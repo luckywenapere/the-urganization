@@ -22,7 +22,7 @@ export default function Home() {
         <div className="mt-12 flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border-2 border-white px-8 text-white transition-colors hover:bg-white hover:text-black md:w-auto"
-            href="#"
+            href="https://instagram.com/theurganization"
             target="_blank"
             rel="noopener noreferrer"
           >
