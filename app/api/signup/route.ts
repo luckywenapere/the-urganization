@@ -1,16 +1,5 @@
-import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-
-// Singleton pattern to avoid creating multiple Prisma instances
-const globalForPrisma = global as unknown as { prisma: PrismaClient };
-
-export const prisma =
-  globalForPrisma.prisma ||
-  new PrismaClient({
-    log: ['error'],
-  });
-
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+import prisma from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   try {
@@ -49,9 +38,11 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
   } catch (error) {
-    console.error("Error creating user:", error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("Error creating user:", errorMessage);
+    console.error("Full error:", error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: `Server error: ${errorMessage}` },
       { status: 500 }
     );
   }
