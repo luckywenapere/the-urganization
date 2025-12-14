@@ -12,12 +12,8 @@
     "prisma:seed": "node prisma/seed.js"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "next": "16.0.7",
-=======
     "@next/font": "^14.2.15",
     "next": "16.0.10",
->>>>>>> 6381ef24da6df31808bc6662a1699e4a406ea7bb
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
