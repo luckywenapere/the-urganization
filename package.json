@@ -9,7 +9,8 @@
     "lint": "eslint",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
-    "prisma:seed": "node prisma/seed.js"
+    "prisma:seed": "node prisma/seed.js",
+    "build": "prisma generate && prisma migrate deploy && next build"
   },
   "dependencies": {
     "@next/font": "^14.2.15",
