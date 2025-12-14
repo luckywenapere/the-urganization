@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "lint": "eslint",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
-    "prisma:seed": "node prisma/seed.js",
-    "build": "prisma generate && prisma migrate deploy && next build"
+    "prisma:seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.15",
     "@next/font": "^14.2.15",
     "@prisma/client": "^6.19.1",
     "next": "16.0.10",
