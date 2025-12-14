@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:seed": "node prisma/seed.js"
   },
   "dependencies": {
-    "@next/font": "^14.2.15",
     "next": "16.0.7",
     "react": "19.2.0",
     "react-dom": "19.2.0"

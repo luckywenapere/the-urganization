@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Caveat_Brush } from "next/font/google";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-// Load fonts properly
-const inter = Inter({
-  variable: "--font-inter",
+// Premium typography
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const caveatBrush = Caveat_Brush({
-  variable: "--font-caveat-brush",
+const dmSans = DM_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${caveatBrush.variable}`}>
-      <body className="antialiased">
+    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+      <body className="antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-black text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
         {children}
       </body>
     </html>

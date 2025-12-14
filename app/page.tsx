@@ -1,44 +1,41 @@
-import Image from "next/image";
+import SignUpForm from "./components/SignUpForm";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black font-sans">
-      <main className="flex w-full max-w-4xl flex-col items-center justify-center p-8 sm:p-16">
-        
-        <div className="flex flex-col items-center gap-6 text-center">
-          <h1 
-            className="font-caveat-brush text-5xl sm:text-7xl md:text-8xl 
-                      font-bold leading-tight tracking-tighter text-white 
-                      uppercase"
-          >
-            The Urganization is coming...
+    <div className="relative min-h-screen w-full bg-black overflow-x-hidden font-sans">
+      {/* Main content */}
+      <main className="relative z-10 flex flex-col min-h-screen w-full items-center justify-between px-4 py-8 sm:px-8 md:px-16">
+        {/* Hero section */}
+        <section className="w-full max-w-3xl mx-auto flex flex-col items-center text-center pt-12 pb-10 md:pt-24 md:pb-16">
+          <h1 className="font-display text-[2.8rem] sm:text-[4vw] md:text-[4.5vw] font-black uppercase tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] mb-6" style={{letterSpacing: '-0.04em'}}>
+            The Urganization
           </h1>
-          
-          <p className="max-w-xl text-xl leading-relaxed text-zinc-300 mt-4">
-            We are working hard to launch our new platform. Follow us for updates!
-          </p>
-        </div>
-
-        <div className="mt-12 flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <div className="mx-auto mb-7 w-24 h-1 bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-800 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.7)]" />
+          <p className="text-base sm:text-lg md:text-xl text-neutral-300 font-medium max-w-xl mx-auto mb-10 tracking-wide" style={{textShadow: '0 1px 2px #000'}}>A new era of organization. <span className="text-neutral-400">Uncompromising.</span></p>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border-2 border-white px-8 text-white transition-colors hover:bg-white hover:text-black md:w-auto"
             href="https://instagram.com/theurganization"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block border border-neutral-700 bg-black/70 px-7 py-2.5 rounded-md text-neutral-200 font-bold tracking-widest uppercase text-xs shadow-md hover:bg-neutral-900 hover:border-neutral-500 transition-all duration-200"
           >
-            Get Notified
+            Instagram
           </a>
-          
-          <p className="w-full text-center mt-8 text-sm text-zinc-500">
+        </section>
+
+        {/* Sign Up Form Section */}
+        <section className="w-full max-w-md mx-auto flex flex-col items-center justify-center pb-16">
+          <div className="w-full">
+            <SignUpForm />
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="w-full border-t border-neutral-800 py-6 text-center bg-black/80">
+          <p className="text-xs text-neutral-500 tracking-widest uppercase">
             &copy; {new Date().getFullYear()} The Urganization. All rights reserved.
           </p>
-        </div>
+        </footer>
       </main>
-      
-      {/* Optional: Texture effect */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none mix-blend-lighten">
-        <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_transparent_5%,_white_90%)]" />
-      </div>
     </div>
   );
 }
