@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@prisma/client": "^6.19.1",
     "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0"
@@ -24,6 +25,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^16.0.10",
+    "prisma": "^6.19.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
