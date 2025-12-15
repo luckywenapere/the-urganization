@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  turbopack: {
-    // Add supported turbopack options here if needed
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push('@libsql/client', 'libsql');
+    }
+    return config;
+  },
+  experimental: {
+    serverComponentsExternalPackages: ['@libsql/client', 'libsql'],
   },
 };
 
