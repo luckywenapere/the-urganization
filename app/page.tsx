@@ -15,7 +15,7 @@ export default function Home() {
           </p>
           <a
             href="#early-access"
-            className="inline-block border border-cyan-600 bg-cyan-700/80 px-8 py-3 rounded-md text-white font-bold tracking-widest uppercase text-base shadow-md hover:bg-cyan-800 hover:border-cyan-400 transition-all duration-200 mb-2"
+            className="inline-block border border-emerald-600 bg-emerald-700/80 px-8 py-3 rounded-md text-white font-bold tracking-widest uppercase text-base shadow-md hover:bg-emerald-800 hover:border-emerald-400 transition-all duration-200 mb-2"
           >
             Get early access
           </a>
@@ -45,24 +45,45 @@ export default function Home() {
 
         {/* CORE BENEFITS (Value props) */}
         <section className="w-full max-w-3xl mx-auto py-10 grid gap-8 md:grid-cols-2">
-          <div>
-            <h3 className="font-bold text-lg mb-2 text-cyan-400">Manage artists, not mess</h3>
+          {/* Value Props with outlined icons and card surfaces */}
+          <div className="bg-slate-900/70 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+            {/* Icon: Users */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-10 h-10 mb-3">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m10-6.13a4 4 0 11-8 0 4 4 0 018 0zM15 20v-2a4 4 0 00-3-3.87A4 4 0 009 18v2" />
+            </svg>
+            <h3 className="font-bold text-lg mb-2 text-emerald-400">Manage artists, not mess</h3>
             <p className="text-neutral-200">Create artist workspaces with everything in one place — tasks, files, releases, collaborators.</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2 text-cyan-400">Plan releases with clarity</h3>
+          <div className="bg-slate-900/70 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+            {/* Icon: Calendar */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-10 h-10 mb-3">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <h3 className="font-bold text-lg mb-2 text-emerald-400">Plan releases with clarity</h3>
             <p className="text-neutral-200">Use release calendars and checklists to execute drops properly, not last minute.</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2 text-cyan-400">Keep collaborators aligned</h3>
+          <div className="bg-slate-900/70 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+            {/* Icon: Users Cog */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-10 h-10 mb-3">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m10-6.13a4 4 0 11-8 0 4 4 0 018 0zM15 20v-2a4 4 0 00-3-3.87A4 4 0 009 18v2" />
+            </svg>
+            <h3 className="font-bold text-lg mb-2 text-emerald-400">Keep collaborators aligned</h3>
             <p className="text-neutral-200">Invite collaborators with role-based access so everyone sees what they need — nothing more.</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2 text-cyan-400">Organize files properly</h3>
+          <div className="bg-slate-900/70 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+            {/* Icon: Folder */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-10 h-10 mb-3">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 7a2 2 0 012-2h3.28a2 2 0 011.42.59l1.42 1.42A2 2 0 0012.72 7H19a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+            </svg>
+            <h3 className="font-bold text-lg mb-2 text-emerald-400">Organize files properly</h3>
             <p className="text-neutral-200">Store music, artwork, videos, contracts, and press assets in artist-specific folders.</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2 text-cyan-400">Scale as the artist grows</h3>
+          <div className="bg-slate-900/70 rounded-xl shadow-lg p-6 flex flex-col items-center text-center md:col-span-2">
+            {/* Icon: Trending Up */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-10 h-10 mb-3">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 8-8" />
+            </svg>
+            <h3 className="font-bold text-lg mb-2 text-emerald-400">Scale as the artist grows</h3>
             <p className="text-neutral-200">What works for one artist scales cleanly to many — without rebuilding your process.</p>
           </div>
         </section>
@@ -70,13 +91,39 @@ export default function Home() {
         {/* HOW IT WORKS (Simple steps) */}
         <section className="w-full max-w-2xl mx-auto py-10">
           <h2 className="font-display text-xl md:text-2xl font-bold mb-4">How it works</h2>
-          <ol className="list-decimal list-inside text-neutral-200 space-y-2 mb-4">
-            <li>Create an artist workspace</li>
-            <li>Invite collaborators</li>
-            <li>Assign tasks & upload files</li>
-            <li>Plan releases & track progress</li>
-          </ol>
-          <p className="text-neutral-400">Everything stays private, structured, and easy to manage.</p>
+          <div className="grid gap-6 md:grid-cols-4">
+            <div className="flex flex-col items-center text-center">
+              {/* Icon: Workspace */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-9 h-9 mb-2">
+                <rect x="4" y="4" width="16" height="16" rx="3" />
+              </svg>
+              <span className="text-neutral-200 font-medium mt-1">Create an artist workspace</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              {/* Icon: User Plus */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-9 h-9 mb-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16 21v-2a4 4 0 00-3-3.87M12 7a4 4 0 110-8 4 4 0 010 8zm6 8v-2a4 4 0 00-3-3.87M6 11v2a4 4 0 003 3.87" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20 8v6m3-3h-6" />
+              </svg>
+              <span className="text-neutral-200 font-medium mt-1">Invite collaborators</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              {/* Icon: Upload */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-9 h-9 mb-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 16V4m0 0l-4 4m4-4l4 4" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20 16v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2" />
+              </svg>
+              <span className="text-neutral-200 font-medium mt-1">Assign tasks & upload files</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              {/* Icon: Chart Bar */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#10b981" className="w-9 h-9 mb-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2M8 17v-6m4 6v-4m4 4v-2" />
+              </svg>
+              <span className="text-neutral-200 font-medium mt-1">Plan releases & track progress</span>
+            </div>
+          </div>
+          <p className="text-neutral-400 mt-6">Everything stays private, structured, and easy to manage.</p>
         </section>
 
         {/* WHY IT EXISTS (Trust / vision) */}
@@ -98,7 +145,7 @@ export default function Home() {
           </ul>
           <a
             href="#signup"
-            className="inline-block border border-cyan-600 bg-cyan-700/80 px-8 py-3 rounded-md text-white font-bold tracking-widest uppercase text-base shadow-md hover:bg-cyan-800 hover:border-cyan-400 transition-all duration-200 mb-2"
+            className="inline-block border border-emerald-600 bg-emerald-700/80 px-8 py-3 rounded-md text-white font-bold tracking-widest uppercase text-base shadow-md hover:bg-emerald-800 hover:border-emerald-400 transition-all duration-200 mb-2"
           >
             Request early access
           </a>
