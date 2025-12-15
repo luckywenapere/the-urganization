@@ -1,12 +1,40 @@
+"use client";
 
 import SignUpForm from "./components/SignUpForm";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full bg-black overflow-x-hidden font-sans">
+      {/* Top Navigation Bar */}
+      <nav className="w-full flex items-center justify-between px-6 py-4 bg-black/80 border-b border-neutral-800 fixed top-0 left-0 z-20">
+        {/* Logo */}
+        <button
+          onClick={() => window.location.reload()}
+          className="font-display text-xl md:text-2xl font-bold text-white tracking-tight hover:text-emerald-400 transition-colors"
+          aria-label="Refresh page"
+        >
+          The Urganization
+        </button>
+        <div className="flex items-center gap-4">
+          <a
+            href="mailto:theurganization@gmail.com"
+            className="text-sm md:text-base text-neutral-300 hover:text-emerald-400 transition-colors underline underline-offset-2"
+          >
+            Contact: theurganization@gmail.com
+          </a>
+          <a
+            href="#early-access"
+            className="hidden md:inline-block border border-emerald-600 bg-emerald-700/80 px-5 py-2 rounded-md text-white font-bold tracking-widest uppercase text-xs md:text-sm shadow-md hover:bg-emerald-800 hover:border-emerald-400 transition-all duration-200"
+          >
+            GET EARLY ACCESS
+          </a>
+        </div>
+      </nav>
       <main className="relative z-10 flex flex-col min-h-screen w-full items-center px-4 py-8 sm:px-8 md:px-16">
+        {/* Spacer to push content below fixed header */}
+        <div style={{ height: '7rem' }} aria-hidden="true" />
         {/* HERO SECTION */}
-        <section className="w-full max-w-3xl mx-auto flex flex-col items-center text-center pt-16 pb-10 md:pt-28 md:pb-16">
+        <section className="w-full max-w-3xl mx-auto flex flex-col items-center text-center pb-10 md:pb-16">
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-6" style={{letterSpacing: '-0.04em'}}>
             One workspace to manage artists from day one to career scale
           </h1>
