@@ -1,14 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.externals.push('@libsql/client', 'libsql');
-    }
-    return config;
-  },
-  experimental: {
-    serverComponentsExternalPackages: ['@libsql/client', 'libsql'],
+  serverExternalPackages: ['@libsql/client', 'libsql'],
+  turbopack: {
+    // Empty config to silence the warning
   },
 };
 
