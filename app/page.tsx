@@ -3,15 +3,7 @@ import SignUpForm from "./components/SignUpForm";
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full bg-black overflow-x-hidden font-sans">
-      {/* Grunge overlay */}
-      <div className="pointer-events-none fixed inset-0 z-0 mix-blend-overlay opacity-60 select-none">
-        <img
-          src="/grunge-texture.png"
-          alt="grunge texture"
-          className="w-full h-full object-cover"
-          draggable="false"
-        />
-      </div>
+      {/* Grunge overlay removed */}
 
       {/* Main content */}
       <main className="relative z-10 flex flex-col min-h-screen w-full items-center justify-between px-4 py-8 sm:px-8 md:px-16">
