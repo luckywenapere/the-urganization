@@ -12,8 +12,6 @@
     "prisma:seed": "node prisma/seed.js"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.15",
-    "@prisma/adapter-libsql": "^7.1.0",
     "@prisma/client": "^6.19.1",
     "next": "16.0.10",
     "react": "19.2.0",
