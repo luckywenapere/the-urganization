@@ -3,6 +3,7 @@
 import Link from "next/link";
 import SignUpForm from "./components/SignUpForm";
 import { useState } from "react";
+import Image from "next/image"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,67 +80,62 @@ export default function Home() {
 
       <main className="relative z-10 flex flex-col w-full items-center">
         
-        {/* --- HERO SECTION --- */}
-        {/* Strict max-w-5xl ensures the content cluster is centralized and focused */}
-        <section className="w-full max-w-5xl mx-auto px-6 md:px-16 pt-48 pb-32 md:pt-64 md:pb-40 flex flex-col items-center text-center">
+                {/* --- HERO SECTION with Background Image --- */}
+        <section className="relative w-full max-w-5xl mx-auto px-6 md:px-16 pt-48 pb-32 md:pt-64 md:pb-40 flex flex-col items-center text-center">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/5 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-10 hover:bg-emerald-500/10 transition-colors cursor-default">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            New for Creative Teams
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[1.05]">
-            Turn your ideas into <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-200 to-teal-200">
-              real music and art.
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-neutral-400 max-w-xl mx-auto mb-12 leading-relaxed font-light">
-            Urganize helps artist teams work together, finish projects, and share their best work, without the mess.
-          </p>
-          
-          <Link
-            href="#early-access"
-            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-500 hover:scale-105 shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)] w-full md:w-auto text-center"
-          >
-            Get Early Access
-            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
-
-          {/* Hero Visual - uses full width of its parent max-w-5xl */}
-          <div className="mt-24 relative w-full aspect-[16/9] md:aspect-[21/9] bg-[#0A0A0A] rounded-xl border border-white/10 shadow-2xl overflow-hidden group hover:border-white/20 transition-all duration-500">
-            <div className="absolute top-0 w-full h-12 bg-white/5 border-b border-white/5 flex items-center px-6 gap-4">
-               <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-neutral-700" />
-                  <div className="w-3 h-3 rounded-full bg-neutral-700" />
-               </div>
-               <div className="h-2 w-32 bg-neutral-800 rounded-full" />
+          {/* Background Image Container */}
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-3xl">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image
+                src="/images/hero-image.png"
+                alt="Creative team collaborating on music and art"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+              />
             </div>
             
-            <div className="pt-20 px-12 pb-12 grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
-               <div className="hidden md:flex flex-col gap-4 opacity-50">
-                  <div className="w-full h-10 bg-white/5 rounded-lg" />
-                  <div className="w-2/3 h-4 bg-white/5 rounded-lg" />
-                  <div className="w-1/2 h-4 bg-white/5 rounded-lg" />
-               </div>
-               <div className="col-span-2 flex flex-col justify-center items-center text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 mb-6 shadow-lg shadow-emerald-900/50 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 3-2 3-2zm0 0v-6" /></svg>
-                  </div>
-                  <h3 className="text-xl font-medium text-white mb-2">New Single Release</h3>
-                  <div className="flex -space-x-3 mt-4">
-                     <div className="w-10 h-10 rounded-full border-4 border-[#0A0A0A] bg-neutral-700" />
-                     <div className="w-10 h-10 rounded-full border-4 border-[#0A0A0A] bg-neutral-600" />
-                     <div className="w-10 h-10 rounded-full border-4 border-[#0A0A0A] bg-emerald-600 flex items-center justify-center text-[10px] font-bold">+</div>
-                  </div>
-               </div>
+            {/* Gradient Fade Overlay - Fades image into black background */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-transparent to-black/90" />
+            
+            {/* Subtle vignette effect for better fade */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_black_70%)]" />
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-10 hover:bg-emerald-500/20 transition-colors cursor-default">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              New for Creative Teams
             </div>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[1.05]">
+              Turn your ideas into <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-200 to-teal-200">
+                real music and art.
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-neutral-300 max-w-xl mx-auto mb-12 leading-relaxed font-light">
+              Urganize helps artist teams work together, finish projects, and share their best work, without the mess.
+            </p>
+            
+            <Link
+              href="#early-access"
+              className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-500 hover:scale-105 shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)] w-full md:w-auto text-center"
+            >
+              Get Early Access
+              <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
           </div>
         </section>
 
