@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import SignUpForm from "./components/SignUpForm";
 
 export default function Home() {
@@ -13,9 +14,9 @@ export default function Home() {
       </div>
 
       {/* --- NAVIGATION --- */}
-      {/* Added md:px-12 to push nav items away from edges */}
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-5">
+        {/* Adjusted to max-w-6xl for the header, keeping it slightly wider for the navigation bar feel */}
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-5"> 
           {/* Logo */}
           <button
             onClick={() => window.location.reload()}
@@ -45,8 +46,8 @@ export default function Home() {
       <main className="relative z-10 flex flex-col w-full items-center">
         
         {/* --- HERO SECTION --- */}
-        {/* Changed max-w-7xl to max-w-6xl and added md:px-16 for side breathing room */}
-        <section className="w-full max-w-6xl mx-auto px-6 md:px-16 pt-48 pb-32 md:pt-64 md:pb-40 flex flex-col items-center text-center">
+        {/* Strict max-w-5xl ensures the content cluster is centralized and focused */}
+        <section className="w-full max-w-5xl mx-auto px-6 md:px-16 pt-48 pb-32 md:pt-64 md:pb-40 flex flex-col items-center text-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/5 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-10 hover:bg-emerald-500/10 transition-colors cursor-default">
             <span className="relative flex h-2 w-2">
@@ -56,29 +57,29 @@ export default function Home() {
             New for Creative Teams
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[1.05] max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[1.05]">
             Turn your ideas into <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-200 to-teal-200">
               real music and art.
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Urganize helps artist teams work together, finish projects, and share their best work—without the mess.
+          <p className="text-lg md:text-xl text-neutral-400 max-w-xl mx-auto mb-12 leading-relaxed font-light">
+            Urganize helps artist teams work together, finish projects, and share their best work, without the mess.
           </p>
           
-          <a
+          <Link
             href="#early-access"
-            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-500 hover:scale-105 shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)]"
+            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-500 hover:scale-105 shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)] px-10 py-5"
           >
             Get Early Access
             <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </Link>
 
-          {/* Hero Visual */}
-          <div className="mt-24 relative w-full max-w-5xl aspect-[16/9] md:aspect-[21/9] bg-[#0A0A0A] rounded-xl border border-white/10 shadow-2xl overflow-hidden group hover:border-white/20 transition-all duration-500">
+          {/* Hero Visual - uses full width of its parent max-w-5xl */}
+          <div className="mt-24 relative w-full aspect-[16/9] md:aspect-[21/9] bg-[#0A0A0A] rounded-xl border border-white/10 shadow-2xl overflow-hidden group hover:border-white/20 transition-all duration-500">
             <div className="absolute top-0 w-full h-12 bg-white/5 border-b border-white/5 flex items-center px-6 gap-4">
                <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-neutral-700" />
@@ -110,11 +111,12 @@ export default function Home() {
 
 
         {/* --- PROBLEM SECTION --- */}
-        {/* Increased padding to md:px-16 lg:px-24 */}
         <section className="w-full py-32 bg-neutral-900/20 border-y border-white/5">
-          <div className="max-w-6xl mx-auto px-6 md:px-16 lg:px-24">
+          {/* Strict max-w-5xl here for centralization */}
+          <div className="max-w-5xl mx-auto px-6 md:px-16">
             <div className="flex flex-col md:flex-row items-start justify-between gap-16 md:gap-24">
               
+              {/* Text Side */}
               <div className="flex-1 md:sticky md:top-32 self-start">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Teams get stuck <br /><span className="text-neutral-500">in messy work.</span></h2>
                 <div className="space-y-8">
@@ -129,6 +131,7 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Visual Side: Comparison */}
               <div className="flex-1 w-full space-y-8">
                 {/* The "Mess" Card */}
                 <div className="p-8 rounded-2xl bg-[#0F0F0F] border border-white/5 grayscale opacity-70 hover:opacity-100 transition-opacity">
@@ -170,8 +173,8 @@ export default function Home() {
 
 
         {/* --- BENEFITS GRID --- */}
-        {/* Adjusted to max-w-6xl and px-16 for desktop balance */}
-        <section className="w-full py-32 px-6 md:px-16 lg:px-24 max-w-6xl mx-auto">
+        {/* Strict max-w-5xl here for centralization */}
+        <section className="w-full py-32 px-6 md:px-16 max-w-5xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Work together. <br className="md:hidden"/> Shine together.</h2>
             <p className="text-neutral-400 max-w-2xl mx-auto text-lg">Focus on actions, not features. Here is how you get it done.</p>
@@ -209,9 +212,9 @@ export default function Home() {
 
 
         {/* --- HOW IT WORKS --- */}
-        {/* Adjusted padding to md:px-16 lg:px-24 */}
         <section className="w-full py-32 bg-[#080808]">
-          <div className="max-w-6xl mx-auto px-6 md:px-16 lg:px-24">
+          {/* Strict max-w-5xl here for centralization */}
+          <div className="max-w-5xl mx-auto px-6 md:px-16">
             <div className="flex flex-col md:flex-row items-center gap-16 md:gap-32">
               
               <div className="flex-1 space-y-12">
@@ -277,11 +280,13 @@ export default function Home() {
 
 
         {/* --- SOCIAL PROOF --- */}
-        <section className="w-full py-32 px-6 md:px-16 lg:px-24 max-w-6xl mx-auto">
+        {/* Strict max-w-5xl here for centralization */}
+        <section className="w-full py-32 px-6 md:px-16 max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Teams are loving it!</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* max-w-4xl is appropriate here to keep the review cards tight */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"> 
              <div className="p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-white/5">
                 <p className="text-lg text-neutral-300 italic mb-6 leading-relaxed">"Urganize makes teamwork easier and more fun. We actually know what we're doing now."</p>
                 <div className="flex items-center gap-4">
@@ -297,7 +302,7 @@ export default function Home() {
                 <div className="flex items-center gap-4">
                    <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10" />
                    <div>
-                      <div className="text-sm font-bold text-white">Davido</div>
+                      <div className="text-sm font-bold text-white">Psalm</div>
                       <div className="text-xs text-neutral-500 uppercase tracking-wider">Producer</div>
                    </div>
                 </div>
@@ -309,6 +314,7 @@ export default function Home() {
         {/* --- FINAL CTA & FORM --- */}
         <section id="early-access" className="w-full py-40 relative overflow-hidden">
           
+          {/* Max-w-2xl is appropriate here to keep the form area tight and focused */}
           <div className="relative z-10 max-w-2xl mx-auto px-6 md:px-12 text-center">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">Start making your <br /> best work today.</h2>
             <p className="text-lg text-neutral-400 mb-12">Join other creative teams who are finally getting organized.</p>
