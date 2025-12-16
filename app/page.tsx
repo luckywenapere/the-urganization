@@ -23,7 +23,7 @@ export default function Home() {
             className="text-lg md:text-xl font-bold tracking-tight text-white hover:text-emerald-400 transition-colors"
             aria-label="Refresh page"
           >
-            The Urganization
+            Urganize
           </button>
           
           <div className="flex items-center gap-8">
