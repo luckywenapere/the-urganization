@@ -70,7 +70,7 @@ export default function Home() {
           
           <Link
             href="#early-access"
-            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-500 hover:scale-105 shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)] px-10 py-5"
+            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-500 hover:scale-105 shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)]"
           >
             Get Early Access
             <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
