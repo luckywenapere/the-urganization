@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import SignUpForm from "./components/SignUpForm";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen w-full bg-[#050505] text-white overflow-x-hidden font-sans selection:bg-emerald-500/30">
       
@@ -13,9 +16,8 @@ export default function Home() {
         <div className="absolute bottom-[10%] right-[-5%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] opacity-30" />
       </div>
 
-      {/* --- NAVIGATION --- */}
-      <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20">
-        {/* Adjusted to max-w-6xl for the header, keeping it slightly wider for the navigation bar feel */}
+            {/* --- NAVIGATION --- */}
+      <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-xl supports-[backdrop-filter]:bg-black/40">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-5"> 
           {/* Logo */}
           <button
@@ -26,19 +28,51 @@ export default function Home() {
             Urganize
           </button>
           
-          <div className="flex items-center gap-8">
-            <a
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link
               href="mailto:theurganization@gmail.com"
-              className="hidden md:block text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
             >
               Contact
-            </a>
-            <a
+            </Link>
+            <Link
               href="#early-access"
               className="px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-xs font-bold uppercase tracking-widest transition-all hover:border-emerald-500/50 hover:shadow-[0_0_20px_-5px_rgba(16,185,129,0.3)]"
             >
               Get Early Access
-            </a>
+            </Link>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+            aria-label="Toggle menu"
+          >
+            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+            <span className={`w-6 h-0.5 bg-white my-1.5 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          </button>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-6 py-6 bg-black/95 border-t border-white/5 backdrop-blur-xl flex flex-col gap-6">
+            <Link
+              href="mailto:theurganization@gmail.com"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-base font-medium text-neutral-400 hover:text-white transition-colors py-2"
+            >
+              Contact
+            </Link>
+            <Link
+              href="#early-access"
+              onClick={() => setIsMenuOpen(false)}
+              className="w-full px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-sm font-bold uppercase tracking-widest transition-all hover:border-emerald-500/50 hover:shadow-[0_0_20px_-5px_rgba(16,185,129,0.3)] text-center"
+            >
+              Get Early Access
+            </Link>
           </div>
         </div>
       </nav>
