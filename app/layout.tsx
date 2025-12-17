@@ -16,8 +16,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Urganization",
-  description: "The Urganization is here.",
+  title: "Urganize",
+  description: "A workspace for artist teams to turn ideas into real music and projects. Plan releases, stay organized, and focus on creating your best work.",
 };
 
 export default function RootLayout({

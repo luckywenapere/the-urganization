@@ -63,12 +63,11 @@ export default function SignUpForm() {
           <input
             id="name"
             type="text"
-            // FIX 1: Changed placeholder to uppercase for visual consistency
             placeholder="YOUR NAME"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            // REFINED: Increased vertical padding and adjusted placeholder color/weight
+
             className="w-full pl-6 pr-4 py-3 bg-neutral-950 border border-neutral-800 rounded-md text-sm text-neutral-100 placeholder-neutral-700 font-medium focus:border-neutral-500 focus:bg-black focus:ring-2 focus:ring-neutral-700 outline-none transition-all duration-200"
             autoComplete="off"
           />
