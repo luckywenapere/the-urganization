@@ -28,6 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
       <head>
+        <meta name="apple-mobile-web-app-title" content="Urganize" />
+
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4PX21EV8K"></script>
         <script dangerouslySetInnerHTML={{
@@ -39,6 +41,7 @@ export default function RootLayout({
             gtag('config', 'G-X4PX21EV8K');
           `,
         }} />
+        
       </head>
       <body className="antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-black text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
         {children}
