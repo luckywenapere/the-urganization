@@ -23,10 +23,17 @@ export default function Home() {
           {/* Logo */}
           <button
             onClick={() => window.location.reload()}
-            className="text-lg md:text-xl font-bold tracking-tight text-white hover:text-emerald-400 transition-colors"
+            className="hover:opacity-80 transition-opacity"
             aria-label="Refresh page"
           >
-            Urganize
+            <Image
+              src="/images/urganize-logo.svg"
+              alt="Urganize"
+              width={140}
+              height={32}
+              className="h-40 w-auto"
+              priority
+            />
           </button>
           
           {/* Desktop Menu */}
