@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 import FormbricksProvider from "./formbricks-provider";
 
 // Premium typography
@@ -103,7 +104,9 @@ export default function RootLayout({
       </head>
       
       <body className="antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-black text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
-        <FormbricksProvider />
+        <Suspense fallback={null}>
+          <FormbricksProvider />
+        </Suspense>
         {children}
       </body>
     </html>
