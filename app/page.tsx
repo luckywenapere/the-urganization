@@ -31,7 +31,7 @@ export default function Home() {
               alt="Urganize"
               width={140}
               height={32}
-              className="h-8 w-auto"
+              className="h-36 w-auto"
               priority
             />
           </button>
