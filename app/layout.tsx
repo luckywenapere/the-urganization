@@ -85,7 +85,7 @@ export default function RootLayout({
         }} />
 
         {/* START Formbricks Surveys */}
-        <script
+        {/* <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
@@ -96,7 +96,7 @@ export default function RootLayout({
              }();
             `
           }}
-        />
+        /> */}
         {/* END Formbricks Surveys */}
 
       </head>
