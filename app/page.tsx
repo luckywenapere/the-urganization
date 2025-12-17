@@ -21,7 +21,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-xl supports-[backdrop-filter]:bg-black/40">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-5"> 
           {/* Logo */}
-          <button
+          {/* <button
             onClick={() => window.location.reload()}
             className="hover:opacity-80 transition-opacity"
             aria-label="Refresh page"
@@ -31,11 +31,19 @@ export default function Home() {
               alt="Urganize"
               width={140}
               height={32}
-              className="h-36 w-auto"
+              className="h-18 w-auto"
               priority
             />
+          </button> */}
+
+          <button
+            onClick={() => window.location.reload()}
+            className="text-lg md:text-xl font-bold tracking-tight text-white hover:text-emerald-400 transition-colors"
+            aria-label="Refresh page"
+          >
+            Urganize
           </button>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <Link
