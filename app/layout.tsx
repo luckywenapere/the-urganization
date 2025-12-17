@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
+import FormbricksProvider from "./formbricks-provider";
 
 // Premium typography
 const spaceGrotesk = Space_Grotesk({
@@ -100,7 +101,9 @@ export default function RootLayout({
         {/* END Formbricks Surveys */}
 
       </head>
+      
       <body className="antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-black text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
+        <FormbricksProvider />
         {children}
       </body>
     </html>
