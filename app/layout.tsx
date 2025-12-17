@@ -84,6 +84,14 @@ export default function RootLayout({
           `,
         }} />
         
+        {/* START Formbricks Surveys */}
+        <script type="text/javascript">
+        !function(){
+          var appUrl = "https://app.formbricks.com";
+          var environmentId = "cmja8xlr9xzf0ad01xu8mpoas";
+          var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=appUrl+"/js/formbricks.umd.cjs",t.onload=function(){window.formbricks?window.formbricks.setup({environmentId:environmentId,appUrl:appUrl}):console.error("Formbricks library failed to load properly. The formbricks object is not available.");};var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
+        </script>
+
       </head>
       <body className="antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-black text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
         {children}
