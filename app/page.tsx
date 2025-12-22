@@ -132,9 +132,9 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[1.05]">
-              Turn your ideas into <br className="hidden md:block" />
+              Where artist teams turn <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-200 to-teal-200">
-                real music and art.
+                creative ideas into impact.
               </span>
             </h1>
             
