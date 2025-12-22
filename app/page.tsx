@@ -139,7 +139,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-neutral-300 max-w-xl mx-auto mb-12 leading-relaxed font-light">
-              Urganize helps artist teams work together, finish projects, and share their best work, without the mess.
+              Urganize keeps every team member aligned, inspired, and performing at their best so your vision becomes reality, not just plans.
             </p>
             
             <Link
