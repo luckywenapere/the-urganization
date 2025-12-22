@@ -338,7 +338,7 @@ export default function Home() {
         <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10" />
         <div>
           <a 
-            href="https://instagram.com/quriesmusic" 
+            href="https://instagram.com/quiriesmusic" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-sm font-bold text-white hover:text-blue-400 transition-colors"
