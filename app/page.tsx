@@ -50,7 +50,7 @@ export default function Home() {
               href="mailto:theurganization@gmail.com"
               className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
             >
-              Contact
+              Request Meeting
             </Link>
             <Link
               href="#early-access"

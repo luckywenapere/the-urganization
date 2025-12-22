@@ -127,7 +127,7 @@ export default function SignUpForm() {
         {/* Divider */}
         <div className="mt-8 pt-4 border-t border-neutral-800">
           <p className="text-center text-[10px] text-neutral-600 font-bold tracking-widest uppercase">
-            No spam. No credit card required.
+            No credit card required.
           </p>
         </div>
       </div>
