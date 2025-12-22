@@ -327,33 +327,47 @@ export default function Home() {
         {/* --- SOCIAL PROOF --- */}
         {/* Strict max-w-5xl here for centralization */}
         <section className="w-full py-32 px-6 md:px-16 max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Teams are loving it!</h2>
-          </div>
-          {/* max-w-4xl is appropriate here to keep the review cards tight */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"> 
-             <div className="p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-white/5">
-                <p className="text-lg text-neutral-300 italic mb-6 leading-relaxed">"Urganize makes teamwork easier and more fun. We actually know what we're doing now."</p>
-                <div className="flex items-center gap-4">
-                   <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10" />
-                   <div>
-                      <div className="text-sm font-bold text-white">Sarah</div>
-                      <div className="text-xs text-neutral-500 uppercase tracking-wider">Artist Manager</div>
-                   </div>
-                </div>
-             </div>
-             <div className="p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-white/5">
-                <p className="text-lg text-neutral-300 italic mb-6 leading-relaxed">"Ideas get finished faster because we aren't losing files in WhatsApp anymore. It's a game changer."</p>
-                <div className="flex items-center gap-4">
-                   <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10" />
-                   <div>
-                      <div className="text-sm font-bold text-white">Psalm</div>
-                      <div className="text-xs text-neutral-500 uppercase tracking-wider">Producer</div>
-                   </div>
-                </div>
-             </div>
-          </div>
-        </section>
+  <div className="text-center mb-16">
+    <h2 className="text-3xl font-bold mb-4">Teams are loving it!</h2>
+  </div>
+  {/* max-w-4xl is appropriate here to keep the review cards tight */}
+  <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"> 
+    <div className="p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-white/5">
+      <p className="text-lg text-neutral-300 italic mb-6 leading-relaxed">"The idea of having one place to manage a release instead of juggling WhatsApp, Drive, and my notes sounds like a dream. I can't wait to try Urganize."</p>
+      <div className="flex items-center gap-4">
+        <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10" />
+        <div>
+          <a 
+            href="https://instagram.com/quriesmusic" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-sm font-bold text-white hover:text-blue-400 transition-colors"
+          >
+            Quiries
+          </a>
+          <div className="text-xs text-neutral-500 uppercase tracking-wider">Independent Artist</div>
+        </div>
+      </div>
+    </div>
+    <div className="p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-white/5">
+      <p className="text-lg text-neutral-300 italic mb-6 leading-relaxed">"From what I've seen, Urganize isn't just another tool, it's a mindset shift. Treating a release as a process, not a conversation, is long overdue."</p>
+      <div className="flex items-center gap-4">
+        <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10" />
+        <div>
+          <a 
+            href="https://instagram.com/psalmthebcn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-sm font-bold text-white hover:text-blue-400 transition-colors"
+          >
+            Psalm the Bcn
+          </a>
+          <div className="text-xs text-neutral-500 uppercase tracking-wider">Producer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
         {/* --- FINAL CTA & FORM --- */}
