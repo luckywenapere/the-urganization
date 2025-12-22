@@ -99,7 +99,7 @@ export default function Home() {
         <section className="relative w-full max-w-5xl mx-auto px-6 md:px-16 pt-48 pb-32 md:pt-64 md:pb-40 flex flex-col items-center text-center">
           
           {/* Background Image Container */}
-          <div className="absolute inset-0 z-0 overflow-hidden w-screen -left-4 -right-4 md:-left-8 md:-right-8">
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-3xl">
             {/* Background Image */}
             <div className="absolute inset-0">
               <Image
