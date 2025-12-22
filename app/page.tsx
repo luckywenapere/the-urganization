@@ -80,7 +80,7 @@ export default function Home() {
               onClick={() => setIsMenuOpen(false)}
               className="text-base font-medium text-neutral-400 hover:text-white transition-colors py-2"
             >
-              Contact
+              Request Meeting
             </Link>
             <Link
               href="#early-access"
