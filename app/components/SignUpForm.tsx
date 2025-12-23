@@ -31,7 +31,7 @@ export default function SignUpForm() {
         return;
       }
 
-      setMessage("Welcome aboard! Check your email for next steps.");
+      setMessage("Welcome aboard! We'll notify your email for next steps when your spot is ready.");
       setName("");
       setEmail("");
     } catch (err) {
