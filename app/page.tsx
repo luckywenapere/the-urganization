@@ -164,15 +164,55 @@ export default function Home() {
               
               {/* Text Side */}
               <div className="flex-1 md:sticky md:top-32 self-start">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Managing an artist’s <br /><span className="text-neutral-500">career shouldn’t feel chaotic.</span></h2>
-                <div className="space-y-8">
+               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+                  Managing an artist <br />
+                  <span className="text-neutral-500">shouldn’t feel chaotic.</span>
+               </h2>
+                <div className="space-y-10">
+                  {/* Problem */}
                   <div className="pl-6 border-l border-neutral-800">
-                    <p className="text-lg text-white mb-2 font-medium">Yet most teams are stuck using whatsApp for conversations, notes for ideas, drive for files and random reminders for deadlines.</p>
-                    <p className="text-neutral-400 leading-relaxed">Things get missed. Momentum slows. Releases fall apart. Talent isn’t the issue. Lack of structure is.</p>
+                    <p className="text-lg text-white mb-4 font-medium">
+                      Yet most teams are stuck using different tools for everything:
+                    </p>
+
+                    <ul className="list-disc list-inside space-y-2 text-neutral-300 mb-4">
+                      <li>WhatsApp for conversations</li>
+                      <li>Notes for ideas</li>
+                      <li>Drive for files</li>
+                      <li>Random reminders for deadlines</li>
+                    </ul>
+
+                    <p className="text-neutral-400 leading-relaxed">
+                      Things get missed. Momentum slows. Releases fall apart.
+                      <br />
+                      Talent isn’t the issue. Lack of structure is.
+                    </p>
                   </div>
+
+              {/* Solution */}
+               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+                  One system for the <br />
+                  <span className="text-neutral-500">entire artist operation.</span>
+               </h2>
                   <div className="pl-6 border-l border-emerald-500">
-                    <p className="text-lg text-emerald-400 mb-2 font-medium">The Urganize Fix. One system for the entire artist operation.</p>
-                    <p className="text-neutral-300 leading-relaxed">We brings everything together in one place. Tasks and responsibilities. Files and assets. Timelines and releases. Team communication. So artists and managers can focus on progress, not chasing people.</p>
+                    {/* <p className="text-lg text-emerald-400 mb-4 font-medium">
+                      The Urganize fix is one system for the entire artist operation.
+                    </p> */}
+
+                    <p className="text-neutral-300 leading-relaxed mb-4">
+                      Urganize brings everything together in one place:
+                    </p>
+
+                    <ul className="list-disc list-inside space-y-2 text-neutral-300">
+                      <li>Tasks and responsibilities</li>
+                      <li>Files and assets</li>
+                      <li>Timelines and releases</li>
+                      <li>Team communication</li>
+                    </ul>
+
+                    <p className="text-neutral-400 leading-relaxed mt-4">
+                      So artists and managers can focus on progress — not chasing people.
+                    </p>
                   </div>
                 </div>
               </div>
