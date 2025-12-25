@@ -140,7 +140,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-neutral-300 max-w-xl mx-auto mb-12 leading-relaxed font-light">
-              Urganize keeps every team member aligned, inspired, and performing at their best so your vision becomes reality, not just plans.
+              Urganize is an all-in-one hub that helps artists and their teams stay urganized, aligned, and on track without scattered tools.
             </p>
             
             <Link
