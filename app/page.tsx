@@ -129,13 +129,13 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              New for Creative Teams
+              New for Music Teams
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[1.05]">
-              Where artist teams turn <br className="hidden md:block" />
+              Run your artist career <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-200 to-teal-200">
-                creative ideas into impact.
+                from one place.
               </span>
             </h1>
             
