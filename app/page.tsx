@@ -164,7 +164,7 @@ export default function Home() {
               
               {/* Text Side */}
               <div className="flex-1 md:sticky md:top-32 self-start">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Managing an artist’s career <br /><span className="text-neutral-500">shouldn’t feel chaotic.</span></h2>
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Managing an artist’s <br /><span className="text-neutral-500">career shouldn’t feel chaotic.</span></h2>
                 <div className="space-y-8">
                   <div className="pl-6 border-l border-neutral-800">
                     <p className="text-lg text-white mb-2 font-medium">Messages are everywhere.</p>
