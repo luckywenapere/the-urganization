@@ -167,8 +167,8 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Managing an artist’s <br /><span className="text-neutral-500">career shouldn’t feel chaotic.</span></h2>
                 <div className="space-y-8">
                   <div className="pl-6 border-l border-neutral-800">
-                    <p className="text-lg text-white mb-2 font-medium">Messages are everywhere.</p>
-                    <p className="text-neutral-400 leading-relaxed">Files get lost in WhatsApp groups. Deadlines get missed because no one knows who is doing what.</p>
+                    <p className="text-lg text-white mb-2 font-medium">Yet most teams are stuck using:</p>
+                    <p className="text-neutral-400 leading-relaxed">WhatsApp for conversations, notes for ideas, drive for files and random reminders for deadlines.</p>
                   </div>
                   <div className="pl-6 border-l border-emerald-500">
                     <p className="text-lg text-emerald-400 mb-2 font-medium">The Urganize Fix.</p>
