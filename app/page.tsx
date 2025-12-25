@@ -167,12 +167,12 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Managing an artist’s <br /><span className="text-neutral-500">career shouldn’t feel chaotic.</span></h2>
                 <div className="space-y-8">
                   <div className="pl-6 border-l border-neutral-800">
-                    <p className="text-lg text-white mb-2 font-medium">Yet most teams are stuck using:</p>
-                    <p className="text-neutral-400 leading-relaxed">WhatsApp for conversations, notes for ideas, drive for files and random reminders for deadlines.</p>
+                    <p className="text-lg text-white mb-2 font-medium">Yet most teams are stuck using whatsApp for conversations, notes for ideas, drive for files and random reminders for deadlines.</p>
+                    <p className="text-neutral-400 leading-relaxed">Things get missed. Momentum slows. Releases fall apart. Talent isn’t the issue. Lack of structure is.</p>
                   </div>
                   <div className="pl-6 border-l border-emerald-500">
-                    <p className="text-lg text-emerald-400 mb-2 font-medium">The Urganize Fix.</p>
-                    <p className="text-neutral-300 leading-relaxed">We clean up the chaos so your team can focus entirely on making art and music.</p>
+                    <p className="text-lg text-emerald-400 mb-2 font-medium">The Urganize Fix. One system for the entire artist operation.</p>
+                    <p className="text-neutral-300 leading-relaxed">We brings everything together in one place. Tasks and responsibilities. Files and assets. Timelines and releases. Team communication. So artists and managers can focus on progress, not chasing people.</p>
                   </div>
                 </div>
               </div>
