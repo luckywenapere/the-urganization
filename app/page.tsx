@@ -229,12 +229,12 @@ export default function Home() {
                     L
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold">Lucky</h4>
-                    <p className="text-xs text-neutral-500 uppercase tracking-[0.2em]">Founder, Urganize</p>
+                    <h4 className="text-xl font-bold">Lucky Wenapere</h4>
+                    <p className="text-xs text-neutral-500 uppercase tracking-[0.2em]">Creator, Urganize</p>
                   </div>
                 </div>
-                <p className="text-neutral-400 leading-relaxed italic">
-                  "Built from real experience working with artist teams — not theory, not spreadsheets, not guesswork."
+                <p className="text-neutral-400 leading-relaxed">
+                  Built from real experience working with artist teams. Nt theory, not spreadsheets, not guesswork.
                 </p>
               </div>
             </motion.div>
