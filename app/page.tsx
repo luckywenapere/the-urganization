@@ -6,6 +6,7 @@ import FAQ from "./components/FAQ";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { RiTwitterXFill, RiInstagramLine, RiLinkedinBoxFill } from "react-icons/ri";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -304,15 +305,32 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col items-center gap-12">
               <div className="flex gap-4">
-                {['x', 'instagram', 'linkedin'].map((social) => (
-                  <Link 
-                    key={social}
-                    href={`https://${social}.com/urganize`}
-                    className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emerald-500 hover:text-black transition-all group"
-                  >
-                    <span className="capitalize text-xs font-bold">{social[0]}</span>
-                  </Link>
-                ))}
+                {/* X (Twitter) */}
+                <Link 
+                  href="https://x.com/urganize"
+                  target="_blank"
+                  className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emerald-500 hover:text-black transition-all group"
+                >
+                  <RiTwitterXFill className="text-xl" />
+                </Link>
+
+                {/* Instagram */}
+                <Link 
+                  href="https://instagram.com/urganize"
+                  target="_blank"
+                  className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emerald-500 hover:text-black transition-all group"
+                >
+                  <RiInstagramLine className="text-xl" />
+                </Link>
+
+                {/* LinkedIn */}
+                <Link 
+                  href="https://linkedin.com/company/urganize"
+                  target="_blank"
+                  className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emerald-500 hover:text-black transition-all group"
+                >
+                  <RiLinkedinBoxFill className="text-xl" />
+                </Link>
               </div>
               
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">

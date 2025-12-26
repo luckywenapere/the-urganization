@@ -13,7 +13,7 @@ const FAQ_DATA: FAQItem[] = [
   {
     id: 1,
     question: "How is Urganize different from other project management tools?",
-    answer: "Urganize is built specifically for creative teams in the music industry. Unlike generic tools, we understand the unique workflow of music releases - from demos to final masters, artwork approval, PR scheduling, and distribution deadlines. Our features are tailored to how artist teams actually work."
+    answer: "Urganize is made just for music teams. Most apps are built for any kind of work, but we created ours specifically for releasing music. We understand all the special things music makers have to do. From early recordings to the finished song, choosing artwork, planning announcements, and getting music on streaming apps. Everything in Urganize works the way music teams actually work."
   },
   // {
   //   id: 2,
@@ -25,11 +25,11 @@ const FAQ_DATA: FAQItem[] = [
   //   question: "Can I try it before committing?",
   //   answer: "Yes! We're offering early access to a limited number of teams. You can sign up for early access above, and we'll notify you when your spot is ready. Early access users will get free usage during our beta period and priority support."
   // },
-  // {
-  //   id: 4,
-  //   question: "How much does it cost?",
-  //   answer: "Urganize will have tiered pricing based on team size and features needed. However, early access users will receive special founding member pricing and extended trial periods. We believe in fair pricing that scales with your success."
-  // },
+  {
+    id: 4,
+    question: "How much does it cost?",
+    answer: "Urganize costs different amounts depending on how big your team is and what tools you need. But if you're one of the first people to try it, you'll get a special discount and more time to test it out for free. We want our prices to be fair - as your team grows and does better, that's when you pay more."
+  },
   // {
   //   id: 5,
   //   question: "Is my data secure?",
