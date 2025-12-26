@@ -193,8 +193,8 @@ export default function Home() {
         {/* --- PROBLEM/SOLUTION BENTO GRID --- */}
         <section className="py-32 px-6 max-w-6xl mx-auto">
           <motion.div {...fadeInUp} className="mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">The Chaos vs. The System</h2>
-            <p className="text-neutral-500 text-lg">Talent isn’t the issue. Lack of structure is.</p>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Talent isn’t the issue. Lack of structure is.</h2>
+            {/* <p className="text-neutral-500 text-lg">Talent isn’t the issue. Lack of structure is.</p> */}
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
