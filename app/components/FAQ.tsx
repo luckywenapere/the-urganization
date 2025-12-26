@@ -27,7 +27,7 @@ const FAQ_DATA: FAQItem[] = [
   // },
   {
     id: 4,
-    question: "How much does it cost?",
+    question: "How much does Urganize cost?",
     answer: "Urganize costs different amounts depending on how big your team is and what tools you need. But if you're one of the first people to try it, you'll get a special discount and more time to test it out for free. We want our prices to be fair - as your team grows and does better, that's when you pay more."
   },
   // {
