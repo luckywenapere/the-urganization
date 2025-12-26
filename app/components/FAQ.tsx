@@ -66,7 +66,7 @@ export default function FAQ() {
               questions
             </span>
           </h2>
-          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+          {/* <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Everything you need to know about Urganize. Can&apos;t find what you&apos;re looking for?
             <a 
               href="mailto:theurganization@gmail.com" 
@@ -74,7 +74,7 @@ export default function FAQ() {
             >
               Email our support team.
             </a>
-          </p>
+          </p> */}
         </div>
 
         {/* FAQ Items */}
