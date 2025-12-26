@@ -15,31 +15,31 @@ const FAQ_DATA: FAQItem[] = [
     question: "How is Urganize different from other project management tools?",
     answer: "Urganize is built specifically for creative teams in the music industry. Unlike generic tools, we understand the unique workflow of music releases - from demos to final masters, artwork approval, PR scheduling, and distribution deadlines. Our features are tailored to how artist teams actually work."
   },
-  {
-    id: 2,
-    question: "Who is Urganize for?",
-    answer: "Urganize is perfect for independent artists, producers, managers, and their teams. Whether you're a solo artist handling everything yourself or have a team of 5+ people (producers, PR, photographers, etc.), Urganize helps keep everyone aligned and focused on the creative process."
-  },
-  {
-    id: 3,
-    question: "Can I try it before committing?",
-    answer: "Yes! We're offering early access to a limited number of teams. You can sign up for early access above, and we'll notify you when your spot is ready. Early access users will get free usage during our beta period and priority support."
-  },
-  {
-    id: 4,
-    question: "How much does it cost?",
-    answer: "Urganize will have tiered pricing based on team size and features needed. However, early access users will receive special founding member pricing and extended trial periods. We believe in fair pricing that scales with your success."
-  },
-  {
-    id: 5,
-    question: "Is my data secure?",
-    answer: "Absolutely. All your files, messages, and project details are encrypted and stored securely. We use industry-standard security practices and compliance measures. Your creative work is yours alone - we never share or use your data for any purpose other than providing you with our service."
-  },
-  {
-    id: 6,
-    question: "Can I collaborate with people outside my team?",
-    answer: "Yes! You can easily share specific projects or files with external collaborators like studio engineers, featured artists, or graphic designers without giving them full access to your workspace. They get exactly what they need to contribute."
-  }
+  // {
+  //   id: 2,
+  //   question: "Who is Urganize for?",
+  //   answer: "Urganize is perfect for independent artists, producers, managers, and their teams. Whether you're a solo artist handling everything yourself or have a team of 5+ people (producers, PR, photographers, etc.), Urganize helps keep everyone aligned and focused on the creative process."
+  // },
+  // {
+  //   id: 3,
+  //   question: "Can I try it before committing?",
+  //   answer: "Yes! We're offering early access to a limited number of teams. You can sign up for early access above, and we'll notify you when your spot is ready. Early access users will get free usage during our beta period and priority support."
+  // },
+  // {
+  //   id: 4,
+  //   question: "How much does it cost?",
+  //   answer: "Urganize will have tiered pricing based on team size and features needed. However, early access users will receive special founding member pricing and extended trial periods. We believe in fair pricing that scales with your success."
+  // },
+  // {
+  //   id: 5,
+  //   question: "Is my data secure?",
+  //   answer: "Absolutely. All your files, messages, and project details are encrypted and stored securely. We use industry-standard security practices and compliance measures. Your creative work is yours alone - we never share or use your data for any purpose other than providing you with our service."
+  // },
+  // {
+  //   id: 6,
+  //   question: "Can I collaborate with people outside my team?",
+  //   answer: "Yes! You can easily share specific projects or files with external collaborators like studio engineers, featured artists, or graphic designers without giving them full access to your workspace. They get exactly what they need to contribute."
+  // }
 ];
 
 export default function FAQ() {
