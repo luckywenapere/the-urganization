@@ -155,6 +155,33 @@ export default function FAQ() {
             </p>
           </div>
         </div>
+        {/* Sign Up CTA */}
+        <div className="text-center mt-6">
+          <a
+            href="#early-access"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl
+              bg-emerald-500/10 border border-emerald-500/30
+              text-emerald-400 font-semibold text-lg
+              hover:bg-emerald-500/20 hover:border-emerald-400
+              transition-all duration-300
+              shadow-[0_0_30px_-10px_rgba(16,185,129,0.25)]"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+            Sign me up!
+          </a>
+        </div>
       </div>
     </section>
   );
