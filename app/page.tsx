@@ -199,7 +199,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5 flex flex-col justify-between min-h-[300px]">
-              <div className="text-neutral-500 font-mono text-xs uppercase tracking-widest mb-4">The Mess</div>
+              <div className="text-neutral-500 font-mono text-xs uppercase tracking-widest mb-4">The Old Way</div>
               <h3 className="text-2xl font-semibold">WhatsApp for conversations & random notes.</h3>
               <p className="text-neutral-500 text-sm">Communication is buried in group chats and personal DMs.</p>
             </motion.div>
@@ -209,7 +209,7 @@ export default function Home() {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] group-hover:bg-emerald-500/20 transition-all" />
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   <div>
-                    <div className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-4">The Solution</div>
+                    <div className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-4">The Urganized Way</div>
                     <h3 className="text-4xl font-bold mb-6">One system for the <br /><span className="text-emerald-400">entire artist operation.</span></h3>
                     <ul className="grid grid-cols-2 gap-4 text-neutral-300">
                       <li className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Tasks & Responsibilities</li>
