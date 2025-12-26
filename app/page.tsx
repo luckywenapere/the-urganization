@@ -262,40 +262,115 @@ export default function Home() {
         {/* Strict max-w-5xl here for centralization */}
         <section className="w-full py-32 px-6 md:px-16 max-w-5xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Work together. <br className="md:hidden"/> Shine together.</h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto text-lg">Focus on actions, not features. Here is how you get it done.</p>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Urganize is built with real<br className="md:hidden"/> artist teams in mind.</h2>
+            <p className="text-neutral-400 max-w-2xl mx-auto text-lg mb-8">
+              It’s designed for:
+            </p>
+
+            <ul className="max-w-2xl mx-auto space-y-3 text-neutral-300 text-lg mb-6">
+              <li>Independent artists managing themselves</li>
+              <li>Artist managers</li>
+              <li>Management teams</li>
+              <li>Creatives working with artists</li>
+            </ul>
+
+            <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+              If you work around an artist’s career, Urganize is for you.
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {/* Card 1 */}
-            <div className="group p-10 bg-neutral-900/30 border border-white/5 rounded-3xl hover:bg-neutral-900/50 hover:border-emerald-500/30 transition-all duration-500">
-              <div className="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Track Tasks</h3>
-              <p className="text-neutral-400 leading-relaxed text-lg">Stay on track. Everyone knows what to do, so nothing gets forgotten before release day.</p>
-            </div>
 
-            {/* Card 2 */}
-            <div className="group p-10 bg-neutral-900/30 border border-white/5 rounded-3xl hover:bg-neutral-900/50 hover:border-blue-500/30 transition-all duration-500">
-              <div className="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Share Files</h3>
-              <p className="text-neutral-400 leading-relaxed text-lg">Share easily. Keep all files, demos, and contracts in one secure place.</p>
-            </div>
+        {/* --- FOUNDER CREDIBILITY SECTION --- */}
+        <section className="w-full py-32 px-6 md:px-16 bg-neutral-900/10 border-y border-white/5">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-start gap-16 md:gap-24">
+              
+              {/* Text */}
+              <div className="flex-1">
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                  Built by someone who <br />
+                  <span className="text-neutral-500">understands the chaos.</span>
+                </h2>
 
-            {/* Card 3 */}
-            <div className="group p-10 bg-neutral-900/30 border border-white/5 rounded-3xl hover:bg-neutral-900/50 hover:border-purple-500/30 transition-all duration-500">
-              <div className="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                <div className="space-y-6 max-w-xl">
+                  <p className="text-lg text-white font-medium">
+                    I’m Lucky, the founder of Urganize.
+                  </p>
+
+                  <p className="text-neutral-400 leading-relaxed text-lg">
+                    I’ve worked with artists, managed artist workflows, and experienced
+                    firsthand how messy and inefficient current tools are.
+                  </p>
+
+                  <p className="text-neutral-400 leading-relaxed text-lg">
+                    Urganize exists to fix that.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Make Music</h3>
-              <p className="text-neutral-400 leading-relaxed text-lg">Do your best work. Spend your time creating, not searching for that lost email.</p>
+
+              {/* Visual / Identity Block */}
+              <div className="flex-1 w-full">
+                <div className="relative p-8 rounded-3xl bg-black border border-white/10">
+                  
+                  {/* Accent Glow */}
+                  <div className="absolute -top-10 -left-10 w-40 h-40 bg-emerald-500/20 blur-[80px] rounded-full pointer-events-none" />
+
+                  <div className="relative space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl">
+                        L
+                      </div>
+                      <div>
+                        <div className="text-white font-bold">Lucky</div>
+                        <div className="text-xs text-neutral-500 uppercase tracking-widest">
+                          Founder, Urganize
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-sm text-neutral-500 leading-relaxed">
+                      Built from real experience working with artist teams — not theory,
+                      not spreadsheets, not guesswork.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
+          
+        
+
+        {/* --- WHY NOW / INVESTOR SIGNAL SECTION --- */}
+        <section className="w-full py-32 px-6 md:px-16 bg-black border-y border-white/5">
+          <div className="max-w-4xl mx-auto text-center">
+            
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+              Why now
+            </h2>
+
+            <div className="space-y-6 max-w-3xl mx-auto">
+              <p className="text-xl text-white font-medium">
+                Music is a business.
+              </p>
+
+              <p className="text-neutral-400 text-lg leading-relaxed">
+                And every serious business needs proper operations.
+              </p>
+
+              <p className="text-neutral-400 text-lg leading-relaxed">
+                Artist teams are growing, releases are more frequent, and expectations
+                are higher — but the tools powering artist operations haven’t evolved.
+              </p>
+
+              <p className="text-emerald-400 text-lg font-medium">
+                Urganize is building the system artist teams have been missing.
+              </p>
+            </div>
+
+          </div>
+        </section>
 
         {/* --- HOW IT WORKS --- */}
         <section className="w-full py-32 bg-[#080808]">
