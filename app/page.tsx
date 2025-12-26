@@ -258,13 +258,14 @@ export default function Home() {
         <section className="py-40 bg-white text-black relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#050505] to-transparent" />
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.h2 {...fadeInUp} className="text-6xl md:text-8xl font-black tracking-tighter mb-12">Why now</motion.h2>
-            <div className="space-y-8">
+            <motion.h2 {...fadeInUp} className="text-6xl md:text-8xl font-black tracking-tighter mb-12">Music is a business.</motion.h2>
+            <motion.h2 {...fadeInUp} className="text-6xl md:text-8xl font-black tracking-tighter mb-12">Urganize is building the system artist teams have been missing.</motion.h2>
+            {/* <div className="space-y-8">
               <p className="text-4xl md:text-5xl font-bold">Music is a business.</p>
               <p className="text-emerald-600 text-black text-2xl font-medium max-w-2xl mx-auto">
                 Urganize is building the system artist teams have been missing.
               </p>
-            </div>
+            </div> */}
           </div>
         </section>
 
