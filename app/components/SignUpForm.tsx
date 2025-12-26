@@ -31,7 +31,7 @@ export default function SignUpForm() {
         return;
       }
 
-      setMessage("Welcome aboard! We'll notify your email for next steps when your spot is ready.");
+      setMessage("Welcome aboard! We'll notify your email when your spot is ready.");
       setName("");
       setEmail("");
     } catch (err) {
@@ -125,11 +125,11 @@ export default function SignUpForm() {
           )}
         </button>
         {/* Divider */}
-        <div className="mt-8 pt-4 border-t border-neutral-800">
+{/*         <div className="mt-8 pt-4 border-t border-neutral-800">
           <p className="text-center text-[10px] text-neutral-600 font-bold tracking-widest uppercase">
             No credit card required.
           </p>
-        </div>
+        </div> */}
       </div>
     </form>
   );

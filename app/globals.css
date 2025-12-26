@@ -77,8 +77,9 @@ h3 {
 p {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(241, 245, 249, 0.85);
+  color: inherit; 
   margin-bottom: var(--space-6);
+  opacity: 0.9;
 }
 
 /* Smooth transitions */
