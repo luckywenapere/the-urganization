@@ -155,7 +155,9 @@ export default function FAQ() {
             </p>
           </div>
         </div> */}
-        {/* Sign Up CTA */}
+        
+      </div>
+      {/* Sign Up CTA */}
         <div className="text-center mt-6">
           <a
             href="#early-access"
@@ -182,7 +184,6 @@ export default function FAQ() {
             Sign me up!
           </a>
         </div>
-      </div>
     </section>
   );
 }
