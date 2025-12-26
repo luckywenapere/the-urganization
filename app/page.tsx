@@ -218,40 +218,9 @@ export default function Home() {
               </div>
 
               {/* Visual Side: Comparison */}
-              <div className="flex-1 w-full space-y-8">
-                {/* The "Mess" Card */}
-                <div className="p-8 rounded-2xl bg-[#0F0F0F] border border-white/5 grayscale opacity-70 hover:opacity-100 transition-opacity">
-                   <div className="flex items-center gap-3 mb-4 text-neutral-500">
-                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                      <span className="font-bold tracking-widest text-xs uppercase">The Chaos</span>
-                   </div>
-                   <div className="space-y-3">
-                      <div className="p-4 bg-black rounded border border-white/5 text-sm text-neutral-500">"Where is the latest mix?"</div>
-                      <div className="p-4 bg-black rounded border border-white/5 text-sm text-neutral-500">"Link expired..."</div>
-                      <div className="p-4 bg-black rounded border border-white/5 text-sm text-neutral-500">"Did you send the artwork?"</div>
-                   </div>
-                </div>
-
-                {/* The "Solution" Card */}
-                <div className="relative p-1 bg-gradient-to-b from-emerald-500/50 to-emerald-900/10 rounded-2xl">
-                   <div className="p-8 rounded-xl bg-[#0A0A0A] h-full">
-                      <div className="flex items-center gap-3 mb-6 text-emerald-400">
-                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                          <span className="font-bold tracking-widest text-xs uppercase">The Clarity</span>
-                      </div>
-                      <div className="space-y-4">
-                         <div className="flex items-center gap-4 p-4 bg-emerald-500/5 border border-emerald-500/10 rounded-lg">
-                            <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
-                            <span className="text-white font-medium">Master_vFinal.wav</span>
-                         </div>
-                         <div className="flex items-center gap-4 p-4 bg-emerald-500/5 border border-emerald-500/10 rounded-lg">
-                            <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</div>
-                            <span className="text-white font-medium">Artwork Approved</span>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-              </div>
+              {/* <div className="flex-1 w-full space-y-8">
+                
+              </div> */}
 
             </div>
           </div>
