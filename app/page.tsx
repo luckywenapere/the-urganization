@@ -43,11 +43,23 @@ export default function Home() {
   <div className={`flex items-center justify-between px-6 py-3 rounded-full border border-white/10 backdrop-blur-2xl transition-all duration-500 ${
     scrolled ? "bg-black/80 shadow-[0_8px_32px_rgba(0,0,0,0.8)]" : "bg-white/5"
   }`}>
-    <button
+        <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="text-xl font-bold tracking-tighter hover:text-emerald-400 transition-colors"
+      className="relative group flex items-center transition-all active:scale-95"
+      aria-label="Urganize Home"
     >
-      Urganize
+      {/* The Logo Image */}
+      <Image 
+        src="/images/urganize-logo.png"
+        alt="Urganize Logo" 
+        width={140}    // Adjust width to fit your logo's aspect ratio
+        height={40}    // Adjust height to fit your logo's aspect ratio
+        className="h-8 w-auto object-contain transition-all duration-300 group-hover:brightness-125 group-hover:drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+        priority       // Ensures the logo loads immediately
+      />
+
+      {/* Ambient Vibrant Glow (Visible on hover) */}
+      <div className="absolute inset-0 bg-emerald-500/15 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
     </button>
 
     {/* Desktop Links */}
