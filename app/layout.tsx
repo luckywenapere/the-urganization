@@ -67,10 +67,9 @@ export const metadata: Metadata = {
     'artist workflow management',
     'organize music releases',
     'tools for independent artists teams',
-
-manage music collaborations
+    'manage music collaborations',
   ],
-};'
+};
 
 export default function RootLayout({
   children,
