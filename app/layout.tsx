@@ -19,20 +19,20 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Urganize | Focus. Finish. Release.',
+    default: 'Urganize | Music Project Management Software for Artist Teams',
     template: '%s - Urganize',
   },
   description:
-    'A workspace for artist teams to turn ideas into real music and projects. Plan releases, stay organized, and focus on creating your best work.',
+    'Urganize is music project management software built for artist teams to manage releases, tasks, files, and workflows in one place.',
   verification: {
     google: '',
   },
 
   metadataBase: new URL('https://urganize.app'),
   openGraph: {
-    title: 'Focus on making the best music with Urganize',
+    title: 'Join Urganize – Workflow Software for Music Teams',
     description:
-      'A workspace for artist teams to turn ideas into real music and projects. Plan releases, stay organized, and focus on creating your best work.',
+      'Get early access to Urganize, the workflow and project management software built specifically for music teams and artist operations.',
     url: 'https://urganize.app',
     siteName: 'Urganize',
     locale: 'en_US',
@@ -61,8 +61,16 @@ export const metadata: Metadata = {
     'Music Project Tracking',
     'Collaboration for Musicians',
     'Music Industry Tools',
+    'project management for musicians',
+    'music team workflow software',
+    'music release planning tool',
+    'artist workflow management',
+    'organize music releases',
+    'tools for independent artists teams',
+
+manage music collaborations
   ],
-};
+};'
 
 export default function RootLayout({
   children,
