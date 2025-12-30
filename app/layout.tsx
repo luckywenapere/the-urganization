@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     template: '%s - Urganize',
   },
   description:
-    'Urganize is music project management software built for artist teams to manage releases, tasks, files, and workflows in one place.',
+    'Urganize: Music project management software for artist teams. Plan releases, track tasks & collaborate efficiently.',
   verification: {
     google: '',
   },
