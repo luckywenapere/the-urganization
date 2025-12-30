@@ -1,0 +1,33 @@
+# Urganize - robots.txt
+User-agent: *
+Allow: /
+
+# Block AI crawlers (prevents training on your content)
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: FacebookBot
+Disallow: /
+
+# Block internal/admin paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /app/  # If there is an app subdirectory
+
+# Block Next.js internals
+Disallow: /_next/static/
+Disallow: /_next/data/
+
+# Block query parameters (clean URLs)
+Disallow: /*?*
+Allow: /*?page=  # Allow pagination
+
+# Sitemaps
+Sitemap: https://urganize.app/sitemap.xml
+
+# Crawl delay to be nice to your server
+Crawl-delay: 1
