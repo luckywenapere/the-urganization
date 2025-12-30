@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Urganize – Workflow Software for Music Teams',
     description:
-      'Get early access to Urganize, the workflow and project management software built specifically for music teams and artist operations.',
+      'Get early access to Urganize, the workflow and project management software built specifically for music teams and artist operations. Get Urganized Now.',
     url: 'https://urganize.app',
     siteName: 'Urganize',
     locale: 'en_US',
