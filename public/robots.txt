@@ -4,51 +4,6 @@
 # Allow all crawlers for main site
 User-agent: *
 Allow: /
-Crawl-delay: 1
-
-# Block specific paths
-Disallow: /api/
-Disallow: /admin/
-Disallow: /dashboard/
-Disallow: /private/
-Disallow: /_next/static/
-Disallow: /_next/data/
-Disallow: /test/
-Disallow: /staging/
-
-# Block query parameters except specific ones
-Disallow: /*?*
-Allow: /*?page=
-Allow: /*?sort=
-
-# Block AI/LLM crawlers
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-# Block SEO/scraping tools (optional)
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
 
 # Sitemap location
 Sitemap: https://urganize.app/sitemap.xml
