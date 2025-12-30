@@ -2,6 +2,8 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://urganize.app/sitemap.xml
+
 # Block AI crawlers (prevents training on your content)
 User-agent: GPTBot
 Disallow: /
