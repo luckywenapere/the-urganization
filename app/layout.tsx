@@ -52,7 +52,7 @@ const websiteSchema = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Urganize | Music Project Management Software for Artist Teams',
+    default: 'Urganize: Manage Music Projects & Releases for Artists',
     template: '%s - Urganize',
   },
   description:

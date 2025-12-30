@@ -1,8 +1,7 @@
 # Urganize - robots.txt
 User-agent: *
 Allow: /
-
-Sitemap: https://urganize.app/sitemap.xml
+Disallow: /
 
 # Block AI crawlers (prevents training on your content)
 User-agent: GPTBot
