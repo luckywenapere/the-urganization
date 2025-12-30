@@ -126,6 +126,9 @@ export default function RootLayout({
           `,
         }} />
 
+        {/* Manual canonical tag - always include this */}
+        <link rel="canonical" href="https://urganize.app" />
+
         {/* START Formbricks Surveys */}
         {/* <script
           type="text/javascript"
