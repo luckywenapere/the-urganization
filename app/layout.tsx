@@ -4,7 +4,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import FormbricksProvider from "./formbricks-provider";
 
-// Premium typography
+// Typography
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
@@ -16,6 +16,39 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
+// JSON-LD Schema Data
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Urganize",
+  "url": "https://urganize.app",
+  "logo": "https://urganize.app/images/urganize-logo.png",
+  "description": "Music project management software built for artist teams to manage releases, tasks, files, and workflows in one place.",
+  "sameAs": [
+    "https://x.com/urganize",
+    "https://linkedin.com/company/urganize",
+    "https://instagram.com/urganize"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "theurganization@gmail.com", // Change to actual contact email
+    "contactType": "Customer Support"
+  }
+} as const;
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Urganize",
+  "url": "https://urganize.app",
+  "description": "Workflow and project management software built specifically for music teams and artist operations.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://urganize.app/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+} as const;
 
 export const metadata: Metadata = {
   title: {
