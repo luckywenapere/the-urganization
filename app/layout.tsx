@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 
   metadataBase: new URL('https://urganize.app'),
   openGraph: {
-    title: 'Join Urganize – Workflow Software for Music Teams',
+    title: 'Urganize – Workflow Software for Music Teams',
     description:
       'Get early access to Urganize, the workflow and project management software built specifically for music teams and artist operations.',
     url: 'https://urganize.app',
@@ -128,6 +128,23 @@ export default function RootLayout({
 
         {/* Manual canonical tag - always include this */}
         <link rel="canonical" href="https://urganize.app" />
+
+        {/* JSON-LD STRUCTURED DATA */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          key="organization-schema"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          key="website-schema"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
+          key="homepage-schema"
+        />
 
         {/* START Formbricks Surveys */}
         {/* <script
