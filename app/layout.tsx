@@ -50,6 +50,25 @@ const websiteSchema = {
   }
 } as const;
 
+const homepageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Urganize: Manage Music Projects & Releases for Artists",
+  "description": "Music project management software built for artist teams to manage releases, tasks, files, and workflows in one place.",
+  "url": "https://urganize.app",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://urganize.app"
+      }
+    ]
+  }
+} as const;
+
 export const metadata: Metadata = {
   title: {
     default: 'Urganize: Manage Music Projects & Releases for Artists',
