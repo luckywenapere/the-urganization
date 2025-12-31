@@ -65,6 +65,9 @@ export default function Home() {
 
     {/* Desktop Links */}
     <div className="hidden md:flex items-center gap-8">
+      <Link href="/features" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">
+        Features
+      </Link>
       <Link href="mailto:theurganization@gmail.com" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">
         Request Meeting
       </Link>
@@ -100,6 +103,13 @@ export default function Home() {
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         className="absolute top-full left-0 w-full mt-4 p-8 rounded-[2.5rem] bg-black/90 border border-white/10 backdrop-blur-3xl md:hidden flex flex-col items-center gap-8 shadow-2xl"
       >
+        <Link 
+          href="/features" 
+          onClick={() => setIsMenuOpen(false)}
+          className="text-2xl font-semibold text-neutral-400 hover:text-white transition-colors"
+        >
+          Features
+        </Link>
         <Link 
           href="mailto:theurganization@gmail.com" 
           onClick={() => setIsMenuOpen(false)}
