@@ -166,7 +166,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-2xl text-neutral-400 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Urganize is the operating system for music teams. One place for your releases, timelines, files, and promotion—structured so nothing falls through the cracks.
+              Urganize is the operating system for music teams. One place for your releases, timelines, files, and promotion. Structured so nothing falls through the cracks.
             </motion.p>
 
             <motion.div 
@@ -230,7 +230,7 @@ export default function Home() {
             <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
               <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
                 <h3 className="text-2xl font-bold mb-4">Promotion Built In</h3>
-                <p className="text-neutral-400">Stop winging it. Promotion tasks surface immediately—content planning, shoot scheduling, rollout timelines—so you're never scrambling.</p>
+                <p className="text-neutral-400">Stop winging it. Promotion tasks surface immediately. Content planning, shoot scheduling and rollout timelines so you're never scrambling.</p>
               </div>
             </motion.div>
 
@@ -285,7 +285,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
               <h3 className="text-3xl font-bold mb-4">Artist Managers</h3>
-              <p className="text-neutral-400 text-lg leading-relaxed">You're responsible when things go wrong. Urganize gives you structure, visibility, and control—so releases don't fall apart.</p>
+              <p className="text-neutral-400 text-lg leading-relaxed">You're responsible when things go wrong. Urganize gives you structure, visibility, and control so releases don't fall apart.</p>
             </motion.div>
 
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
