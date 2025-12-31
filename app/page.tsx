@@ -53,10 +53,10 @@ export default function Home() {
       <Image 
         src="/images/urganize-logo.png"
         alt="Urganize Logo" 
-        width={140}    // Adjust width to fit your logo's aspect ratio
-        height={40}    // Adjust height to fit your logo's aspect ratio
+        width={140}
+        height={40}
         className="h-8 w-auto object-contain transition-all duration-300 group-hover:brightness-125 group-hover:drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]"
-        priority       // Ensures the logo loads immediately
+        priority
       />
 
       {/* Ambient Vibrant Glow (Visible on hover) */}
@@ -72,7 +72,7 @@ export default function Home() {
         href="#early-access"
         className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
       >
-        Get Early Access
+        Join the Waitlist
       </Link>
     </div>
 
@@ -112,7 +112,7 @@ export default function Home() {
           onClick={() => setIsMenuOpen(false)}
           className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
         >
-          Get Early Access
+          Join the Waitlist
         </Link>
         
         {/* Subtle Socials in Menu */}
@@ -148,124 +148,165 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8"
             >
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
-              New for Music Teams
+              Launching January 28, 2026
             </motion.div>
             
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-[calc(-0.04em)] leading-[0.9] mb-8"
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-8 leading-[0.9]"
             >
-              Run your artist career <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-emerald-300 to-emerald-600">
-                from one place.
-              </span>
+              Stop losing releases to chaos.
             </motion.h1>
 
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+              className="text-lg md:text-2xl text-neutral-400 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Urganize is the all-in-one hub that helps artists and their teams stay urganized, aligned, and on track.
+              Urganize is the operating system for music teams. One place for your releases, timelines, files, and promotion—structured so nothing falls through the cracks.
             </motion.p>
 
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
               <Link
                 href="#early-access"
-                className="group relative inline-flex items-center justify-center px-12 py-5 bg-white text-black text-lg font-bold rounded-full hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                Get Early Access
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                Join the Waitlist
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
+              <p className="text-xs text-neutral-600 mt-6 uppercase tracking-widest">Built for managers and independent artists</p>
             </motion.div>
           </div>
         </section>
 
-        {/* --- PROBLEM/SOLUTION BENTO GRID --- */}
-        <section className="py-32 px-6 max-w-6xl mx-auto">
-          <motion.div {...fadeInUp} className="mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Talent isn’t the issue. Lack of structure is.</h2>
-            {/* <p className="text-neutral-500 text-lg">Talent isn’t the issue. Lack of structure is.</p> */}
+        {/* --- PROBLEM SECTION --- */}
+        <section className="py-32 px-6">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-24">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Music creation is easy. Managing releases is chaos.</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5 flex flex-col justify-between min-h-[300px]">
-              <div className="text-neutral-500 font-mono text-xs uppercase tracking-widest mb-4">The Old Way</div>
-              <h3 className="text-2xl font-semibold">WhatsApp for conversations & random notes.</h3>
-              <p className="text-neutral-500 text-sm">Communication is buried in group chats and personal DMs.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
+              <h3 className="text-2xl font-bold mb-4">Promotion falls apart</h3>
+              <p className="text-neutral-400">Content plans made last-minute. Timelines ignored. Releases announced with no momentum.</p>
             </motion.div>
 
-            <motion.div {...fadeInUp} className="md:col-span-2 p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10 group overflow-hidden">
-              <div className="bg-black/80 rounded-[1.9rem] h-full p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] group-hover:bg-emerald-500/20 transition-all" />
-                <div className="relative z-10 flex flex-col h-full justify-between">
-                  <div>
-                    <div className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-4">The Urganized Way</div>
-                    <h3 className="text-4xl font-bold mb-6">One system for the <br /><span className="text-emerald-400">entire artist operation.</span></h3>
-                    <ul className="grid grid-cols-2 gap-4 text-neutral-300">
-                      <li className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Tasks & Responsibilities</li>
-                      <li className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Files & Assets</li>
-                      <li className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Timelines & Releases</li>
-                      <li className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Team Comms</li>
-                    </ul>
-                  </div>
-                </div>
+            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
+              <h3 className="text-2xl font-bold mb-4">Files are everywhere</h3>
+              <p className="text-neutral-400">Stems in email. Artwork in DMs. Contracts in Google Drive. Nothing connected to the actual release.</p>
+            </motion.div>
+
+            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
+              <h3 className="text-2xl font-bold mb-4">Tasks live in your head</h3>
+              <p className="text-neutral-400">WhatsApp reminders. Excel checklists. Constant mental load of "what did we forget?"</p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* --- SOLUTION SECTION --- */}
+        <section className="py-32 px-6 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Everything a release needs. Nothing it doesn't.</h2>
+            <p className="text-xl text-neutral-400">Urganize doesn't ask what you want to do. It shows you what needs to happen next.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
+              <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
+                <h3 className="text-2xl font-bold mb-4">Release Command Center</h3>
+                <p className="text-neutral-400">Every release gets automatic structure: pre-defined tasks, organized folders, and clear phases from creation to promotion.</p>
+              </div>
+            </motion.div>
+
+            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
+              <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
+                <h3 className="text-2xl font-bold mb-4">Promotion Built In</h3>
+                <p className="text-neutral-400">Stop winging it. Promotion tasks surface immediately—content planning, shoot scheduling, rollout timelines—so you're never scrambling.</p>
+              </div>
+            </motion.div>
+
+            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
+              <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
+                <h3 className="text-2xl font-bold mb-4">Timeline Enforcement</h3>
+                <p className="text-neutral-400">The system prompts you when dates are missing. No more "we'll figure it out later" that turns into last-minute panic.</p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* --- FOUNDER IDENTITY SECTION (FIXED) --- */}
+        {/* --- HOW IT WORKS SECTION --- */}
         <section className="py-32 px-6">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <motion.div {...fadeInUp} className="flex-1">
-              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-tight">
-                Built by someone who <br />
-                <span className="text-neutral-600">understands the chaos.</span>
-              </h2>
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">From chaos to clarity in minutes.</h2>
+          </motion.div>
+
+          <div className="max-w-5xl mx-auto space-y-12">
+            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">1</div>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-3">Create a release</h3>
+                <p className="text-neutral-400 text-lg">Name it, set the date. The system does the rest.</p>
+              </div>
             </motion.div>
 
-            <motion.div {...fadeInUp} className="flex-1 w-full max-w-md">
-              <div className="relative p-10 rounded-[2.5rem] bg-gradient-to-b from-neutral-800 to-neutral-950 border border-white/10 shadow-2xl group overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="flex items-center gap-5 mb-8">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl shadow-[0_0_20px_rgba(16,185,129,0.4)]">
-                    L
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold">Lucky W.</h4>
-                    <p className="text-xs text-neutral-500 uppercase tracking-[0.2em]">Creator, Urganize</p>
-                  </div>
-                </div>
-                <p className="text-neutral-400 leading-relaxed">
-                  Built from real experience working with artist teams. Not theory, not spreadsheets, not guesswork.
-                </p>
+            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">2</div>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-3">See what's next</h3>
+                <p className="text-neutral-400 text-lg">Tasks, folders, and timelines auto-populate. No blank pages. No guessing.</p>
               </div>
+            </motion.div>
+
+            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">3</div>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold mb-3">Execute with confidence</h3>
+                <p className="text-neutral-400 text-lg">Upload files, assign tasks, track progress. Everything tied to the release.</p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* --- WHO THIS IS FOR SECTION --- */}
+        <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Built for the people who make releases happen.</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
+              <h3 className="text-3xl font-bold mb-4">Artist Managers</h3>
+              <p className="text-neutral-400 text-lg leading-relaxed">You're responsible when things go wrong. Urganize gives you structure, visibility, and control—so releases don't fall apart.</p>
+            </motion.div>
+
+            <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
+              <h3 className="text-3xl font-bold mb-4">Independent Artists</h3>
+              <p className="text-neutral-400 text-lg leading-relaxed">Doing everything yourself? Same chaos, no support. Urganize gives you the same system managers use, adapted for one.</p>
             </motion.div>
           </div>
         </section>
 
         {/* --- WHY NOW SECTION --- */}
-        <section className="py-40 bg-white text-black relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#050505] to-transparent" />
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.h2 {...fadeInUp} className="text-6xl md:text-8xl font-black tracking-tighter mb-12">Music is a business.</motion.h2>
-            <motion.h2 {...fadeInUp} className="text-6xl md:text-8xl font-black tracking-tighter mb-12">Urganize is building the system artist teams have been missing.</motion.h2>
-            {/* <div className="space-y-8">
-              <p className="text-4xl md:text-5xl font-bold">Music is a business.</p>
-              <p className="text-emerald-600 text-black text-2xl font-medium max-w-2xl mx-auto">
-                Urganize is building the system artist teams have been missing.
+        <section className="py-32 px-6">
+          <div className="max-w-4xl mx-auto">
+            <motion.div {...fadeInUp} className="text-center mb-16">
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8">Built from real conversations, not assumptions.</h2>
+              <p className="text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+                We interviewed artist managers who've shipped hundreds of releases. The pattern was clear: the industry scaled music creation, but operations stayed chaotic. Generic tools are too flexible. Music tools have terrible UX.
               </p>
-            </div> */}
+            </motion.div>
+            <motion.div {...fadeInUp} className="text-center">
+              <p className="text-2xl font-bold text-emerald-400">Urganize fixes both.</p>
+            </motion.div>
           </div>
         </section>
 
@@ -277,8 +318,8 @@ export default function Home() {
           
           <div className="relative z-10 max-w-xl mx-auto">
             <motion.div {...fadeInUp} className="text-center mb-12">
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Secure your spot.</h2>
-              <p className="text-neutral-400">Join early to help shape Urganize for artist teams.</p>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Join managers and artists who refuse to lose releases to chaos.</h2>
+              <p className="text-neutral-400">Urganize launches January 28, 2026. Get early access.</p>
             </motion.div>
 
             <motion.div 
@@ -292,7 +333,7 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
                 <p className="text-[10px] text-neutral-500 uppercase tracking-[0.3em] font-bold">
-                  Limited slots available for Beta
+                  No spam. Just launch updates and early access.
                 </p>
               </div>
             </motion.div>
@@ -335,9 +376,7 @@ export default function Home() {
               </div>
               
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
-                <span className="text-emerald-400/50">Private by default</span>
-                <span className="text-emerald-400/50">Built for music teams</span>
-                <span className="text-emerald-400/50">Made for creatives</span>
+                <span className="text-emerald-400/50">Where music careers stop being chaotic</span>
               </div>
 
               <p className="text-neutral-700 text-sm">
