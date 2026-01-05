@@ -141,7 +141,7 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center justify-center pt-20">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/hero-image.png"
+              src="/images/hero-image.webp"
               alt="Creative team"
               fill
               className="object-cover opacity-40 grayscale-[20%]"
