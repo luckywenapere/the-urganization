@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     // 4️⃣ Send to MailerLite (NON-BLOCKING)
     try {
       const mailerLiteResponse = await fetch(
-        "https://connect.mailerlite.com/api/subscribers/${encodeURIComponent(email)}`, 
+        `https://connect.mailerlite.com/api/subscribers/${encodeURIComponent(email)}`, 
 		{
 		  method: "PUT",
           headers: {
