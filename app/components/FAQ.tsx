@@ -23,7 +23,7 @@ const FAQ_DATA: FAQItem[] = [
 
   {
     id: 3,
-    question: "Is Urganize a Distributor?",
+    question: "Is Urganize a distributor?",
     answer: "No. Urganize is not a music distributor. We don't upload your music to streaming platforms like Spotify, Apple Music, or YouTube Music.\n\nUrganize is a release management operating system. We help you organize everything that needs to happen before and around your release. Think of us as the command center that ensures your release actually succeeds once it hits the platforms.\n\nYou'll still use your preferred distributor (DistroKid, TuneCore, CD Baby, etc.) to get your music live. Urganize makes sure you don't show up to release day with missing artwork, forgotten promo tasks, or a chaotic timeline."
   },
   {
