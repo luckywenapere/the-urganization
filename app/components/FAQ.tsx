@@ -20,11 +20,7 @@ const FAQ_DATA: FAQItem[] = [
     question: "Who is Urganize for?",
     answer: "Urganize is perfect for independent artists, producers, managers, and their teams. Whether you're a solo artist handling everything yourself or have a team of 5+ people (producers, PR, photographers, etc.), Urganize helps keep everyone aligned and focused on the creative process."
   },
-  {/* {
-    id: 3,
-    question: "Can I try Urganize?",
-    answer: "Yes! We're offering early access to a limited number of teams. You can sign up for early access above, and we'll notify you when your spot is ready. Early access users will get free usage during our beta period and priority support."
-  },*/}
+
   {
     id: 3,
     question: "Is Urganize a Distributor?",
