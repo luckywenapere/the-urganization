@@ -28,7 +28,7 @@ const FAQ_DATA: FAQItem[] = [
   },
   {
     id: 4,
-    question: "Is Urganize in Beta?",
+    question: "Is The App in its Beta Stage?",
     answer: "Yes. We're currently in beta, launching January 28th, 2026.\n\nDuring beta, you'll get early access to the core platform — release creation, task frameworks, timeline enforcement, and file organization. We're actively building alongside our first users, which means your feedback directly shapes what we ship next.\n\nBeta is free to join. If you want in, hop on the waitlist and we'll get you set up."
   },
   {
