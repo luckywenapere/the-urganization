@@ -31,7 +31,7 @@ export async function POST(req: Request) {
        2. Save to Neon via Prisma
        (Neon is source of truth)
     ----------------------------------------- */
-    await prisma.waitlist.upsert({
+    await prisma.waitlistSignup.upsert({
       where: { email },
       update: {}, // no-op if already exists
       create: {
