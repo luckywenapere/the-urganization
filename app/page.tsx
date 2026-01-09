@@ -350,7 +350,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-{/*
+
         <section className="py-32 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
@@ -358,7 +358,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-*/}
+
         <FAQ />
 
         {/* --- FOOTER --- */}
