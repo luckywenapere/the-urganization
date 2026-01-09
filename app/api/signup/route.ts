@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
     // 1. Save to Neon (idempotent)
     await sql`
-      INSERT INTO "WaitlistSignup" (email, name)
+      INSERT INTO "User" (email, name)
       VALUES (${email}, ${name})
       ON CONFLICT (email) DO NOTHING;
     `;
