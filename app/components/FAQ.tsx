@@ -28,16 +28,12 @@ const FAQ_DATA: FAQItem[] = [
   {
     id: 3,
     question: "Is Urganize a Distributor?",
-    answer: "No. Urganize is not a music distributor. We don't upload your music to streaming platforms like Spotify, Apple Music, or YouTube Music.
-	Urganize is a release management operating system, we help you urganize everything that needs to happen before and around your release. Think of us as the command center that ensures your release actually succeeds once it hits the platforms.
-	You'll still use your preferred distributor (DistroKid, TuneCore, CD Baby, etc.) to get your music live. Urganize makes sure you don't show up to release day with missing artwork, forgotten promo tasks, or a chaotic timeline."
+    answer: "No. Urganize is not a music distributor. We don't upload your music to streaming platforms like Spotify, Apple Music, or YouTube Music.\n\nUrganize is a release management operating system. We help you organize everything that needs to happen before and around your release. Think of us as the command center that ensures your release actually succeeds once it hits the platforms.\n\nYou'll still use your preferred distributor (DistroKid, TuneCore, CD Baby, etc.) to get your music live. Urganize makes sure you don't show up to release day with missing artwork, forgotten promo tasks, or a chaotic timeline."
   },
   {
     id: 4,
     question: "Is Urganize in Beta?",
-    answer: "Yes. We're currently in beta, launching January 28th, 2026.
-	During beta, you'll get early access to the core platform, release creation, task frameworks, timeline enforcement, and file organization. We're actively building alongside our first users, which means your feedback directly shapes what we ship next.
-	Beta is free to join. If you want in, hop on the waitlist and we'll get you set up."
+    answer: "Yes. We're currently in beta, launching January 28th, 2026.\n\nDuring beta, you'll get early access to the core platform — release creation, task frameworks, timeline enforcement, and file organization. We're actively building alongside our first users, which means your feedback directly shapes what we ship next.\n\nBeta is free to join. If you want in, hop on the waitlist and we'll get you set up."
   },
   {
     id: 5,
