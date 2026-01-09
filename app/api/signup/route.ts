@@ -1,79 +1,83 @@
-import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import { z } from "zod";
 
-export async function POST(request: NextRequest) {
+/* ----------------------------------------
+   Input validation schema
+----------------------------------------- */
+const signupSchema = z.object({
+  email: z.string().email(),
+  name: z.string().min(1).optional(),
+});
+
+export async function POST(req: Request) {
   try {
-    const { email, name } = await request.json();
+    /* ----------------------------------------
+       1. Parse & validate input
+    ----------------------------------------- */
+    const body = await req.json();
+    const parsed = signupSchema.safeParse(body);
 
-    // 1️⃣ Validate input
-    if (!email || !name) {
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "Email and name are required" },
+        { error: "Invalid input" },
         { status: 400 }
       );
     }
 
-    // 2️⃣ Check if user already exists
-    const existingUser = await prisma.user.findUnique({
+    const { email, name } = parsed.data;
+
+    /* ----------------------------------------
+       2. Save to Neon via Prisma
+       (Neon is source of truth)
+    ----------------------------------------- */
+    await prisma.waitlist.upsert({
       where: { email },
-    });
-
-    if (existingUser) {
-      return NextResponse.json(
-        { error: "Email already registered" },
-        { status: 400 }
-      );
-    }
-
-    // 3️⃣ Create new user in DB
-    const user = await prisma.user.create({
-      data: {
+      update: {}, // no-op if already exists
+      create: {
         email,
         name,
       },
     });
 
-    // 4️⃣ Send to MailerLite (NON-BLOCKING)
+    /* ----------------------------------------
+       3. Sync to MailerLite (non-blocking)
+    ----------------------------------------- */
     try {
-      const mailerLiteResponse = await fetch(
-        `https://connect.mailerlite.com/api/subscribers/${encodeURIComponent(email)}`, 
-		{
-		  method: "PUT",
+      const res = await fetch(
+        "https://connect.mailerlite.com/api/subscribers",
+        {
+          method: "POST",
           headers: {
-            "Content-Type": "application/json",
             Authorization: `Bearer ${process.env.MAILERLITE_API_KEY}`,
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             email,
-            fields: {
-              name,
-            },
+            fields: { name },
             groups: [process.env.MAILERLITE_GROUP_ID],
           }),
         }
       );
 
-      if (!mailerLiteResponse.ok) {
-        const errText = await mailerLiteResponse.text();
-        console.error("MailerLite error:", errText);
-        // DO NOT throw — we don't want to block signup
+      if (!res.ok) {
+        const error = await res.text();
+        console.error("MailerLite error:", error);
       }
-    } catch (mailerLiteError) {
-      console.error("MailerLite request failed:", mailerLiteError);
-      // Still don't block signup
+    } catch (err) {
+      // Never block signup because of MailerLite
+      console.error("MailerLite request failed:", err);
     }
 
-    // 5️⃣ Return success
-    return NextResponse.json(
-      { message: "User created successfully", user },
-      { status: 201 }
-    );
-  } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error("Error creating user:", errorMessage);
+    /* ----------------------------------------
+       4. Success response
+    ----------------------------------------- */
+    return NextResponse.json({ success: true });
 
+  } catch (err) {
+    console.error("Signup route error:", err);
     return NextResponse.json(
-      { error: `Server error: ${errorMessage}` },
+      { error: "Something went wrong" },
       { status: 500 }
     );
   }

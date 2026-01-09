@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiTwitterXFill, RiInstagramLine, RiLinkedinBoxFill } from "react-icons/ri";
+import { FoundingCouncilSection } from './components/FoundingCouncilSection';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -346,6 +347,14 @@ export default function Home() {
                   No spam. Just launch updates and early access.
                 </p>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-32 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
+              <FoundingCouncilSection />
             </motion.div>
           </div>
         </section>
