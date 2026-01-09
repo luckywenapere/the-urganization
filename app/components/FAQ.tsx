@@ -12,7 +12,7 @@ interface FAQItem {
 const FAQ_DATA: FAQItem[] = [
   {
     id: 1,
-    question: "How is Urganize different from other project management tools?",
+    question: "How is Urganize different from other tools?",
     answer: "Urganize is made just for music teams. Most apps are built for any kind of work, but we created ours specifically for releasing music. We understand all the special things music makers have to do. From early recordings to the finished song, choosing artwork, planning announcements, and getting music on streaming apps. Everything in Urganize works the way music teams actually work."
   },
   {
