@@ -82,9 +82,9 @@ export const metadata: Metadata = {
 
   metadataBase: new URL('https://urganize.app'),
   openGraph: {
-    title: 'Know What To Do At Every Step of Your Release | Urganize',
+    title: 'Know What To Do At Every Step of Your Song Release | Urganize',
     description:
-      'GBuilt for artist managers and independent artists who refuse to let chaos kill their releases. Know exactly what to do—and when.',
+      'Built for artist managers and independent artists who refuse to let chaos kill their releases. Know exactly what to do at every stage.',
     url: 'https://urganize.app',
     siteName: 'Urganize',
     locale: 'en_US',
