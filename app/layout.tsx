@@ -32,7 +32,7 @@ const organizationSchema = {
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "theurganization@gmail.com", // Change to actual contact email
+    "email": "theurganization@gmail.com",
     "contactType": "Customer Support"
   }
 } as const;
@@ -82,16 +82,16 @@ export const metadata: Metadata = {
 
   metadataBase: new URL('https://urganize.app'),
   openGraph: {
-    title: 'Urganize – Workflow Software for Music Teams',
+    title: 'Urganize - Know What To Do At Every Step of Your Release',
     description:
-      'Get early access to Urganize, the workflow and project management software built specifically for music teams and artist operations. Get Urganized Now.',
+      'GBuilt for artist managers and independent artists who refuse to let chaos kill their releases. Know exactly what to do—and when.',
     url: 'https://urganize.app',
     siteName: 'Urganize',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/opengraph-image.png',
+        url: '/opengraph-image.png?v=2',
         width: 1200,
         height: 630,
         alt: 'Urganize - Music Project Management Application',
@@ -100,7 +100,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/opengraph-image.png'],
+    images: ['/opengraph-image.png?v=2'],
   },
   keywords: [
     'Music Project Management',
