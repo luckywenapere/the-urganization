@@ -152,10 +152,10 @@ export default function SignUpForm() {
         {message === "launch-partner" && referralLink && (
           <div className="mb-6 p-4 bg-emerald-900/20 border border-emerald-800/40 rounded space-y-3">
             <div className="text-xs text-emerald-300 font-bold tracking-widest uppercase">
-              🎉 You're a Launch Partner!
+              You're a Launch Partner!
             </div>
             <p className="text-[11px] text-neutral-400 leading-relaxed">
-              Share this link with 1 manager friend. When they join, you skip to position 50 and get 1 month free.
+              Share this link with 1 manager or independent artist friend. When they join, you skip to position 10 and get 1 month free.
             </p>
             <div className="flex gap-2">
               <input
