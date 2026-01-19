@@ -180,7 +180,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Urganize gives you <span className="text-white font-semibold">one task at a time</span>, intelligently guided by your progress. Complete a step, share the outcome, and get your next move — adapted to your results.
+              Urganize gives you <span className="text-white font-semibold">one task at a time</span>, intelligently guided by your progress. Complete a step, share the outcome, and get your next move adapted to your results.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -210,7 +210,7 @@ export default function Home() {
         <section className="py-32 px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Releasing music is chaos.</h2>
-            <p className="text-xl text-neutral-400">Promotion schedules, distributor deadlines, credits, artwork, metadata — scattered everywhere.</p>
+            <p className="text-xl text-neutral-400">Promotion schedules, distributor deadlines, credits, artwork, metadata scattered everywhere.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -235,7 +235,7 @@ export default function Home() {
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">One task. One focus. Always clear.</h2>
-            <p className="text-xl text-neutral-400">Urganize doesn't overwhelm you with everything at once. It shows you exactly what to do next — and adapts based on your progress.</p>
+            <p className="text-xl text-neutral-400">Urganize doesn't overwhelm you with everything at once. It shows you exactly what to do next and adapts based on your progress.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -271,7 +271,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Everything In One Place</h3>
-                <p className="text-neutral-400">Documents, metadata, credits, assets — all tied to your release. Nothing gets lost.</p>
+                <p className="text-neutral-400">Documents, metadata, credits, and assets are all tied to your release. Nothing gets lost.</p>
               </div>
             </motion.div>
           </div>
@@ -290,7 +290,7 @@ export default function Home() {
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">1</div>
               <div className="flex-1">
                 <h3 className="text-3xl font-bold mb-3">Create your release</h3>
-                <p className="text-neutral-400 text-lg">Name it, set the date. The system sets up everything you need — folders, structure, and your first task.</p>
+                <p className="text-neutral-400 text-lg">Name it, set the date. The system sets up everything you need: folders, structure, and your first task.</p>
               </div>
             </motion.div>
 
@@ -316,7 +316,7 @@ export default function Home() {
             <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">4</div>
               <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Get your next step — adapted</h3>
+                <h3 className="text-3xl font-bold mb-3">Get your next step, intelligently adapted to your progress.</h3>
                 <p className="text-neutral-400 text-lg">Based on your outcome, the system intelligently determines what should happen next. Repeat until release day.</p>
               </div>
             </motion.div>
@@ -352,7 +352,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
               <h3 className="text-3xl font-bold mb-4">Artist Managers</h3>
-              <p className="text-neutral-400 text-lg leading-relaxed">You're responsible when things go wrong. Urganize gives you structure, visibility, and control — so releases don't fall apart and you can finally breathe.</p>
+              <p className="text-neutral-400 text-lg leading-relaxed">You're responsible when things go wrong. Urganize gives you structure, visibility, and control so releases stay on track and you can finally breathe.</p>
             </motion.div>
 
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
@@ -406,7 +406,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col items-center gap-12">
               <div className="flex gap-4">
-                {/* X (Twitter) */}
+                {/* X */}
                 <Link 
                   href="https://x.com/urganize"
                   target="_blank"
