@@ -62,7 +62,9 @@ export default function FeaturesPage() {
               transition={{ delay: 0.2 }}
               className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]"
             >
-              Built to end the chaos.
+              AI-guided.
+              <br />
+              <span className="text-emerald-400">Stress-free.</span>
             </motion.h1>
 
             <motion.p 
@@ -71,7 +73,7 @@ export default function FeaturesPage() {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed"
             >
-              Every feature in Urganize exists for one reason: to prevent releases from falling apart.
+              Every feature in Urganize exists to remove overwhelm and guide you through your release — one intelligent step at a time.
             </motion.p>
           </div>
         </section>
@@ -80,16 +82,16 @@ export default function FeaturesPage() {
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             
-            {/* Feature 1: Release Command Center */}
+            {/* Feature 1: AI-Guided Steps */}
             <motion.div {...fadeInUp} className="mb-32">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                     Core Feature
                   </div>
-                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Release Command Center</h2>
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Intelligent Guidance</h2>
                   <p className="text-xl text-neutral-400 mb-8 leading-relaxed">
-                    Every release becomes a structured workspace. No blank pages. No guessing. The system auto-generates everything you need.
+                    Instead of overwhelming you with a massive checklist, Urganize shows you one task at a time. Complete it, share the outcome, and get your next step — adapted to your results.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
@@ -97,8 +99,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Automatic task generation</p>
-                        <p className="text-neutral-500 text-sm">Pre-defined frameworks for every phase of your release</p>
+                        <p className="font-semibold mb-1">One task at a time</p>
+                        <p className="text-neutral-500 text-sm">Never see 50 tasks at once. Focus on what matters now.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -106,8 +108,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Smart folder structure</p>
-                        <p className="text-neutral-500 text-sm">Audio, stems, artwork, contracts—organized by default</p>
+                        <p className="font-semibold mb-1">Feedback-driven adaptation</p>
+                        <p className="text-neutral-500 text-sm">Answer a quick question after each task. The system learns from real outcomes.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -115,15 +117,28 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Timeline enforcement</p>
-                        <p className="text-neutral-500 text-sm">Get prompted when critical dates are missing</p>
+                        <p className="font-semibold mb-1">Smart next steps</p>
+                        <p className="text-neutral-500 text-sm">Your next task is intelligently determined based on what just happened.</p>
                       </div>
                     </li>
                   </ul>
                 </div>
                 <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/10">
-                  <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex items-center justify-center">
-                    <p className="text-neutral-600 text-sm">Release Dashboard Preview</p>
+                  <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex flex-col items-center justify-center p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                        <span className="text-emerald-400 text-lg">✓</span>
+                      </div>
+                      <span className="text-neutral-400">Task completed</span>
+                    </div>
+                    <div className="w-full p-4 rounded-xl bg-neutral-900/80 border border-emerald-500/30 mb-4">
+                      <p className="text-sm text-neutral-300 mb-2">How did it go?</p>
+                      <div className="flex gap-2">
+                        <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs">Got approval</span>
+                        <span className="px-3 py-1 rounded-full bg-neutral-800 text-neutral-500 text-xs">Needs revision</span>
+                      </div>
+                    </div>
+                    <div className="text-neutral-600 text-xs">→ Next step adapts based on your answer</div>
                   </div>
                 </div>
               </div>
@@ -134,8 +149,24 @@ export default function FeaturesPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/10">
-                    <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex items-center justify-center">
-                      <p className="text-neutral-600 text-sm">Promotion Timeline Preview</p>
+                    <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex flex-col items-center justify-center p-6">
+                      <div className="w-full space-y-3">
+                        <div className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900/80 border border-white/5">
+                          <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm">📸</div>
+                          <span className="text-sm text-neutral-300">Plan content shoot</span>
+                          <span className="ml-auto text-xs text-emerald-400">Now</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900/50 border border-white/5 opacity-50">
+                          <div className="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-500 text-sm">📅</div>
+                          <span className="text-sm text-neutral-500">Schedule rollout</span>
+                          <span className="ml-auto text-xs text-neutral-600">Next</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900/50 border border-white/5 opacity-30">
+                          <div className="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-500 text-sm">📣</div>
+                          <span className="text-sm text-neutral-500">Announcement post</span>
+                          <span className="ml-auto text-xs text-neutral-600">Later</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -145,7 +176,7 @@ export default function FeaturesPage() {
                   </div>
                   <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Promotion First</h2>
                   <p className="text-xl text-neutral-400 mb-8 leading-relaxed">
-                    Promotion is the highest-risk phase. That's why it's built into every release from day one.
+                    Promotion is where releases fail. That's why it's built into every release from day one — not an afterthought.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
@@ -153,8 +184,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Pre-defined promotion tasks</p>
-                        <p className="text-neutral-500 text-sm">Content planning, shoot schedules, social rollout—visible immediately</p>
+                        <p className="font-semibold mb-1">Promotion tasks surface early</p>
+                        <p className="text-neutral-500 text-sm">Content planning, shoot schedules, social rollout — visible from the start</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -163,7 +194,7 @@ export default function FeaturesPage() {
                       </div>
                       <div>
                         <p className="font-semibold mb-1">No last-minute scrambling</p>
-                        <p className="text-neutral-500 text-sm">Timeline prompts prevent "we'll figure it out later"</p>
+                        <p className="text-neutral-500 text-sm">Timeline guidance prevents "we'll figure it out later"</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -172,7 +203,7 @@ export default function FeaturesPage() {
                       </div>
                       <div>
                         <p className="font-semibold mb-1">Clear accountability</p>
-                        <p className="text-neutral-500 text-sm">Assign promotion tasks to team members, track progress</p>
+                        <p className="text-neutral-500 text-sm">Track progress on every promotion task</p>
                       </div>
                     </li>
                   </ul>
@@ -197,8 +228,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Default folder structure</p>
-                        <p className="text-neutral-500 text-sm">Audio, stems, artwork, licenses—created automatically</p>
+                        <p className="font-semibold mb-1">Pre-built folder structure</p>
+                        <p className="text-neutral-500 text-sm">Audio, stems, artwork, contracts — organized by default</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -206,8 +237,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Minimum asset enforcement</p>
-                        <p className="text-neutral-500 text-sm">Releases require at least one audio file to progress</p>
+                        <p className="font-semibold mb-1">Release-connected</p>
+                        <p className="text-neutral-500 text-sm">Files live with the release they belong to. No more hunting.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -215,37 +246,74 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Everything connected</p>
-                        <p className="text-neutral-500 text-sm">Files, tasks, and timelines tied to the same release</p>
+                        <p className="font-semibold mb-1">Nothing gets lost</p>
+                        <p className="text-neutral-500 text-sm">Metadata, credits, assets — all in one place</p>
                       </div>
                     </li>
                   </ul>
                 </div>
                 <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/10">
-                  <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex items-center justify-center">
-                    <p className="text-neutral-600 text-sm">File System Preview</p>
+                  <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex flex-col items-center justify-center p-6">
+                    <div className="w-full space-y-2">
+                      <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-900/50">
+                        <span className="text-lg">📁</span>
+                        <span className="text-sm text-neutral-300">Audio</span>
+                        <span className="ml-auto text-xs text-neutral-600">3 files</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-900/50">
+                        <span className="text-lg">📁</span>
+                        <span className="text-sm text-neutral-300">Stems</span>
+                        <span className="ml-auto text-xs text-neutral-600">8 files</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-900/50">
+                        <span className="text-lg">📁</span>
+                        <span className="text-sm text-neutral-300">Artwork</span>
+                        <span className="ml-auto text-xs text-neutral-600">5 files</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-900/50">
+                        <span className="text-lg">📁</span>
+                        <span className="text-sm text-neutral-300">Contracts</span>
+                        <span className="ml-auto text-xs text-neutral-600">2 files</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-900/50">
+                        <span className="text-lg">📁</span>
+                        <span className="text-sm text-neutral-300">Promotion</span>
+                        <span className="ml-auto text-xs text-neutral-600">4 files</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Feature 4: Team Collaboration */}
+            {/* Feature 4: Timeline Enforcement */}
             <motion.div {...fadeInUp} className="mb-32">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/10">
-                    <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex items-center justify-center">
-                      <p className="text-neutral-600 text-sm">Collaboration Preview</p>
+                    <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex flex-col items-center justify-center p-6">
+                      <div className="w-full p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 mb-4">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="text-amber-400">⚠️</span>
+                          <span className="text-sm text-amber-300 font-medium">Timeline Alert</span>
+                        </div>
+                        <p className="text-sm text-neutral-400">Release date not set. Set a date to unlock timeline-based guidance.</p>
+                      </div>
+                      <div className="w-full p-4 rounded-xl bg-neutral-900/80 border border-white/5">
+                        <p className="text-xs text-neutral-500 mb-2">Suggested release window</p>
+                        <p className="text-lg text-white font-semibold">March 14 - 21, 2026</p>
+                        <p className="text-xs text-neutral-600 mt-1">Based on your current progress</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                    Teamwork
+                    Enforcement
                   </div>
-                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Manager + Artist Sync</h2>
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Timeline Guidance</h2>
                   <p className="text-xl text-neutral-400 mb-8 leading-relaxed">
-                    Built for how music teams actually work. Managers lead operations. Artists stay informed and execute.
+                    The system prompts you when dates are missing. No more "we'll figure it out later" that turns into last-minute panic.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
@@ -253,8 +321,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Role-based access</p>
-                        <p className="text-neutral-500 text-sm">Managers control structure, artists complete assigned tasks</p>
+                        <p className="font-semibold mb-1">Gentle prompts, not nagging</p>
+                        <p className="text-neutral-500 text-sm">The system surfaces timeline issues before they become crises</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -262,8 +330,8 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Relationship tracking</p>
-                        <p className="text-neutral-500 text-sm">Keep notes on producers, engineers, collaborators per release</p>
+                        <p className="font-semibold mb-1">Smart deadline suggestions</p>
+                        <p className="text-neutral-500 text-sm">Based on your progress and release date</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -271,60 +339,11 @@ export default function FeaturesPage() {
                         <RiCheckLine className="text-emerald-400 text-sm" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">Works solo too</p>
-                        <p className="text-neutral-500 text-sm">Independent artists get full access without manager complexity</p>
+                        <p className="font-semibold mb-1">No missed windows</p>
+                        <p className="text-neutral-500 text-sm">Distributor deadlines, playlist pitches — all accounted for</p>
                       </div>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Feature 5: Budget Tracking */}
-            <motion.div {...fadeInUp} className="mb-20">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                    Financial Clarity
-                  </div>
-                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Light Budget Tracking</h2>
-                  <p className="text-xl text-neutral-400 mb-8 leading-relaxed">
-                    Track planned vs. actual spend per release. Simple, clear, no accounting degree required.
-                  </p>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-1">
-                        <RiCheckLine className="text-emerald-400 text-sm" />
-                      </div>
-                      <div>
-                        <p className="font-semibold mb-1">Release-level budgets</p>
-                        <p className="text-neutral-500 text-sm">Set budgets per category: production, promotion, distribution</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-1">
-                        <RiCheckLine className="text-emerald-400 text-sm" />
-                      </div>
-                      <div>
-                        <p className="font-semibold mb-1">No payment processing</p>
-                        <p className="text-neutral-500 text-sm">We track numbers, you handle payments however you want</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-1">
-                        <RiCheckLine className="text-emerald-400 text-sm" />
-                      </div>
-                      <div>
-                        <p className="font-semibold mb-1">Stay on top of spend</p>
-                        <p className="text-neutral-500 text-sm">See at a glance if you're on track or over budget</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/10">
-                  <div className="aspect-[4/3] bg-neutral-800/50 rounded-2xl flex items-center justify-center">
-                    <p className="text-neutral-600 text-sm">Budget Tracking Preview</p>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -356,8 +375,8 @@ export default function FeaturesPage() {
                 <p className="text-neutral-500">We don't show streaming numbers or social media metrics. Check your platforms.</p>
               </div>
               <div className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-                <h3 className="text-xl font-bold mb-3 text-neutral-400">❌ AI Recommendations</h3>
-                <p className="text-neutral-500">We don't tell you what to create. We help you execute what you've decided.</p>
+                <h3 className="text-xl font-bold mb-3 text-neutral-400">❌ Music Distribution</h3>
+                <p className="text-neutral-500">We don't upload to Spotify or Apple Music. Use your preferred distributor.</p>
               </div>
             </motion.div>
           </div>
@@ -371,9 +390,9 @@ export default function FeaturesPage() {
           
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <motion.div {...fadeInUp}>
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">Ready to get organized?</h2>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">Ready to release without the stress?</h2>
               <p className="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">
-                Join managers and artists who refuse to lose releases to chaos.
+                Join managers and artists who refuse to let chaos kill their releases.
               </p>
               <Link
                 href="/#early-access"
