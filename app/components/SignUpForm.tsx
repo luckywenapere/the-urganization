@@ -128,7 +128,7 @@ export default function SignUpForm() {
                 </span>
               </div>
               <p className="text-[11px] text-neutral-500 leading-relaxed">
-                Bring 1 friend, jump to top 50 on waitlist + get 1 month free (₦7,500 value)
+                Bring 1 friend, jump to top 50 on waitlist + get 1 month free (₦8,000 value)
               </p>
             </div>
           </label>
