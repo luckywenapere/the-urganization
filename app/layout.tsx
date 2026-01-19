@@ -24,7 +24,7 @@ const organizationSchema = {
   "name": "Urganize",
   "url": "https://urganize.app",
   "logo": "https://urganize.app/images/urganize-logo.png",
-  "description": "Music project management software built for artist teams to manage releases, tasks, files, and workflows in one place.",
+  "description": "AI-guided release management platform for artist managers and independent artists. One task at a time, intelligently adapted to your progress.",
   "sameAs": [
     "https://x.com/urganize",
     "https://linkedin.com/company/urganize",
@@ -42,7 +42,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "name": "Urganize",
   "url": "https://urganize.app",
-  "description": "Workflow and project management software built specifically for music teams and artist operations.",
+  "description": "AI-guided release management that shows you exactly what to do next. One task at a time, adapted to your results.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://urganize.app/search?q={search_term_string}",
@@ -53,8 +53,8 @@ const websiteSchema = {
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Urganize: Manage Music Projects & Releases for Artists",
-  "description": "Music project management software built for artist teams to manage releases, tasks, files, and workflows in one place.",
+  "name": "Urganize: AI-Guided Release Management for Music Artists",
+  "description": "Release music without the stress. Urganize gives you one task at a time, intelligently guided by your progress. Complete a step, share the outcome, get your next move.",
   "url": "https://urganize.app",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -71,20 +71,20 @@ const homepageSchema = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Urganize: Manage Music Projects & Releases for Artists',
+    default: 'Urganize: AI-Guided Release Management for Music Artists',
     template: '%s - Urganize',
   },
   description:
-    'Urganize: Music project management software for artist teams. Plan releases, track tasks & collaborate efficiently.',
+    'Release music without the stress. Urganize gives you one task at a time, intelligently guided by your progress. Built for artist managers and independent artists.',
   verification: {
     google: '',
   },
 
   metadataBase: new URL('https://urganize.app'),
   openGraph: {
-    title: 'Know What To Do At Every Step of Your Song Release | Urganize',
+    title: 'Release Music Without the Stress | Urganize',
     description:
-      'Built for artist managers and independent artists who refuse to let chaos kill their releases. Know exactly what to do at every stage.',
+      'AI-guided release management. One task at a time, adapted to your results. Stop the overwhelm, start shipping music.',
     url: 'https://urganize.app',
     siteName: 'Urganize',
     locale: 'en_US',
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png?v=2',
         width: 1200,
         height: 630,
-        alt: 'Urganize - Music Project Management Application',
+        alt: 'Urganize - AI-Guided Release Management',
       },
     ],
   },
@@ -103,24 +103,22 @@ export const metadata: Metadata = {
     images: ['/opengraph-image.png?v=2'],
   },
   keywords: [
-    'Music Project Management',
-    'Artist Collaboration',
-    'Release Planning',
-    'Music Team Organization',
-    'Creative Workflow',
-    'Music Production Management',
-    'Artist Team Workspace',
-    'Music Project Tracking',
-    'Collaboration for Musicians',
-    'Music Industry Tools',
-    'project management for musicians',
-    'music team workflow software',
-    'music release planning tool',
-    'artist workflow management',
-    'organize music releases',
-    'tools for independent artists teams',
-    'manage music collaborations',
-  ],
+    'AI release management',
+    'music release platform',
+    'artist manager tools',
+    'independent artist software',
+    'release planning',
+    'music project management',
+    'AI-guided workflow',
+    'music release checklist',
+    'artist team workspace',
+    'release management system',
+    'music promotion planning',
+    'artist workflow automation',
+    'release task management',
+    'music operations software',
+    'intelligent release guidance',
+  ],
 };
 
 export default function RootLayout({
@@ -164,26 +162,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
           key="homepage-schema"
         />
-
-        {/* START Formbricks Surveys */}
-        {/* <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(){
-                var appUrl = "https://app.formbricks.com";
-                var environmentId = "cmja8xlr9xzf0ad01xu8mpoas";
-                var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=appUrl+"/js/formbricks.umd.cjs",t.onload=function(){window.formbricks?window.formbricks.setup({environmentId:environmentId,appUrl:appUrl}):console.error("Formbricks library failed to load properly. The formbricks object is not available.");};var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
-             }();
-            `
-          }}
-        /> */}
-        {/* END Formbricks Surveys */}
-
       </head>
-      
-      <body className="antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-black text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
-        <Suspense fallback={null}>
+      <body className="font-sans antialiased">
+        <Suspense>
           <FormbricksProvider />
         </Suspense>
         {children}
