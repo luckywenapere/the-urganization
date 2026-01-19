@@ -13,123 +13,100 @@ const FAQ_DATA: FAQItem[] = [
   {
     id: 1,
     question: "How is Urganize different from other tools?",
-    answer: "Urganize is made just for music teams. Most apps are built for any kind of work, but we created ours specifically for releasing music. We understand all the special things music makers have to do. From early recordings to the finished song, choosing artwork, planning announcements, and getting music on streaming apps. Everything in Urganize works the way music teams actually work."
+    answer: "Most project management tools dump 50 tasks on you at once and expect you to figure it out. Urganize is different — it shows you one task at a time, guided by AI that understands where you are in your release. Complete a task, share how it went, and your next step adapts based on real outcomes. It's built specifically for music releases, not generic work."
   },
   {
     id: 2,
-    question: "Who is Urganize for?",
-    answer: "Urganize is perfect for independent artists, producers, managers, and their teams. Whether you're a solo artist handling everything yourself or have a team of 5+ people (producers, PR, photographers, etc.), Urganize helps keep everyone aligned and focused on the creative process."
+    question: "What does 'AI-guided' actually mean?",
+    answer: "When you complete a task in Urganize, you answer a quick question about the outcome — did you get approval? Need revisions? Hit a blocker? The system uses this feedback to intelligently determine your next step. Instead of following a rigid checklist, your workflow adapts to what's actually happening with your release."
   },
-
   {
     id: 3,
-    question: "Is Urganize a distributor?",
-    answer: "No. Urganize is not a music distributor. We don't upload your music to streaming platforms like Spotify, Apple Music, or YouTube Music.\n\nUrganize is a release management operating system. We help you organize everything that needs to happen before and around your release. Think of us as the command center that ensures your release actually succeeds once it hits the platforms.\n\nYou'll still use your preferred distributor (DistroKid, TuneCore, CD Baby, etc.) to get your music live. Urganize makes sure you don't show up to release day with missing artwork, forgotten promo tasks, or a chaotic timeline."
+    question: "Who is Urganize for?",
+    answer: "Urganize is built for artist managers who are tired of releases falling apart, and independent artists who are doing everything themselves. Whether you manage multiple artists or you're a solo act handling your own releases, Urganize gives you the structure and guidance to ship music without the stress."
   },
   {
     id: 4,
-    question: "Is the app currently in Beta?",
-    answer: "Yes. We're currently in beta, launching January 28th, 2026.\n\nDuring beta, you'll get early access to the core platform — release creation, task frameworks, timeline enforcement, and file organization. We're actively building alongside our first users, which means your feedback directly shapes what we ship next.\n\nBeta is free to join. If you want in, hop on the waitlist and we'll get you set up."
+    question: "Is Urganize a distributor?",
+    answer: "No. Urganize is not a music distributor. We don't upload your music to streaming platforms like Spotify, Apple Music, or YouTube Music.\n\nUrganize is a release management platform. We help you organize everything that needs to happen before and around your release — the tasks, files, promotion planning, and timelines. Think of us as your AI-guided command center that ensures your release actually succeeds once it hits the platforms.\n\nYou'll still use your preferred distributor (DistroKid, TuneCore, CD Baby, etc.) to get your music live."
   },
   {
     id: 5,
-    question: "Is my data secure?",
-    answer: "Absolutely. All your files, messages, and project details are encrypted and stored securely. We use industry-standard security practices and compliance measures. Your creative work is yours alone - we never share or use your data for any purpose other than providing you with our service."
+    question: "Is the app currently in Beta?",
+    answer: "Yes. We're currently in beta, launching January 28th, 2026.\n\nDuring beta, you'll get early access to the core platform — AI-guided task flow, release creation, timeline enforcement, and file organization. We're actively building alongside our first users, which means your feedback directly shapes what we ship next.\n\nBeta is free to join. If you want in, hop on the waitlist and we'll get you set up."
   },
   {
     id: 6,
-    question: "Can I collaborate with people outside my team?",
-    answer: "Yes! You can easily share specific projects or files with external collaborators like studio engineers, featured artists, or graphic designers without giving them full access to your workspace. They get exactly what they need to contribute."
+    question: "Is my data secure?",
+    answer: "Absolutely. All your files, release details, and project data are encrypted and stored securely. We use industry-standard security practices. Your creative work is yours alone — we never share or use your data for any purpose other than providing you with our service."
+  },
+  {
+    id: 7,
+    question: "Can I collaborate with my team?",
+    answer: "Yes! You can invite team members to your releases — managers, producers, PR reps, photographers. Everyone sees the same task flow and can track progress together. External collaborators can be given limited access to just what they need."
+  },
+  {
+    id: 8,
+    question: "What if I don't want AI guidance?",
+    answer: "The AI guidance is designed to reduce overwhelm, not control your workflow. You can always see all your tasks if you prefer, and the guidance is based on your own feedback — it's not making decisions for you, it's helping you focus on what matters next based on what you told it."
   }
 ];
 
 export default function FAQ() {
-  const [openId, setOpenId] = useState<number | null>(null);
-
-  const toggleFAQ = (id: number) => {
-    setOpenId(openId === id ? null : id);
-  };
+  const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-32 bg-[#050505]">
-      <div className="max-w-5xl mx-auto px-6 md:px-16">
-        {/* Section Header */}
+    <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/30 to-transparent">
+      <div className="max-w-3xl mx-auto">
+        
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-6 hover:bg-emerald-500/20 transition-colors cursor-default">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Questions & Answers
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Frequently asked <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-200 to-teal-200">
-              questions
-            </span>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
+            Questions?
           </h2>
-          {/* <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-            Everything you need to know about Urganize. Can&apos;t find what you&apos;re looking for?
-            <a 
-              href="mailto:theurganization@gmail.com" 
-              className="ml-1 text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
-            >
-              Email our support team.
-            </a>
-          </p> */}
+          <p className="text-neutral-400 text-lg">
+            Everything you need to know about Urganize.
+          </p>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4 max-w-3xl mx-auto">
+        <div className="space-y-4">
           {FAQ_DATA.map((item) => (
             <div
               key={item.id}
-              className={`rounded-2xl border transition-all duration-300 ${
-                openId === item.id
-                  ? "bg-neutral-900/50 border-emerald-500/30 shadow-[0_0_30px_-10px_rgba(16,185,129,0.1)]"
-                  : "bg-neutral-900/30 border-white/5 hover:bg-neutral-900/40 hover:border-white/10"
-              }`}
+              className="rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden"
             >
               <button
-                onClick={() => toggleFAQ(item.id)}
-                className="w-full px-8 py-6 text-left flex items-center justify-between group"
-                aria-expanded={openId === item.id}
+                onClick={() => setActiveId(activeId === item.id ? null : item.id)}
+                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-white/[0.02] transition-colors"
               >
-                <h3 className="text-lg md:text-xl font-bold text-white pr-8">
-                  {item.question}
-                </h3>
-                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                  openId === item.id
-                    ? "bg-emerald-500/20 text-emerald-400 rotate-180"
-                    : "bg-white/5 text-neutral-400 group-hover:bg-white/10"
+                <span className="text-lg font-semibold pr-8">{item.question}</span>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center transition-transform duration-300 ${
+                  activeId === item.id ? 'rotate-45 bg-emerald-500 border-emerald-500' : ''
                 }`}>
-                  <svg
-                    className="w-5 h-5 transition-transform duration-300"
-                    fill="none"
-                    viewBox="0 0 24 24"
+                  <svg 
+                    className={`w-4 h-4 transition-colors ${activeId === item.id ? 'text-black' : 'text-white'}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
                     stroke="currentColor"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
                 </div>
               </button>
 
               <AnimatePresence>
-                {openId === item.id && (
+                {activeId === item.id && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
                     <div className="px-8 pb-6 pt-2">
                       <div className="w-full h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent mb-6" />
-                      <p className="text-neutral-300 text-lg leading-relaxed">
+                      <p className="text-neutral-300 text-lg leading-relaxed whitespace-pre-line">
                         {item.answer}
                       </p>
                     </div>
@@ -140,26 +117,8 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* Additional CTA */}
-        {/* <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-3 p-4 rounded-2xl bg-neutral-900/30 border border-white/5">
-            <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <p className="text-neutral-300">
-              <a 
-                href="mailto:theurganization@gmail.com" 
-                className="text-white font-semibold hover:text-emerald-400 transition-colors"
-              >
-                Contact us
-              </a>
-            </p>
-          </div>
-        </div> */}
-        
-      </div>
-      {/* Sign Up CTA */}
-        <div className="text-center mt-6">
+        {/* Sign Up CTA */}
+        <div className="text-center mt-12">
           <a
             href="#early-access"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl
@@ -182,9 +141,10 @@ export default function FAQ() {
                 d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
-            Sign me up!
+            Join the waitlist
           </a>
         </div>
+      </div>
     </section>
   );
 }
