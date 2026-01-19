@@ -124,11 +124,11 @@ export default function SignUpForm() {
                   Launch Partner
                 </span>
                 <span className="text-[9px] font-bold px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded uppercase tracking-wider">
-                  Skip 50 spots
+                  Skip to top spots
                 </span>
               </div>
               <p className="text-[11px] text-neutral-500 leading-relaxed">
-                Bring 1 friend, jump to top 50 on waitlist + get 1 month free (₦8,000 value)
+                Bring 1 friend, jump to top 10 on waitlist + get 1 month free (₦8,000 value)
               </p>
             </div>
           </label>
