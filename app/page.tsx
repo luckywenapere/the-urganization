@@ -66,12 +66,6 @@ export default function Home() {
             >
               See How It Works
             </Link>
-            <Link 
-              href="mailto:theurganization@gmail.com" 
-              className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
-            >
-              Request Meeting
-            </Link>
             <Link
               href="#early-access"
               className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
@@ -109,13 +103,6 @@ export default function Home() {
                 className="text-2xl font-semibold text-neutral-400 hover:text-white transition-colors"
               >
                 Features
-              </Link>
-              <Link 
-                href="mailto:theurganization@gmail.com" 
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-semibold text-neutral-400 hover:text-white transition-colors"
-              >
-                Request Meeting
               </Link>
               <Link
                 href="#early-access"
