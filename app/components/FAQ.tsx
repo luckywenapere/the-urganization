@@ -18,7 +18,7 @@ const FAQ_DATA: FAQItem[] = [
   {
     id: 2,
     question: "What does 'AI-guided' actually mean?",
-    answer: "When you complete a task in Urganize, you answer a quick question about the outcome — did you get approval? Need revisions? Hit a blocker? The system uses this feedback to intelligently determine your next step. Instead of following a rigid checklist, your workflow adapts to what's actually happening with your release."
+    answer: "It means our technology helps you make the best choices for your music. It tracks your progress, your schedule, and your results. Instead of showing you every single task at once, the AI just shows you the most important thing to do right now."
   },
   {
     id: 3,

@@ -146,7 +146,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8"
             >
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
-              AI-Guided Release Management
+              AI-Guided Release Decisions
             </motion.div>
             
             {/* Hero Headline */}
@@ -168,7 +168,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Urganize gives you <span className="text-white font-semibold">one task at a time</span>, intelligently guided by your progress. Complete a step, share the outcome, and get your next move adapted to your results.
+              Urganize gives you <span className="text-white font-semibold">just one task to work on at a time</span>. It looks at where you are with your music, how much work you’ve done, and when your song comes out. It also asks about your goals. This keeps your plans out of your head so you don’t feel overwhelmed.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -229,7 +229,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Intelligent Guidance</h3>
-                <p className="text-neutral-400">AI-guided steps that understand where you are in your release. No guessing, no blank pages.</p>
+                <p className="text-neutral-400">Our AI looks at your music schedule and the work you have already finished. It remembers your results so it can tell you exactly what to do next.</p>
               </div>
             </motion.div>
 
@@ -241,7 +241,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Adaptive Flow</h3>
-                <p className="text-neutral-400">Complete a task, share how it went. Your next step adjusts based on real outcomes, not assumptions.</p>
+                <p className="text-neutral-400">Finish a task and tell the app how it went. Urganize uses your results to pick your next step so you don't have to guess. It keeps things simple so you never feel like you have too much to do.</p>
               </div>
             </motion.div>
 

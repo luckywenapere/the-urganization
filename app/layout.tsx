@@ -24,7 +24,7 @@ const organizationSchema = {
   "name": "Urganize",
   "url": "https://urganize.app",
   "logo": "https://urganize.app/images/urganize-logo.png",
-  "description": "AI-guided release management platform for artist managers and independent artists. One task at a time, intelligently adapted to your progress.",
+  "description": "AI-Guided Release Decisions for artist managers and independent artists. One task at a time, intelligently adapted to your progress.",
   "sameAs": [
     "https://x.com/urganize",
     "https://linkedin.com/company/urganize",
@@ -42,7 +42,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "name": "Urganize",
   "url": "https://urganize.app",
-  "description": "AI-guided release management that shows you exactly what to do next. One task at a time, adapted to your results.",
+  "description": "AI-guided release decisions that shows you exactly what to do next. One task at a time, adapted to your results.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://urganize.app/search?q={search_term_string}",
@@ -53,7 +53,7 @@ const websiteSchema = {
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Urganize: AI-Guided Release Management for Music Artists",
+  "name": "Urganize: AI-Guided Release Decisions for Music Artists",
   "description": "Release music without the stress. Urganize gives you one task at a time, intelligently guided by your progress. Complete a step, share the outcome, get your next move.",
   "url": "https://urganize.app",
   "breadcrumb": {
@@ -71,7 +71,7 @@ const homepageSchema = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Urganize: AI-Guided Release Management for Music Artists',
+    default: 'Urganize: AI-Guided Release Decisions for Music Artists',
     template: '%s - Urganize',
   },
   description:
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Release Music Without the Stress | Urganize',
     description:
-      'AI-guided release management. One task at a time, adapted to your results. Stop the overwhelm, start shipping music.',
+      'AI-guided release decisions. One task at a time, adapted to your results. Stop the overwhelm, start shipping music.',
     url: 'https://urganize.app',
     siteName: 'Urganize',
     locale: 'en_US',
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png?v=2',
         width: 1200,
         height: 630,
-        alt: 'Urganize - AI-Guided Release Management',
+        alt: 'Urganize - AI-Guided Release Decisions',
       },
     ],
   },
