@@ -196,12 +196,6 @@ export default function Home() {
               >
                 Join the Waitlist
               </Link>
-              <Link
-                href="/features"
-                className="px-10 py-5 bg-white/5 border border-white/20 text-white text-sm font-bold uppercase tracking-[0.15em] rounded-full hover:bg-white/10 hover:border-white/30 transition-all"
-              >
-                See How It Works
-              </Link>
             </motion.div>
           </div>
         </section>
