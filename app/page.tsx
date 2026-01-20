@@ -8,6 +8,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiTwitterXFill, RiInstagramLine, RiLinkedinBoxFill } from "react-icons/ri";
 import { FoundingCouncilSection } from './components/FoundingCouncilSection';
+import FounderPOV from "./components/FounderPOV";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -355,6 +356,11 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
+<FounderPOV
+  quote="I’ve seen too many great releases fail, not because the music wasn’t good, but because the work around it was chaotic. Talent isn’t the bottleneck anymore — operations are. Urganize exists to bring structure to releases so creativity isn’t constantly interrupted by stress."
+/>
+
 
         {/* --- EARLY ACCESS / SIGN UP SECTION --- */}
         <section id="early-access" className="py-32 px-6">
