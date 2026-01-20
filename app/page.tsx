@@ -63,7 +63,7 @@ export default function Home() {
               href="/features" 
               className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
             >
-              Features
+              See How It Works
             </Link>
             <Link 
               href="mailto:theurganization@gmail.com" 
@@ -75,7 +75,7 @@ export default function Home() {
               href="#early-access"
               className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
             >
-              Join Waitlist
+              Get Early Access
             </Link>
           </div>
 
@@ -121,7 +121,7 @@ export default function Home() {
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
               >
-                Join the Waitlist
+                Get Early Access
               </Link>
               
               {/* Subtle Socials in Menu */}
@@ -194,7 +194,7 @@ export default function Home() {
                 href="#early-access"
                 className="px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                Join the Waitlist
+                Get Early Access
               </Link>
             </motion.div>
           </div>
