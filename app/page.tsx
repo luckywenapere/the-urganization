@@ -156,9 +156,8 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]"
             >
-              Release music
-              <br />
-              <span className="text-emerald-400">without the stress.</span>
+              Your music career,<br />
+              <span className="text-emerald-400">organized and stress-free.</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -168,7 +167,8 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Urganize gives you <span className="text-white font-semibold">just one task to work on at a time</span>. It looks at where you are with your music, how much work you’ve done, and when your song comes out. It also asks about your goals. This keeps your plans out of your head so you don’t feel overwhelmed.
+              Urganize guides you through releasing your music, <span className="text-white font-semibold">one personalized task at a time</span>. 
+              It adapts to your progress so you always know what to do next — like a manager in your pocket.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -192,32 +192,31 @@ export default function Home() {
         <section className="py-32 px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Releasing music is chaos.</h2>
-            <p className="text-xl text-neutral-400">Promotion schedules, distributor deadlines, credits, artwork, metadata scattered everywhere.</p>
+            <p className="text-xl text-neutral-400">Promotion schedules, distributor deadlines, credits, artwork, metadata — all scattered everywhere.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-              <h3 className="text-2xl font-bold mb-4">Overwhelmed by checklists</h3>
-              <p className="text-neutral-400">Generic tools dump 50 tasks on you at once. You don't know where to start, so you don't.</p>
+              <h3 className="text-2xl font-bold mb-4">Too many things, too little guidance</h3>
+              <p className="text-neutral-400">Generic tools dump 50 tasks at once. You don’t know where to start, so you don’t.</p>
             </motion.div>
 
             <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-              <h3 className="text-2xl font-bold mb-4">Files are everywhere</h3>
-              <p className="text-neutral-400">Stems in email. Artwork in DMs. Contracts in Google Drive. Nothing connected to the actual release.</p>
+              <h3 className="text-2xl font-bold mb-4">Everything scattered</h3>
+              <p className="text-neutral-400">Contracts, artwork, stems, metadata — nothing connected to your actual release.</p>
             </motion.div>
 
             <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-              <h3 className="text-2xl font-bold mb-4">Constant mental load</h3>
-              <p className="text-neutral-400">The stress of "what did I forget?" follows you everywhere. The creative high gets buried.</p>
+              <h3 className="text-2xl font-bold mb-4">Stress steals your focus</h3>
+              <p className="text-neutral-400">The constant question of "what did I forget?" interrupts creativity and slows your workflow.</p>
             </motion.div>
           </div>
         </section>
-
-        {/* --- SOLUTION SECTION --- */}
+        {/* --- SOLUTION / FEATURES SECTION --- */}
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">One task. One focus. Always clear.</h2>
-            <p className="text-xl text-neutral-400">Urganize doesn't overwhelm you with everything at once. It shows you exactly what to do next and adapts based on your progress.</p>
+            <p className="text-xl text-neutral-400">Urganize doesn’t overwhelm you with everything at once. It shows you exactly what to do next and adapts based on your progress.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -229,7 +228,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Intelligent Guidance</h3>
-                <p className="text-neutral-400">Our AI looks at your music schedule and the work you have already finished. It remembers your results so it can tell you exactly what to do next.</p>
+                <p className="text-neutral-400">Urganize asks questions about your music and goals, then gives you tasks tailored to you. It evolves with your progress, like a manager in your pocket.</p>
               </div>
             </motion.div>
 
@@ -241,7 +240,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Adaptive Flow</h3>
-                <p className="text-neutral-400">Finish a task and tell the app how it went. Urganize uses your results to pick your next step so you don't have to guess. It keeps things simple so you never feel like you have too much to do.</p>
+                <p className="text-neutral-400">Finish a task, share how it went, and Urganize adapts the next step automatically. One task at a time, always personalized.</p>
               </div>
             </motion.div>
 
@@ -253,7 +252,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Everything In One Place</h3>
-                <p className="text-neutral-400">Documents, metadata, credits, and assets are all tied to your release. Nothing gets lost.</p>
+                <p className="text-neutral-400">Contracts, split sheets, artwork, song files, ads — keep everything organized and accessible.</p>
               </div>
             </motion.div>
           </div>
@@ -263,7 +262,7 @@ export default function Home() {
         <section className="py-32 px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">How it works.</h2>
-            <p className="text-xl text-neutral-400">A simple loop that keeps you moving forward, never overwhelmed.</p>
+            <p className="text-xl text-neutral-400">A simple loop that keeps you moving forward without overwhelm.</p>
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
@@ -271,8 +270,8 @@ export default function Home() {
             <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">1</div>
               <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Create your release</h3>
-                <p className="text-neutral-400 text-lg">Name it, set the date. The system sets up everything you need: folders, structure, and your first task.</p>
+                <h3 className="text-3xl font-bold mb-3">Answer questions about your music & goals</h3>
+                <p className="text-neutral-400 text-lg">This sets up a personalized workflow just for you.</p>
               </div>
             </motion.div>
 
@@ -280,8 +279,8 @@ export default function Home() {
             <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">2</div>
               <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Focus on one task</h3>
-                <p className="text-neutral-400 text-lg">See exactly what needs to happen next. No massive checklist. Just the one thing that matters right now.</p>
+                <h3 className="text-3xl font-bold mb-3">Receive personalized tasks</h3>
+                <p className="text-neutral-400 text-lg">Urganize shows you exactly what to do next — never a giant, overwhelming checklist.</p>
               </div>
             </motion.div>
 
@@ -289,8 +288,8 @@ export default function Home() {
             <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">3</div>
               <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Complete & share the outcome</h3>
-                <p className="text-neutral-400 text-lg">Finish the task, then answer a quick question about how it went. This feeds the system with real data.</p>
+                <h3 className="text-3xl font-bold mb-3">Complete a task & provide feedback</h3>
+                <p className="text-neutral-400 text-lg">This feeds the system so your next step is intelligently adapted.</p>
               </div>
             </motion.div>
 
@@ -298,8 +297,8 @@ export default function Home() {
             <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">4</div>
               <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Get your next step, intelligently adapted to your progress.</h3>
-                <p className="text-neutral-400 text-lg">Based on your outcome, the system intelligently determines what should happen next. Repeat until release day.</p>
+                <h3 className="text-3xl font-bold mb-3">Repeat the loop, adapted to your progress</h3>
+                <p className="text-neutral-400 text-lg">Urganize continuously adapts, keeping you on track until release day.</p>
               </div>
             </motion.div>
 
@@ -344,10 +343,9 @@ export default function Home() {
           </div>
         </section>
 
-<FounderPOV
-  quote="I’ve seen too many great releases fail, not because the music wasn’t good, but because the work around it was chaotic. Talent isn’t the bottleneck anymore — operations are. Urganize exists to bring structure to releases so creativity isn’t constantly interrupted by stress."
-/>
-
+        <FounderPOV
+          quote="I’ve seen too many great releases fail, not because the music wasn’t good, but because the work around it was chaotic. Talent isn’t the bottleneck anymore — operations are. Urganize exists to bring structure to releases so creativity isn’t constantly interrupted by stress."
+        />
 
         {/* --- EARLY ACCESS / SIGN UP SECTION --- */}
         <section id="early-access" className="py-32 px-6">
@@ -359,7 +357,7 @@ export default function Home() {
               </div>
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Get early access.</h2>
               <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-                Join the waitlist. Be the first to experience AI-guided release management.
+                Be the first to experience your personal release manager. One task at a time, fully adaptable to you.
               </p>
             </motion.div>
 
