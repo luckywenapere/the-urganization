@@ -270,7 +270,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Everything In One Place</h3>
-                <p className="text-neutral-400">Contracts, split sheets, artwork, song files, ads — keep everything organized and accessible.</p>
+                <p className="text-neutral-400">Contracts, split sheets, artwork all keep in structured systems and are easily accessible.</p>
               </div>
             </motion.div>
           </div>
