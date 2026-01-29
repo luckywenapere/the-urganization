@@ -351,7 +351,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
               <h3 className="text-3xl font-bold mb-4">Artist Managers</h3>
-              <p className="text-neutral-400 text-lg leading-relaxed">When things go wrong, it’s on you. Urganize gives you clear steps, shows you everything in one place, and helps you stay in control so releases don’t fall behind and you can relax.
+              <p className="text-neutral-400 text-lg leading-relaxed">When things go wrong, it’s on you. Urganize gives you clear steps and helps you stay in control so releases don’t fall behind and you can relax.
               </p>
             </motion.div>
 
