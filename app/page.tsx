@@ -367,21 +367,29 @@ Outcomes are captured to reduce guesswork and improve future guidance.</p>
         />
 
         {/* --- EARLY ACCESS / SIGN UP SECTION --- */}
+        {/* --- SIGN UP / LOGIN SECTION --- */}
         <section id="early-access" className="py-32 px-6">
           <div className="max-w-4xl mx-auto">
             <motion.div {...fadeInUp} className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
-                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
-                Beta Launching January 28th
-              </div>
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Get early access.</h2>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Ready to get started?</h2>
               <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-                Be the first to experience your personal release manager. One task at a time, fully adaptable to you.
+                Sign up to start managing your releases with AI-guided workflows, or login to continue where you left off.
               </p>
             </motion.div>
 
-            <motion.div {...fadeInUp}>
-              <SignUpForm />
+            <motion.div {...fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+              <Link
+                href="https://app.urganize.app/auth"
+                className="w-full sm:w-auto px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] text-center"
+              >
+                Sign Up
+              </Link>
+              <Link
+                href="https://app.urganize.app/auth"
+                className="w-full sm:w-auto px-10 py-5 text-white text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20 text-center"
+              >
+                Login
+              </Link>
             </motion.div>
 
             <motion.div {...fadeInUp} className="mt-12 text-center">
@@ -390,13 +398,13 @@ Outcomes are captured to reduce guesswork and improve future guidance.</p>
                   <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Free during beta
+                  AI-guided workflows
                 </span>
                 <span className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Just launch updates and early access
+                  One task at a time
                 </span>
               </div>
             </motion.div>
