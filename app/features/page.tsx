@@ -33,12 +33,20 @@ export default function FeaturesPage() {
           >
             ← Back to Home
           </Link>
-          <Link
-            href="/#early-access"
-            className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
-          >
-            Join the Waitlist
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="https://app.urganize.app/auth"
+              className="px-5 py-2 text-white text-xs font-bold uppercase tracking-widest rounded-full hover:bg-white/10 hover:scale-105 transition-all border border-white/20"
+            >
+              Login
+            </Link>
+            <Link
+              href="https://app.urganize.app/auth"
+              className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+            >
+              Sign Up
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -394,15 +402,23 @@ export default function FeaturesPage() {
               <p className="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">
                 Join managers and artists who refuse to let chaos kill their releases.
               </p>
-              <Link
-                href="/#early-access"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
-              >
-                Join the Waitlist
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="https://app.urganize.app/auth"
+                  className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
+                >
+                  Sign Up
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link
+                  href="https://app.urganize.app/auth"
+                  className="inline-flex items-center gap-3 px-10 py-5 text-white text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20"
+                >
+                  Login
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

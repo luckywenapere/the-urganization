@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import SignUpForm from "./components/SignUpForm";
 import FAQ from "./components/FAQ";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -59,7 +58,7 @@ export default function Home() {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4">
             <Link 
               href="/features" 
               className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
@@ -67,10 +66,16 @@ export default function Home() {
               See How It Works
             </Link>
             <Link
-              href="#early-access"
+              href="https://app.urganize.app/auth"
+              className="px-5 py-2 text-white text-xs font-bold uppercase tracking-widest rounded-full hover:bg-white/10 hover:scale-105 transition-all border border-white/20"
+            >
+              Login
+            </Link>
+            <Link
+              href="https://app.urganize.app/auth"
               className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
             >
-              Get Early Access
+              Sign Up
             </Link>
           </div>
 
@@ -105,11 +110,18 @@ export default function Home() {
                 Features
               </Link>
               <Link
-                href="#early-access"
+                href="https://app.urganize.app/auth"
+                onClick={() => setIsMenuOpen(false)}
+                className="w-full text-center py-5 text-white text-lg font-bold rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20"
+              >
+                Login
+              </Link>
+              <Link
+                href="https://app.urganize.app/auth"
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
               >
-                Get Early Access
+                Sign Up
               </Link>
               
               {/* Subtle Socials in Menu */}
@@ -179,10 +191,16 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
-                href="#early-access"
+                href="https://app.urganize.app/auth"
                 className="px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                Get Early Access
+                Sign Up
+              </Link>
+              <Link
+                href="https://app.urganize.app/auth"
+                className="px-10 py-5 text-white text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20"
+              >
+                Login
               </Link>
             </motion.div>
           </div>
@@ -228,7 +246,12 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Intelligent Guidance</h3>
+<<<<<<< HEAD
                 <p className="text-neutral-400">Urganize asks questions about your music and goals, then gives you tasks tailored to you. It evolves with your progress, like a manager in your pocket.</p>
+=======
+                <p className="text-neutral-400">Our AI looks at your release timeline and completed work to decide what should happen next.
+Outcomes are captured to reduce guesswork and improve future guidance.</p>
+>>>>>>> a619a1d (update sign up button)
               </div>
             </motion.div>
 
