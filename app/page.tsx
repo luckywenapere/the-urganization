@@ -246,12 +246,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Intelligent Guidance</h3>
-<<<<<<< HEAD
-                <p className="text-neutral-400">Urganize asks questions about your music and goals, then gives you tasks tailored to you. It evolves with your progress, like a manager in your pocket.</p>
-=======
                 <p className="text-neutral-400">Our AI looks at your release timeline and completed work to decide what should happen next.
 Outcomes are captured to reduce guesswork and improve future guidance.</p>
->>>>>>> a619a1d (update sign up button)
               </div>
             </motion.div>
 
