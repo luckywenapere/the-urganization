@@ -435,7 +435,7 @@ export default function Home() {
                         alt="Company Logo 1"
                         width={128}
                         height={96}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-4"
                       />
                     </motion.div>
 
@@ -446,7 +446,7 @@ export default function Home() {
                         alt="Company Logo 2"
                         width={128}
                         height={96}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-4"
                       />
                     </motion.div>
 
@@ -457,7 +457,7 @@ export default function Home() {
                         alt="Company Logo 3"
                         width={128}
                         height={96}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-4"
                       />
                     </motion.div>
 
@@ -468,7 +468,7 @@ export default function Home() {
                         alt="Company Logo 4"
                         width={128}
                         height={96}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-4"
                       />
                     </motion.div>
 
@@ -479,13 +479,35 @@ export default function Home() {
                         alt="Company Logo 5"
                         width={128}
                         height={96}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </motion.div>
+
+                   {/* Logo Placeholder 6 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-6.png"
+                        alt="Company Logo 6"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </motion.div>
+
+                    {/* Logo Placeholder 7 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-7.png"
+                        alt="Company Logo 7"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-contain p-4"
                       />
                     </motion.div>
                   </div>
-                  <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
-            <p className="text-sm text-neutral-400">Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.</p>
-          </motion.div>
+                    <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
+                    <p className="text-sm text-neutral-400">Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.</p>
+                  </motion.div>
                 </div>
               </div>
             </div>
