@@ -63,19 +63,13 @@ export default function Home() {
               href="/features" 
               className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
             >
-              See How It Works
-            </Link>
-            <Link
-              href="https://app.urganize.app/auth"
-              className="px-5 py-2 text-white text-xs font-bold uppercase tracking-widest rounded-full hover:bg-white/10 hover:scale-105 transition-all border border-white/20"
-            >
-              Login
+              How it works
             </Link>
             <Link
               href="https://app.urganize.app/auth"
               className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
             >
-              Sign Up
+              Start Your Release
             </Link>
           </div>
 
@@ -112,16 +106,9 @@ export default function Home() {
               <Link
                 href="https://app.urganize.app/auth"
                 onClick={() => setIsMenuOpen(false)}
-                className="w-full text-center py-5 text-white text-lg font-bold rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20"
-              >
-                Login
-              </Link>
-              <Link
-                href="https://app.urganize.app/auth"
-                onClick={() => setIsMenuOpen(false)}
                 className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
               >
-                Sign Up
+                Start Your Release
               </Link>
               
               {/* Subtle Socials in Menu */}
@@ -137,7 +124,7 @@ export default function Home() {
       <main className="relative z-10">
         
         {/* --- HERO SECTION --- */}
-        <section className="relative min-h-screen flex items-center justify-center pt-20">
+        <section className="relative min-h-screen flex items-center justify-center pt-24">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/hero-image.webp"
@@ -155,10 +142,10 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-4"
             >
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
-              AI-Guided Release Decisions
+              Built by an Oracle Certified AI Pro
             </motion.div>
             
             {/* Hero Headline */}
@@ -166,10 +153,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]"
+              className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter mb-6 leading-[0.9]"
             >
-              Your music career,<br />
-              <span className="text-emerald-400">stress-free.</span>
+              Release music without the stress of
+              <span className="text-emerald-400"> not knowing what to do.</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -177,10 +164,9 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed"
+              className="text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
-              Urganize guides you through releasing your music, <span className="text-white font-semibold">one personalized task at a time</span>. 
-              It adapts to your progress so you always know what to do next.
+              <span className="text-white font-semibold">Urganize</span> is a release operating system for artist managers. It gives you AI-guided steps, organized tasks, and a content plan so you can promote music properly without guessing.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -194,13 +180,7 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                Sign Up
-              </Link>
-              <Link
-                href="https://app.urganize.app/auth"
-                className="px-10 py-5 text-white text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20"
-              >
-                Login
+                Start Your Release
               </Link>
             </motion.div>
           </div>
@@ -209,69 +189,58 @@ export default function Home() {
         {/* --- PROBLEM SECTION --- */}
         <section className="py-32 px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Releasing music is chaos.</h2>
-            <p className="text-xl text-neutral-400">Promotion dates, distributor deadlines, credits, cover arts, metadata — all spread out everywhere.</p>
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Artist managers don't fail because they don't care.</h2>
+            <p className="text-xl text-neutral-400 mb-12">They fail because promotion is chaotic.</p>
+            <div className="text-xl text-neutral-400 space-y-3">
+              <p>No clear steps.</p>
+              <p>No structure.</p>
+              <p>Too many moving parts.</p>
+              <p>Too much guessing.</p>
+              <p className="pt-4 font-semibold">Most releases die quietly not because the music is bad, but because the process is broken.</p>
+              <p className="pt-4 text-emerald-400 font-bold text-2xl">Urganize fixes that.</p>
+            </div>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-              <h3 className="text-2xl font-bold mb-4">Too many things, zero guidance</h3>
-              <p className="text-neutral-400">Generic tools dump 50 tasks at once. You don’t know where to start, so you don’t.</p>
-            </motion.div>
-
-            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-              <h3 className="text-2xl font-bold mb-4">Everything scattered</h3>
-              <p className="text-neutral-400">Contracts, artwork, stems, metadata all in different places.</p>
-            </motion.div>
-
-            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
-              <h3 className="text-2xl font-bold mb-4">Stress steals your focus</h3>
-              <p className="text-neutral-400">The constant question of "what did we forget?" stops creativity and slows your workflow.</p>
-            </motion.div>
-          </div>
         </section>
+
         {/* --- SOLUTION / FEATURES SECTION --- */}
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">One task. One focus. Always clear.</h2>
-            <p className="text-xl text-neutral-400">Urganize doesn’t overwhelm you with everything at once. It shows you exactly what to do next and adapts based on your progress.</p>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Urganize helps artist managers release music with structure.</h2>
+            <p className="text-2xl text-white font-semibold mb-8">Instead of wondering what to do next, Urganize tells you.</p>
+            <div className="text-xl text-neutral-400 space-y-6">
+               {/*<p>Instead of wondering what to do next, Urganize tells you.</p> */}
+              <p>Instead of scattered notes, you get organized tasks.</p>
+              <p>Instead of random promotion, you get a content plan.</p>
+              <p className="text-emerald-400 font-bold text-2xl">One system. One flow. Zero confusion.</p>
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
-              <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Intelligent Guidance</h3>
-                <p className="text-neutral-400">Our AI checks your release schedule and what you’ve already done to tell you the next step. It saves the results so future advice is clearer and easier.</p>
-              </div>
-            </motion.div>
-
-            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
-              <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Adaptive Flow</h3>
-                <p className="text-neutral-400">Finish a task, share how it went, and Urganize adapts the next step automatically. One task at a time, always personalized.</p>
-              </div>
-            </motion.div>
-
-            <motion.div {...fadeInUp} className="p-1 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-[2rem] border border-white/10">
-              <div className="bg-black/80 rounded-[1.9rem] h-full p-8">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Everything In One Place</h3>
-                <p className="text-neutral-400">Contracts, split sheets, artwork all keep in structured systems and are easily accessible.</p>
-              </div>
+          <div className="max-w-4xl mx-auto mt-20">
+            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-emerald-500/20">
+              <h3 className="text-3xl font-bold mb-8 text-center">Benefits</h3>
+              <ul className="space-y-4 text-neutral-300 text-lg">
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
+                  <span>Clear step-by-step guidance for every release</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
+                  <span>AI adapts tasks based on your current release stage</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
+                  <span>Built-in content planning for promotion</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
+                  <span>Less stress. Better execution</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
+                  <span>No prior marketing knowledge required</span>
+                </li>
+              </ul>
+              <p className="text-emerald-400 font-semibold text-center mt-8 pt-8 border-t border-white/10">Currently free while we build with early users.</p>
             </motion.div>
           </div>
         </section>
@@ -279,101 +248,123 @@ export default function Home() {
         {/* --- HOW IT WORKS SECTION --- */}
         <section className="py-32 px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">How it works.</h2>
-            <p className="text-xl text-neutral-400">A simple loop that keeps you moving forward without overwhelm.</p>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">How it works</h2>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
-            {/* Step 1 */}
-            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">1</div>
-              <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Answer questions about your music & goals</h3>
-                <p className="text-neutral-400 text-lg">This sets up a personalized workflow just for you.</p>
-              </div>
-            </motion.div>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6 text-lg text-neutral-300">
+              <motion.div {...fadeInUp} className="flex gap-6 items-start">
+                <span className="text-emerald-400 font-bold text-3xl flex-shrink-0">1.</span>
+                <p>Create a new release</p>
+              </motion.div>
+              <motion.div {...fadeInUp} className="flex gap-6 items-start">
+                <span className="text-emerald-400 font-bold text-3xl flex-shrink-0">2.</span>
+                <p>Urganize asks a few questions about your current situation</p>
+              </motion.div>
+              <motion.div {...fadeInUp} className="flex gap-6 items-start">
+                <span className="text-emerald-400 font-bold text-3xl flex-shrink-0">3.</span>
+                <p>AI generates personalized step-by-step tasks</p>
+              </motion.div>
+              <motion.div {...fadeInUp} className="flex gap-6 items-start">
+                <span className="text-emerald-400 font-bold text-3xl flex-shrink-0">4.</span>
+                <p>You get a content plan for promotion</p>
+              </motion.div>
+              <motion.div {...fadeInUp} className="flex gap-6 items-start">
+                <span className="text-emerald-400 font-bold text-3xl flex-shrink-0">5.</span>
+                <p>You execute with clarity</p>
+              </motion.div>
+            </div>
 
-            {/* Step 2 */}
-            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">2</div>
-              <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Receive personalized tasks</h3>
-                <p className="text-neutral-400 text-lg">Urganize shows you exactly what to do next — never a giant, overwhelming checklist.</p>
-              </div>
-            </motion.div>
-
-            {/* Step 3 */}
-            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">3</div>
-              <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Complete a task & provide feedback</h3>
-                <p className="text-neutral-400 text-lg">This feeds the system so your next step is intelligently adapted.</p>
-              </div>
-            </motion.div>
-
-            {/* Step 4 */}
-            <motion.div {...fadeInUp} className="flex flex-col md:flex-row gap-8 items-start mb-16">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-black text-2xl">4</div>
-              <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-3">Repeat the loop, adapted to your progress</h3>
-                <p className="text-neutral-400 text-lg">Urganize continuously adapts, keeping you on track until release day.</p>
-              </div>
-            </motion.div>
-
-            {/* Loop Visual */}
             <motion.div {...fadeInUp} className="mt-12 p-8 rounded-[2rem] bg-neutral-900/50 border border-emerald-500/20 text-center">
-              <div className="flex items-center justify-center gap-4 flex-wrap">
-                <span className="px-4 py-2 bg-emerald-500/20 rounded-full text-emerald-400 font-semibold">Task</span>
-                <svg className="w-6 h-6 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-                <span className="px-4 py-2 bg-emerald-500/20 rounded-full text-emerald-400 font-semibold">Feedback</span>
-                <svg className="w-6 h-6 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-                <span className="px-4 py-2 bg-emerald-500/20 rounded-full text-emerald-400 font-semibold">Adapt</span>
-                <svg className="w-6 h-6 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-                <span className="px-4 py-2 bg-emerald-500/20 rounded-full text-emerald-400 font-semibold">Repeat</span>
-              </div>
-              <p className="text-neutral-500 mt-6 text-sm">The AI-guided loop that keeps you on track without the overwhelm.</p>
+              <p className="text-emerald-400 font-bold text-2xl">That's it.</p>
+              <p className="text-emerald-400 font-bold text-2xl">No guessing.</p>
             </motion.div>
           </div>
         </section>
 
-        {/* --- WHO THIS IS FOR SECTION --- */}
+        {/* --- EXAMPLE WORKFLOWS SECTION --- */}
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Built for the people who make releases happen.</h2>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Example workflows</h2>
+            <p className="text-xl text-neutral-400">early preview</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
-              <h3 className="text-3xl font-bold mb-4">Artist Managers</h3>
-              <p className="text-neutral-400 text-lg leading-relaxed">When things go wrong, it’s on you. Urganize gives you clear steps and helps you stay in control so releases don’t fall behind and you can relax.
-              </p>
+              <h3 className="text-3xl font-bold mb-6">Example 1 - New single release</h3>
+              <ul className="space-y-3 text-neutral-300 text-lg">
+                <li>Manager creates release</li>
+                <li>Answers questions (date, platforms, assets ready?)</li>
+                <li className="pt-2 font-semibold text-white">Urganize generates:</li>
+                <li className="ml-4">• Pre-release checklist</li>
+                <li className="ml-4">• Content ideas</li>
+                <li className="ml-4">• Posting timeline</li>
+                <li className="pt-2">Manager follows tasks inside one dashboard</li>
+              </ul>
             </motion.div>
 
             <motion.div {...fadeInUp} className="p-10 rounded-[2.5rem] bg-neutral-900/80 border border-white/10">
-              <h3 className="text-3xl font-bold mb-4">Independent Artists</h3>
-              <p className="text-neutral-400 text-lg leading-relaxed">Doing everything yourself? Same chaos, no support. Urganize gives you the same system managers use, adapted for one. Focus on your music, not the stress.</p>
+              <h3 className="text-3xl font-bold mb-6">Example 2 - Late promotion rescue</h3>
+              <p className="text-neutral-300 text-lg mb-4">Artist already dropped music.</p>
+              <p className="text-neutral-300 text-lg mb-4 font-semibold text-white">Urganize adjusts:</p>
+              <ul className="space-y-3 text-neutral-300 text-lg">
+                <li>• Focus shifts to post-release content</li>
+                <li>• Playlist outreach tasks appear</li>
+                <li>• Social engagement steps activate</li>
+              </ul>
+              <p className="pt-4 text-neutral-300 text-lg">Same system. Different stage.</p>
             </motion.div>
           </div>
         </section>
 
-        <FounderPOV
-          quote="I’ve seen too many great releases fail, not because the music wasn’t good, but because the work around it was chaotic. Talent isn’t the bottleneck anymore, operations are. Urganize exists to bring structure to releases so creativity isn’t constantly interrupted by stress."
-        />
+        {/* --- WHY DIFFERENT SECTION --- */}
+        <section className="py-32 px-6">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Why Urganize is different</h2>
+            <p className="text-xl text-neutral-400 mb-8">Most tools give you empty task lists.</p>
+            <p className="text-2xl font-semibold text-white mb-4">Urganize tells you what the tasks should be.</p>
+            <p className="text-xl text-neutral-400 mb-8">It's not just organization.</p>
+            <p className="text-2xl font-bold text-emerald-400">It's direction.</p>
+          </motion.div>
+        </section>
 
-        {/* --- EARLY ACCESS / SIGN UP SECTION --- */}
-        {/* --- SIGN UP / LOGIN SECTION --- */}
+        {/* --- EARLY TRACTION SECTION --- */}
+        <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-12">Early traction</h2>
+            <ul className="space-y-4 text-xl text-neutral-300">
+              <li className="flex items-center gap-3 justify-center">
+                <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Growing waitlist of artist managers
+              </li>
+              <li className="flex items-center gap-3 justify-center">
+                <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Built with real release workflows
+              </li>
+              <li className="flex items-center gap-3 justify-center">
+                <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Designed specifically for music promotion not generic productivity
+              </li>
+            </ul>
+            <p className="text-neutral-400 text-lg mt-8">We're currently onboarding early users through demos.</p>
+          </motion.div>
+        </section>
+
+        {/* --- CTA SECTION --- */}
         <section id="early-access" className="py-32 px-6">
           <div className="max-w-4xl mx-auto">
             <motion.div {...fadeInUp} className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Ready to get started?</h2>
-              <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-                Sign up to start managing your releases with AI-guided workflows, or login to continue where you left off.
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Start Your Release</h2>
+              <p className="text-xl text-neutral-400 max-w-2xl mx-auto mb-8">
+                Stop guessing.<br />
+                Stop missing steps.<br />
+                Start releasing with structure.
               </p>
             </motion.div>
 
@@ -382,33 +373,121 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="w-full sm:w-auto px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] text-center"
               >
-                Sign Up
+                Start Your Release
               </Link>
-              <Link
-                href="https://app.urganize.app/auth"
-                className="w-full sm:w-auto px-10 py-5 text-white text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-white/10 active:scale-95 transition-all border border-white/20 text-center"
-              >
-                Login
-              </Link>
-            </motion.div>
-
-            <motion.div {...fadeInUp} className="mt-12 text-center">
-              <div className="inline-flex items-center gap-6 text-neutral-600 text-sm">
-                <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  AI-guided workflows
-                </span>
-                <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  One task at a time
-                </span>
-              </div>
             </motion.div>
           </div>
+        </section>
+
+        {/* --- THE TEAM SECTION --- */}
+        <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Meet The Urganization</h2>
+              <p className="text-xl text-neutral-400">Our founder brings 8 years of experience as a multimedia creative director in the creative industry.</p>
+            </div>
+
+            {/* Team Members */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-20">
+              {/* Team Member 1 */}
+              <motion.div {...fadeInUp} className="flex flex-col items-center">
+                <div className="w-48 h-48 rounded-lg bg-neutral-800 border border-white/10 mb-6 flex items-center justify-center">
+                  <Image
+                    src="/images/placeholder-avatar.jpg"
+                    alt="Lucky Wenapere"
+                    width={192}
+                    height={192}
+                    className="rounded-lg w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-center">Lucky Wenapere</h3>
+                <p className="text-emerald-400 font-semibold text-center mt-2">Founder</p>
+              </motion.div>
+
+              {/* Team Member 2 */}
+              <motion.div {...fadeInUp} className="flex flex-col items-center">
+                <div className="w-48 h-48 rounded-lg bg-neutral-800 border border-white/10 mb-6 flex items-center justify-center">
+                  <Image
+                    src="/images/placeholder-avatar.jpg"
+                    alt="Bobson Prosper"
+                    width={192}
+                    height={192}
+                    className="rounded-lg w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-center">Bobson Prosper</h3>
+                <p className="text-emerald-400 font-semibold text-center mt-2">Lead Engineer</p>
+              </motion.div>
+            </div>
+
+            {/* Companies Section */}
+            <div className="mt-20">
+              <h3 className="text-3xl font-bold text-center mb-12">Companies we've worked with</h3>
+              
+              {/* Scrolling Container for Mobile, Grid for Desktop */}
+              <div className="md:flex md:justify-center md:gap-8">
+                <div className="overflow-x-auto md:overflow-visible">
+                  <div className="flex gap-6 md:gap-8 animate-scroll-logos md:animate-none">
+                    {/* Logo Placeholder 1 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-1.png"
+                        alt="Company Logo 1"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+
+                    {/* Logo Placeholder 2 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-2.png"
+                        alt="Company Logo 2"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+
+                    {/* Logo Placeholder 3 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-3.png"
+                        alt="Company Logo 3"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+
+                    {/* Logo Placeholder 4 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-4.png"
+                        alt="Company Logo 4"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+
+                    {/* Logo Placeholder 5 */}
+                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/images/logo-5.png"
+                        alt="Company Logo 5"
+                        width={128}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </section>
 
         <FAQ />
