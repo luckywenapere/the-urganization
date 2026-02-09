@@ -29,6 +29,17 @@ export default function Home() {
     }
   };
 
+  const logos = [
+    { src: "/images/logo-1.png", alt: "Company Logo 1" },
+    { src: "/images/logo-2.png", alt: "Company Logo 2" },
+    { src: "/images/logo-3.png", alt: "Company Logo 3" },
+    { src: "/images/logo-4.png", alt: "Company Logo 4" },
+    { src: "/images/logo-5.png", alt: "Company Logo 5" },
+    { src: "/images/logo-6.png", alt: "Company Logo 6" },
+    { src: "/images/logo-7.png", alt: "Company Logo 7" },
+  ];
+
+
   return (
     <div className="relative min-h-screen w-full bg-[#050505] text-white overflow-x-hidden font-sans selection:bg-emerald-500/30">
       
@@ -423,94 +434,74 @@ export default function Home() {
 
             {/* Companies Section */}
             <div className="mt-20">
-              
-              {/* Scrolling Container for Mobile, Grid for Desktop */}
               <div className="md:flex md:justify-center md:gap-8">
-                <div className="overflow-x-auto md:overflow-visible">
-                  <div className="flex gap-6 md:gap-8 animate-scroll-logos md:animate-none">
-                    {/* Logo Placeholder 1 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-1.png"
-                        alt="Company Logo 1"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
+                {/* Infinite scroll wrapper */}
+                <div className="relative w-full overflow-hidden md:max-w-5xl">
 
-                    {/* Logo Placeholder 2 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-2.png"
-                        alt="Company Logo 2"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
-
-                    {/* Logo Placeholder 3 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-3.png"
-                        alt="Company Logo 3"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
-
-                    {/* Logo Placeholder 4 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-4.png"
-                        alt="Company Logo 4"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
-
-                    {/* Logo Placeholder 5 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-5.png"
-                        alt="Company Logo 5"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
-
-                   {/* Logo Placeholder 6 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-6.png"
-                        alt="Company Logo 6"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
-
-                    {/* Logo Placeholder 7 */}
-                    <motion.div {...fadeInUp} className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/images/logo-7.png"
-                        alt="Company Logo 7"
-                        width={128}
-                        height={96}
-                        className="w-full h-full object-contain p-4"
-                      />
-                    </motion.div>
+                  {/* Logo track (duplicated for seamless loop) */}
+                  <div className="flex w-max gap-6 md:gap-8 animate-logo-marquee">
+                    {[
+                      "/images/logo-1.png",
+                      "/images/logo-2.png",
+                      "/images/logo-3.png",
+                      "/images/logo-4.png",
+                      "/images/logo-5.png",
+                      "/images/logo-6.png",
+                      "/images/logo-7.png",
+                      "/images/logo-1.png",
+                      "/images/logo-2.png",
+                      "/images/logo-3.png",
+                      "/images/logo-4.png",
+                      "/images/logo-5.png",
+                      "/images/logo-6.png",
+                      "/images/logo-7.png",
+                    ].map((src, i) => (
+                      <motion.div
+                        key={i}
+                        {...fadeInUp}
+                        className="flex-shrink-0 w-32 h-24 rounded-lg bg-neutral-900/50 border border-white/10 flex items-center justify-center overflow-hidden"
+                      >
+                        <Image
+                          src={src}
+                          alt={`Company Logo ${i + 1}`}
+                          width={128}
+                          height={96}
+                          className="w-full h-full object-contain p-4"
+                        />
+                      </motion.div>
+                    ))}
                   </div>
-                    <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
-                    <p className="text-sm text-neutral-400">Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.</p>
-                  </motion.div>
                 </div>
               </div>
+
+              <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
+                <p className="text-sm text-neutral-400">
+                  Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.
+                </p>
+              </motion.div>
+
+              {/* Animation */}
+              <style jsx global>{`
+                @keyframes logoMarquee {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+
+                .animate-logo-marquee {
+                  animation: logoMarquee 22s linear infinite;
+                  will-change: transform;
+                }
+
+                .animate-logo-marquee:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
             </div>
+
           </motion.div>
         </section>
 
