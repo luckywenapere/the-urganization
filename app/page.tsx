@@ -474,11 +474,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
-                <p className="text-sm text-neutral-400">
-                  Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.
-                </p>
-              </motion.div>
+              
 
               {/* Animation */}
               <style jsx global>{`
@@ -501,7 +497,11 @@ export default function Home() {
                 }
               `}</style>
             </div>
-
+                <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
+                <p className="text-sm text-neutral-400">
+                  Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.
+                </p>
+              </motion.div>
           </motion.div>
         </section>
 
