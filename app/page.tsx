@@ -423,7 +423,6 @@ export default function Home() {
 
             {/* Companies Section */}
             <div className="mt-20">
-              <h3 className="text-3xl font-bold text-center mb-12">Companies we've worked with</h3>
               
               {/* Scrolling Container for Mobile, Grid for Desktop */}
               <div className="md:flex md:justify-center md:gap-8">
@@ -484,6 +483,9 @@ export default function Home() {
                       />
                     </motion.div>
                   </div>
+                  <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mt-16 mb-20">
+            <p className="text-sm text-neutral-400">Recognition of these institutions reflects individual educational or professional experience only. It does not constitute an endorsement of Urganize, nor does it guarantee any specific results or outcomes.</p>
+          </motion.div>
                 </div>
               </div>
             </div>
