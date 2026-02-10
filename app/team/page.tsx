@@ -21,6 +21,31 @@ export default function TeamPage() {
             <div className="text-xl font-bold">Bobson Prosper</div>
             <div className="text-emerald-400 font-semibold mt-1">Lead Engineer</div>
           </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">Gideon Ugorji</div>
+            <div className="text-emerald-400 font-semibold mt-1">Engineering</div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">King-Kpunee Tedum</div>
+            <div className="text-emerald-400 font-semibold mt-1">Engineering</div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">Alan Dokotree</div>
+            <div className="text-emerald-400 font-semibold mt-1">Community & User Engagement</div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">Abraham Anyebe</div>
+            <div className="text-emerald-400 font-semibold mt-1">Operations</div>
+          </div>
+          
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">Success Elton</div>
+            <div className="text-emerald-400 font-semibold mt-1">Operations & User Support</div>
+          </div>
         </div>
       </div>
     </main>

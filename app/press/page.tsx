@@ -18,7 +18,7 @@ export default function PressPage() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-xl font-semibold">Short description</h2>
             <p className="text-neutral-300 mt-2">
-              Urganize is a release operating system for artist managers — AI-guided steps, organized tasks, and a content plan.
+              Urganize is a release operating system for artist managers - AI-guided steps, organized tasks, and a content plan.
             </p>
           </div>
 
@@ -33,9 +33,21 @@ export default function PressPage() {
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-xl font-semibold">Logos</h2>
-            <p className="text-neutral-300 mt-2">
-              Add downloadable assets here (e.g., a zip link or a /press-assets route).
-            </p>
+              {/* <a
+                href="/press/urganize-press-kit.pdf"
+                download
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition-all"
+                >
+                Download Press Kit (PDF)
+                </a> */}
+
+                <a
+                href="/press/urganize-logo.zip"
+                download
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all"
+                >
+                Download Logos (ZIP)
+              </a>
           </div>
         </div>
       </div>
