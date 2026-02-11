@@ -1,26 +1,29 @@
-import Link from "next/link";
-
-export default function SubprocessorsPage() {
+export default function Subprocessors() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white px-6 py-24">
-      <div className="max-w-4xl mx-auto">
-        <Link href="/" className="text-sm text-neutral-400 hover:text-white transition-colors">
-          ← Back to home
-        </Link>
+    <main className="max-w-3xl mx-auto px-6 py-24 text-neutral-300">
+      <h1 className="text-4xl font-bold mb-8 text-white">Subprocessors</h1>
 
-        <h1 className="text-4xl md:text-5xl font-black tracking-tighter mt-6">Subprocessors</h1>
-        <p className="text-neutral-300 mt-4">
-          Placeholder list. Replace with your real vendors before launch.
-        </p>
+      <p className="mb-6">
+        Urganize uses trusted third-party services to operate our platform.
+      </p>
 
-        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
-          <ul className="space-y-3 text-neutral-300">
-            <li>Hosting / Infrastructure — TBD</li>
-            <li>Analytics — TBD</li>
-            <li>Email / Notifications — TBD</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      <ul className="space-y-2 list-disc ml-6">
+        <li>Vercel – Hosting</li>
+        <li>Google Analytics – Usage analytics</li>
+        <li>Google Gemini – AI processing</li>
+        <li>Paystack – Payments</li>
+        <li>Gmail – Email communication</li>
+        <li>Neon – Database</li>
+        <li>Supabase – Authentication and storage</li>
+        <li>Slack – Internal team communication</li>
+        <li>WhatsApp – Customer messaging</li>
+        <li>Telegram – Customer messaging</li>
+        <li>MailerLite – Product and marketing emails</li>
+      </ul>
+
+      <p className="mt-8">
+        Additional subprocessors may be added as Urganize evolves.
+      </p>
+    </main>
   );
 }
