@@ -81,7 +81,7 @@ export default function TermsPage() {
         </div>
 
         <div className="mt-16 pt-6 border-t border-white/10 flex justify-between text-xs uppercase tracking-[0.2em] text-neutral-500">
-          <span>© Urganize</span>
+          <span>© The Urganization</span>
           <div className="flex gap-4">
             <Link href="/privacy">Privacy</Link>
             <Link href="/subprocessors">Subprocessors</Link>

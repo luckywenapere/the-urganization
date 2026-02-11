@@ -352,7 +352,7 @@ export default function PrivacyPolicy() {
             {/* Footer line */}
             <motion.div {...fadeInUp} className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <p className="text-sm text-neutral-500">
-                &copy; {new Date().getFullYear()} Urganize
+                &copy; {new Date().getFullYear()} The Urganization
               </p>
 
               <div className="flex gap-4 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
