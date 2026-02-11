@@ -268,7 +268,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed"
+              className="-mt-2 text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
               <span className="text-white font-semibold">Urganize</span> is a release
               operating system for artist managers. It gives you AI-guided steps,
