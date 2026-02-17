@@ -14,37 +14,22 @@ export default function TeamPage() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Lucky Wenapere</div>
-            <div className="text-emerald-400 font-semibold mt-1">Founder</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder</div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">Tedum King</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder & AI Engineer</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Bobson Prosper</div>
-            <div className="text-emerald-400 font-semibold mt-1">Lead Engineer</div>
+            <div className="text-emerald-400 font-semibold mt-1">Backend Engineer</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Gideon Ugorji</div>
-            <div className="text-emerald-400 font-semibold mt-1">Engineering</div>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-xl font-bold">King-Kpunee Tedum</div>
-            <div className="text-emerald-400 font-semibold mt-1">Engineering</div>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-xl font-bold">Alan Dokotree</div>
-            <div className="text-emerald-400 font-semibold mt-1">Community & User Engagement</div>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-xl font-bold">Abraham Anyebe</div>
-            <div className="text-emerald-400 font-semibold mt-1">Operations</div>
-          </div>
-          
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-xl font-bold">Success Elton</div>
-            <div className="text-emerald-400 font-semibold mt-1">Operations & User Support</div>
+            <div className="text-emerald-400 font-semibold mt-1">DevOps</div>
           </div>
         </div>
       </div>
