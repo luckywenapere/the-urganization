@@ -547,7 +547,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-20">
+            <div className="flex justify-center max-w-3xl mx-auto mb-20">
               <motion.div {...fadeInUp} className="flex flex-col items-center">
                 <div className="w-48 h-48 rounded-lg bg-neutral-800 border border-white/10 mb-6 flex items-center justify-center">
                   <Image
@@ -560,20 +560,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-center">Lucky Wenapere</h3>
                 <p className="text-emerald-400 font-semibold text-center mt-2">Founder</p>
-              </motion.div>
-
-              <motion.div {...fadeInUp} className="flex flex-col items-center">
-                <div className="w-48 h-48 rounded-lg bg-neutral-800 border border-white/10 mb-6 flex items-center justify-center">
-                  <Image
-                    src="/images/bobsonprosper.png"
-                    alt="Bobson Prosper"
-                    width={192}
-                    height={192}
-                    className="rounded-lg w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold text-center">Bobson Prosper</h3>
-                <p className="text-emerald-400 font-semibold text-center mt-2">Lead Engineer</p>
               </motion.div>
             </div>
 
