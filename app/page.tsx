@@ -452,7 +452,7 @@ export default function Home() {
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Meet The Urganization</h2>
               <p className="text-xl text-neutral-400">
-                Our founder brings 8 years of experience as a multimedia creative director in the creative industry.
+                Our founder brings 8 years of experience as a multimedia creative director in the industry, is a software dev, and a product manager.
               </p>
             </div>
 

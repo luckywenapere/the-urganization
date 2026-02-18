@@ -13,17 +13,17 @@ const FAQ_DATA: FAQItem[] = [
   {
     id: 1,
     question: "Is Urganize live?",
-    answer: "Not yet. We're in pre-launch and onboarding early users via demos."
+    answer: "Not yet. We're in pre-launch."
   },
   {
     id: 2,
-    question: "Who is this for?",
-    answer: "Artist managers in Nigeria handling music releases."
+    question: "Who is Urganize for?",
+    answer: "Artists actively building their careers"
   },
   {
     id: 3,
-    question: "Is it free?",
-    answer: "Yes — free during early access. Paid plans will come later."
+    question: "Is Urganize free?",
+    answer: "No, it is not."
   },
   {
     id: 4,
@@ -37,8 +37,8 @@ const FAQ_DATA: FAQItem[] = [
   },
   {
     id: 6,
-    question: "What happens after I click \"Start Your Release\"?",
-    answer: "You'll personally walk through Urganize live with the founder and see how it works for your workflow."
+    question: "What happens after I click \"Start Urganizing\"?",
+    answer: "You sign up or login to the beta version"
   }
 ];
 
