@@ -159,7 +159,7 @@ export default function Home() {
                     href="https://app.urganize.app/auth"
                     className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
                   >
-                    Start Your Release
+                    Start Urganizing
                   </Link>
                 </motion.div>
               )}
@@ -213,7 +213,7 @@ export default function Home() {
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
               >
-                Start Your Release
+                Start Urganizing
               </Link>
 
               {/* Subtle Socials in Menu */}
@@ -270,10 +270,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="-mt-2 text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
-              <span className="text-white font-semibold">Urganize</span> is a release
-              operating system for artist managers. It gives you AI-guided steps,
-              organized tasks, and a content plan so you can promote music properly
-              without guessing.
+              <span className="text-white font-semibold">Urganize</span> is an AI that helps artists reach their goals by giving one step at a time and deciding what’s next based on results.
             </motion.p>
 
             {/* CTA Buttons (Observed) */}
@@ -288,7 +285,7 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                Start Your Release
+                Start Urganizing
               </Link>
             </motion.div>
           </div>
@@ -298,7 +295,7 @@ export default function Home() {
         <section className="py-32 px-6">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
-              Artist managers don&apos;t fail because they don&apos;t care.
+              Artists don&apos;t fail because they don&apos;t care.
             </h2>
             <p className="text-xl text-neutral-400 mb-12">They fail because promotion is chaotic.</p>
             <div className="text-xl text-neutral-400 space-y-3">
@@ -309,7 +306,6 @@ export default function Home() {
               <p className="pt-4 font-semibold">
                 Most releases die quietly not because the music is bad, but because the process is broken.
               </p>
-              <p className="pt-4 text-emerald-400 font-bold text-2xl">Urganize fixes that.</p>
             </div>
           </motion.div>
         </section>
@@ -318,13 +314,13 @@ export default function Home() {
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">
-              Urganize helps artist managers release music with structure.
+              Urganize helps artists reach their goals with guided steps.
             </h2>
             <p className="text-2xl text-white font-semibold mb-8">
               Instead of wondering what to do next, Urganize tells you.
             </p>
             <div className="text-xl text-neutral-400 space-y-6">
-              <p>Instead of scattered notes, you get organized tasks.</p>
+              <p>Instead of scattered notes, you get urganized tasks.</p>
               <p>Instead of random promotion, you get a content plan.</p>
               <p className="text-emerald-400 font-bold text-2xl">One system. One flow. Zero confusion.</p>
             </div>
@@ -336,41 +332,12 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="flex justify-center mb-6"
+              className="flex justify-center mb-20"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
+              <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
                 Built by an Oracle Certified AI Pro
               </div>
-            </motion.div>
-
-            <motion.div {...fadeInUp} className="p-8 rounded-[2rem] bg-neutral-900/50 border border-emerald-500/20">
-              <h3 className="text-3xl font-bold mb-8 text-center">Benefits</h3>
-              <ul className="space-y-4 text-neutral-300 text-lg">
-                <li className="flex items-start gap-3">
-                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
-                  <span>Clear step-by-step guidance for every release</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
-                  <span>AI adapts tasks based on your current release stage</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
-                  <span>Built-in content planning for promotion</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
-                  <span>Less stress. Better execution</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-emerald-400 font-bold text-2xl mt-1">•</span>
-                  <span>No prior marketing knowledge required</span>
-                </li>
-              </ul>
-              <p className="text-emerald-400 font-semibold text-center mt-8 pt-8 border-t border-white/10">
-                Currently free while we build with early users.
-              </p>
             </motion.div>
           </div>
         </section>
@@ -420,7 +387,7 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] text-center"
               >
-                Start Your Release
+                Start Urganizing
               </Link>
             </motion.div>
           </div>
@@ -461,69 +428,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- WHY DIFFERENT SECTION --- */}
-        <section className="py-32 px-6">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Why Urganize is different</h2>
-            <p className="text-xl text-neutral-400 mb-8">Most tools give you empty task lists.</p>
-            <p className="text-2xl font-semibold text-white mb-4">Urganize tells you what the tasks should be.</p>
-            <p className="text-xl text-neutral-400 mb-8">It&apos;s not just organization.</p>
-            <p className="text-2xl font-bold text-emerald-400">It&apos;s direction.</p>
-          </motion.div>
-        </section>
-
-        {/* --- EARLY TRACTION SECTION --- */}
-        <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-12">Early traction</h2>
-            <ul className="space-y-4 text-xl text-neutral-300">
-              <li className="flex items-center gap-3 justify-center">
-                <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Growing waitlist of artist managers
-              </li>
-              <li className="flex items-center gap-3 justify-center">
-                <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Built with real release workflows
-              </li>
-              <li className="flex items-center gap-3 justify-center">
-                <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Designed specifically for music promotion not generic productivity
-              </li>
-            </ul>
-            <p className="text-neutral-400 text-lg mt-8">
-              We&apos;re currently onboarding early users through demos.
-            </p>
-          </motion.div>
-        </section>
-
         {/* --- CTA SECTION --- */}
         <section id="early-access" className="py-32 px-6">
           <div className="max-w-4xl mx-auto">
             <motion.div {...fadeInUp} className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Start Your Release</h2>
-              <p className="text-xl text-neutral-400 max-w-2xl mx-auto mb-8">
-                Stop guessing.<br />
-                Stop missing steps.<br />
-                Start releasing with structure.
-              </p>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Stop guessing.<br /> Stop missing steps.<br /> Start dominating the game.</h2>
             </motion.div>
 
             <motion.div {...fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
@@ -531,7 +440,7 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="w-full sm:w-auto px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] text-center"
               >
-                Start Your Release
+                Start Urganizing
               </Link>
             </motion.div>
           </div>
@@ -710,15 +619,19 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-
-                  <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
-                    <span className="text-emerald-400/50">AI-guided release management</span>
-                  </div>
                 </div>
               </div>
 
               <p className="text-neutral-700 text-sm">
-                &copy; {new Date().getFullYear()} The Urganization.
+                &copy; {new Date().getFullYear()}{' '}
+                <a 
+                  href="https://theurganization.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  The Urganization
+                </a>.
               </p>
             </div>
           </div>
