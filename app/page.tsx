@@ -259,8 +259,8 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="max-w-[18ch] sm:max-w-[20ch] md:max-w-[24ch] text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6 leading-[0.92]"
             >
-              Release music without the stress of
-              <span className="text-emerald-400"> not knowing what to do.</span>
+              Grow your music career without the stress 
+              <span className="text-emerald-400"> of not knowing what to do.</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -394,7 +394,7 @@ export default function Home() {
         </section>
 
         {/* --- EXAMPLE WORKFLOWS SECTION --- */}
-        <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
+       {/* <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Example workflows</h2>
             <p className="text-xl text-neutral-400">early preview</p>
@@ -426,7 +426,7 @@ export default function Home() {
               <p className="pt-4 text-neutral-300 text-lg">Same system. Different stage.</p>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* --- CTA SECTION --- */}
         <section id="early-access" className="py-32 px-6">
