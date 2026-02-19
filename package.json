@@ -15,6 +15,7 @@
     "@formbricks/js": "^4.3.0",
     "@neondatabase/serverless": "^1.0.2",
     "@prisma/client": "^6.19.1",
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",

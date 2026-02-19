@@ -3,6 +3,7 @@ import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import FormbricksProvider from "./formbricks-provider";
+import { Analytics } from "@vercel/analytics/next";
 
 // Typography
 const spaceGrotesk = Space_Grotesk({
@@ -168,6 +169,7 @@ export default function RootLayout({
           <FormbricksProvider />
         </Suspense>
         {children}
+        <Analytics />
       </body>
     </html>
   );
