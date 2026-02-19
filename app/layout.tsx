@@ -21,10 +21,10 @@ const dmSans = DM_Sans({
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Urganize",
+  "name": "The Operating System for Music Teams",
   "url": "https://urganize.app",
   "logo": "https://urganize.app/images/urganize-logo.png",
-  "description": "AI-Guided Release Decisions for artist managers and independent artists. One task at a time, intelligently adapted to your progress.",
+  "description": "The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.",
   "sameAs": [
     "https://x.com/urganize",
     "https://linkedin.com/company/urganize",
@@ -40,9 +40,9 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Urganize",
+  "name": "The Operating System for Music Teams",
   "url": "https://urganize.app",
-  "description": "AI-guided release decisions that shows you exactly what to do next. One task at a time, adapted to your results.",
+  "description": "The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://urganize.app/search?q={search_term_string}",
@@ -53,8 +53,8 @@ const websiteSchema = {
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Urganize: AI-Guided Release Decisions for Music Artists",
-  "description": "Release music without the stress. Urganize gives you one task at a time, intelligently guided by your progress. Complete a step, share the outcome, get your next move.",
+  "name": "The Operating System for Music Teams",
+  "description": "The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.",
   "url": "https://urganize.app",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -71,22 +71,22 @@ const homepageSchema = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Urganize: AI-Guided Release Decisions for Music Artists',
-    template: '%s - Urganize',
+    default: 'The Operating System for Music Teams',
+    template: '%s - The Operating System for Music Teams',
   },
   description:
-    'Release music without the stress. Urganize gives you one task at a time, intelligently guided by your progress. Built for artist managers and independent artists.',
+    'The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.',
   verification: {
     google: '',
   },
 
   metadataBase: new URL('https://urganize.app'),
   openGraph: {
-    title: 'Release Music Without the Stress | Urganize',
+    title: 'The Operating System for Music Teams',
     description:
-      'AI-guided release decisions. One task at a time, adapted to your results. Stop the overwhelm, start shipping music.',
+      'AI-guided release decisions. Organized tasks. Content planning. Everything your music team needs in one place.',
     url: 'https://urganize.app',
-    siteName: 'Urganize',
+    siteName: 'The Operating System for Music Teams',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png?v=2',
         width: 1200,
         height: 630,
-        alt: 'Urganize - AI-Guided Release Decisions',
+        alt: 'The Operating System for Music Teams',
       },
     ],
   },
@@ -103,21 +103,21 @@ export const metadata: Metadata = {
     images: ['/opengraph-image.png?v=2'],
   },
   keywords: [
-    'AI release management',
-    'music release platform',
-    'artist manager tools',
-    'independent artist software',
-    'release planning',
-    'music project management',
-    'AI-guided workflow',
-    'music release checklist',
-    'artist team workspace',
-    'release management system',
-    'music promotion planning',
-    'artist workflow automation',
-    'release task management',
+    'music team platform',
+    'music release management',
+    'artist team tools',
     'music operations software',
-    'intelligent release guidance',
+    'release planning system',
+    'music project management',
+    'AI music guidance',
+    'music release checklist',
+    'music team workspace',
+    'release management platform',
+    'music promotion planning',
+    'music workflow automation',
+    'release task management',
+    'music operations system',
+    'intelligent music guidance',
   ],
 };
 
