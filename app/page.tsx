@@ -159,7 +159,7 @@ export default function Home() {
                     href="https://app.urganize.app/auth"
                     className="px-5 py-2 bg-emerald-500 text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.2)]"
                   >
-                    Start Urganizing
+                    Join the first 100 users
                   </Link>
                 </motion.div>
               )}
@@ -213,7 +213,7 @@ export default function Home() {
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
               >
-                Start Urganizing
+                Join the first 100 users
               </Link>
 
               {/* Subtle Socials in Menu */}
@@ -259,7 +259,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="max-w-[18ch] sm:max-w-[20ch] md:max-w-[24ch] text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6 leading-[0.92]"
             >
-              Grow your music career without the stress 
+              Grow a music career without the stress 
               <span className="text-emerald-400"> of not knowing what to do.</span>
             </motion.h1>
 
@@ -270,7 +270,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="-mt-2 text-lg md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
-              <span className="text-white font-semibold">Urganize</span> is an AI that helps artists reach their goals by giving one step at a time and deciding what’s next based on results.
+              <span className="text-white font-semibold">Urganize</span> is an AI that helps music teams reach their goals by giving one step at a time and deciding what’s next based on results.
             </motion.p>
 
             {/* CTA Buttons (Observed) */}
@@ -285,7 +285,7 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                Start Urganizing
+                Join the first 100 users
               </Link>
             </motion.div>
           </div>
@@ -372,13 +372,13 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <motion.div {...fadeInUp} className="mt-12 p-8 rounded-[2rem] bg-neutral-900/50 border border-emerald-500/20 text-center">
+          {/*  <motion.div {...fadeInUp} className="mt-12 p-8 rounded-[2rem] bg-neutral-900/50 border border-emerald-500/20 text-center">
               <p className="text-emerald-400 font-bold text-2xl">That&apos;s it.</p>
               <p className="text-emerald-400 font-bold text-2xl">No guessing.</p>
-            </motion.div>
+            </motion.div> */}
 
             {/* CTA under How it works (Observed) */}
-            <motion.div
+       {/*     <motion.div
               ref={howItWorksCtaWrapRef}
               {...fadeInUp}
               className="mt-10 flex justify-center"
@@ -389,7 +389,7 @@ export default function Home() {
               >
                 Start Urganizing
               </Link>
-            </motion.div>
+            </motion.div> */}
           </div>
         </section>
 
@@ -440,7 +440,7 @@ export default function Home() {
                 href="https://app.urganize.app/auth"
                 className="w-full sm:w-auto px-10 py-5 bg-emerald-500 text-black text-sm font-black uppercase tracking-[0.2em] rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] text-center"
               >
-                Start Urganizing
+                Join the first 100 users
               </Link>
             </motion.div>
           </div>
@@ -450,7 +450,7 @@ export default function Home() {
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Meet The Urganization</h2>
+              {/* <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Meet The Urganization</h2> */}
               <p className="text-xl text-neutral-400">
                 Our founder brings 8 years of experience as a multimedia creative director in the industry, is a software dev, and a product manager.
               </p>
