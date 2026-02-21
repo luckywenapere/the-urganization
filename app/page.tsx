@@ -213,7 +213,7 @@ export default function Home() {
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full text-center py-5 bg-emerald-500 text-black text-lg font-bold rounded-full hover:bg-emerald-400 active:scale-95 transition-all"
               >
-                Join the first 100 users
+                Log in
               </Link>
 
               {/* Subtle Socials in Menu */}
