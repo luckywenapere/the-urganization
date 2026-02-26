@@ -468,7 +468,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-center">Lucky Wenapere</h3>
-                <p className="text-emerald-400 font-semibold text-center mt-2">CEO</p>
+                <p className="text-emerald-400 font-semibold text-center mt-2">Co-Founder/CEO</p>
               </motion.div>
             </div>
 
