@@ -2,13 +2,21 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { neon } from "@neondatabase/serverless";
 
-const sql = neon(process.env.DATABASE_URL!);
-
 const signupSchema = z.object({
   email: z.string().email(),
   name: z.string().optional(),
   isLaunchPartner: z.boolean().optional().default(false),
 });
+
+function getSqlClient() {
+  const databaseUrl = process.env.DATABASE_URL;
+
+  if (!databaseUrl) {
+    throw new Error("DATABASE_URL is not configured");
+  }
+
+  return neon(databaseUrl);
+}
 
 export async function POST(req: Request) {
   try {
@@ -23,6 +31,7 @@ export async function POST(req: Request) {
     }
 
     const { email, name, isLaunchPartner } = parsed.data;
+    const sql = getSqlClient();
 
     // Generate simple referral code from email
     const referralCode = email.split('@')[0].toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -38,14 +47,26 @@ export async function POST(req: Request) {
 
     // 2. Sync to MailerLite with custom fields
     try {
-      const mailerliteBody: any = {
+      const groups = process.env.MAILERLITE_GROUP_ID
+        ? [process.env.MAILERLITE_GROUP_ID]
+        : [];
+
+      const mailerliteBody: {
+        email: string;
+        fields: {
+          name?: string;
+          launch_partner: "Yes" | "No";
+          referral_code: string;
+        };
+        groups: string[];
+      } = {
         email,
         fields: { 
           name,
           launch_partner: isLaunchPartner ? "Yes" : "No",
           referral_code: referralCode,
         },
-        groups: [process.env.MAILERLITE_GROUP_ID],
+        groups,
       };
 
       const res = await fetch(

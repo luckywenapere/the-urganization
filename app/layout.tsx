@@ -22,10 +22,10 @@ const dmSans = DM_Sans({
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "The Operating System for Music Teams",
+  "name": "Urganize",
   "url": "https://urganize.app",
   "logo": "https://urganize.app/images/urganize-logo.png",
-  "description": "The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.",
+  "description": "Release operations software for music managers and small label teams. Collect collaborator credits, structure release metadata automatically, and track what is ready next.",
   "sameAs": [
     "https://x.com/urganize",
     "https://linkedin.com/company/urganize",
@@ -41,21 +41,16 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "The Operating System for Music Teams",
+  "name": "Urganize",
   "url": "https://urganize.app",
-  "description": "The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://urganize.app/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "description": "Release operations software for music teams. Stop chasing collaborators and re-typing song credits."
 } as const;
 
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "The Operating System for Music Teams",
-  "description": "The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.",
+  "name": "Urganize",
+  "description": "Stop chasing collaborators and re-typing song credits. Collect credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
   "url": "https://urganize.app",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -72,53 +67,53 @@ const homepageSchema = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Operating System for Music Teams',
-    template: '%s - The Operating System for Music Teams',
+    default: "Urganize",
+    template: "%s | Urganize",
   },
   description:
-    'The all-in-one platform for music teams. AI-guided release decisions, organized tasks, and content planning. One system, zero confusion.',
+    "Release operations software for music teams. Collect collaborator credits, structure metadata automatically, and know what is ready, what is missing, and what to do next.",
   verification: {
-    google: '',
+    google: "",
   },
 
-  metadataBase: new URL('https://urganize.app'),
+  metadataBase: new URL("https://urganize.app"),
   openGraph: {
-    title: 'The Operating System for Music Teams',
+    title: "Urganize",
     description:
-      'AI-guided release decisions. Organized tasks. Content planning. Everything your music team needs in one place.',
-    url: 'https://urganize.app',
-    siteName: 'The Operating System for Music Teams',
-    locale: 'en_US',
-    type: 'website',
+      "Stop chasing collaborators and re-typing song credits. Collect credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
+    url: "https://urganize.app",
+    siteName: "Urganize",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: '/opengraph-image.png?v=2',
+        url: "/opengraph-image.png?v=2",
         width: 1200,
         height: 630,
-        alt: 'The Operating System for Music Teams',
+        alt: "Urganize release operations software for music teams",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    images: ['/opengraph-image.png?v=2'],
+    card: "summary_large_image",
+    title: "Urganize",
+    description:
+      "Stop chasing collaborators and re-typing song credits. Collect credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
+    images: ["/opengraph-image.png?v=2"],
   },
   keywords: [
-    'music team platform',
-    'music release management',
-    'artist team tools',
-    'music operations software',
-    'release planning system',
-    'music project management',
-    'AI music guidance',
-    'music release checklist',
-    'music team workspace',
-    'release management platform',
-    'music promotion planning',
-    'music workflow automation',
-    'release task management',
-    'music operations system',
-    'intelligent music guidance',
+    "music release operations software",
+    "music manager tools",
+    "small label workflow",
+    "collaborator credit collection",
+    "release metadata software",
+    "release readiness tracking",
+    "music metadata management",
+    "release command center",
+    "music team workspace",
+    "release operations platform",
+    "song credits workflow",
+    "music release management",
   ],
 };
 

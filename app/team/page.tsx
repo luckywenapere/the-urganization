@@ -14,22 +14,22 @@ export default function TeamPage() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Lucky Wenapere</div>
-            <div className="text-emerald-400 font-semibold mt-1">Co-Founder & Frontend Engineer</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder & CEO</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Tedum King</div>
-            <div className="text-emerald-400 font-semibold mt-1">Co-Founder & AI Engineer</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder</div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="text-xl font-bold">Jacob Ngalato</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Bobson Prosper</div>
-            <div className="text-emerald-400 font-semibold mt-1">Backend Engineer</div>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-xl font-bold">Gideon Ugorji</div>
-            <div className="text-emerald-400 font-semibold mt-1">DevOps</div>
+            <div className="text-emerald-400 font-semibold mt-1">Founding Engineer</div>
           </div>
         </div>
       </div>
