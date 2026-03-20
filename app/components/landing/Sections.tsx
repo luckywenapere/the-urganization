@@ -13,11 +13,11 @@ import { SectionShell } from "./SectionShell";
 import { TestimonialCard } from "./TestimonialCard";
 
 const solutionSteps = [
-  "Create your release",
-  "Copy your credit link",
-  "Send it anywhere",
+  "Create release",
+  "Copy credit link",
+  "Send anywhere",
   "Credits come in",
-  "Release info is organized",
+  "Release info, urganized",
 ];
 
 function Eyebrow({ children }: { children: ReactNode }) {
@@ -57,7 +57,7 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
     <SectionShell className="pt-12 sm:pt-16 lg:pt-20">
       <div className="grid items-center gap-10 xl:gap-14 lg:grid-cols-[0.86fr_1.14fr]">
         <div className="max-w-2xl">
-          <Eyebrow>Release operations software for music business</Eyebrow>
+          <Eyebrow>Music Business Operations Software</Eyebrow>
 
           <h1 className="mt-8 mb-0 max-w-[12ch] text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.75rem] lg:leading-[0.96]">
             Send one link. Collect all your song credits.
