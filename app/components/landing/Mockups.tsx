@@ -14,6 +14,7 @@ interface ProductScreenshotProps {
   imageClassName?: string;
   chrome?: "desktop" | "mobile";
   priority?: boolean;
+  showHeader?: boolean;
   children?: ReactNode;
 }
 
@@ -28,6 +29,7 @@ function ProductScreenshot({
   imageClassName,
   chrome = "desktop",
   priority = false,
+  showHeader = true,
   children,
 }: ProductScreenshotProps) {
   return (
@@ -41,30 +43,34 @@ function ProductScreenshot({
       <div className="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-white/45 to-transparent" />
 
       <div className="relative overflow-hidden rounded-[1.95rem] border border-white/8 bg-[#09120f]">
-        <div className="flex items-start justify-between gap-4 border-b border-white/8 px-4 py-3 sm:px-5 sm:py-4">
-          <div className="min-w-0">
-            <p className="mb-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/42">
-              {eyebrow}
-            </p>
-            <p className="mt-1 mb-0 text-sm font-medium leading-5 text-white/82">{title}</p>
-          </div>
+        {showHeader ? (
+          <>
+            <div className="flex items-start justify-between gap-4 border-b border-white/8 px-4 py-3 sm:px-5 sm:py-4">
+              <div className="min-w-0">
+                <p className="mb-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/42">
+                  {eyebrow}
+                </p>
+                <p className="mt-1 mb-0 text-sm font-medium leading-5 text-white/82">{title}</p>
+              </div>
 
-          {chrome === "desktop" ? (
-            <div className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#ff8d79]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#ffd76d]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#b7ff6e]" />
+              {chrome === "desktop" ? (
+                <div className="flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#ff8d79]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#ffd76d]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#b7ff6e]" />
+                </div>
+              ) : (
+                <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
+                  Mobile
+                </div>
+              )}
             </div>
-          ) : (
-            <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
-              Mobile
-            </div>
-          )}
-        </div>
 
-        <div className="border-b border-white/8 px-4 py-3 sm:px-5">
-          <p className="mb-0 text-sm leading-6 text-white/58">{subtitle}</p>
-        </div>
+            <div className="border-b border-white/8 px-4 py-3 sm:px-5">
+              <p className="mb-0 text-sm leading-6 text-white/58">{subtitle}</p>
+            </div>
+          </>
+        ) : null}
 
         <div className={clsx("relative overflow-hidden bg-[#050806]", aspectClassName)}>
           <Image
@@ -126,6 +132,7 @@ export function HeroCommandCenterMockup() {
       subtitle="Copy Credit Link, collect credits, and keep the release moving"
       aspectClassName="aspect-[1895/890]"
       priority
+      showHeader={false}
     >
       <div className="grid gap-3 sm:grid-cols-3">
         <InfoPill

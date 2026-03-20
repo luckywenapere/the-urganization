@@ -94,6 +94,25 @@ function Eyebrow({ children }: { children: ReactNode }) {
   );
 }
 
+function ProofLine({
+  children,
+  align = "left",
+}: {
+  children: ReactNode;
+  align?: "left" | "center";
+}) {
+  return (
+    <p
+      className={[
+        "mb-0 text-sm font-medium leading-6 text-white/64",
+        align === "center" ? "text-center" : "text-left",
+      ].join(" ")}
+    >
+      {children}
+    </p>
+  );
+}
+
 interface CTAProps {
   startReleaseHref: string;
   bookDemoHref: string;
@@ -122,9 +141,12 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
             />
           </div>
 
-          <p className="mt-5 mb-0 text-sm font-medium text-white/62">
-            Free 1-month trial • No credit card required
-          </p>
+          <div className="mt-5 space-y-2">
+            <ProofLine>100+ credits collected through Urganize</ProofLine>
+            <p className="mb-0 text-sm font-medium text-white/62">
+              Free 1-month trial • No credit card required
+            </p>
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/55">
             {[
@@ -189,6 +211,10 @@ export function SolutionStepsSection() {
             Copy your credit link once, send it anywhere, and let Urganize collect credits inside
             the release.
           </p>
+
+          <div className="mt-4">
+            <ProofLine>Used on real releases — 100+ credits collected</ProofLine>
+          </div>
 
           <div className="mt-8">
             <FeatureStepList steps={solutionSteps} />
@@ -404,6 +430,10 @@ export function FinalCTASection({ startReleaseHref, bookDemoHref }: CTAProps) {
           <p className="mt-5 mb-0 max-w-2xl text-base leading-8 text-white/78">
             Create a release, send one link, and get your credits organized properly.
           </p>
+
+          <div className="mt-4">
+            <ProofLine>Already used to collect 100+ credits</ProofLine>
+          </div>
 
           <div className="mt-8">
             <LandingCTAGroup
