@@ -57,7 +57,7 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
     <SectionShell className="pt-12 sm:pt-16 lg:pt-20">
       <div className="grid items-center gap-10 xl:gap-14 lg:grid-cols-[0.86fr_1.14fr]">
         <div className="max-w-2xl">
-          <Eyebrow>Release operations software for music teams</Eyebrow>
+          <Eyebrow>Release operations software for music business</Eyebrow>
 
           <h1 className="mt-8 mb-0 max-w-[12ch] text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.75rem] lg:leading-[0.96]">
             Send one link. Collect all your song credits.
@@ -157,7 +157,7 @@ export function FooterTagline() {
     <footer className="border-t border-white/8 py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p className="mb-0 text-sm font-medium text-white/78">
-          Urganize is the uperating system fur music teams.
+          Urganize is the uperating system fur music business.
         </p>
 
         <div className="flex items-center gap-5 text-sm text-white/52">
