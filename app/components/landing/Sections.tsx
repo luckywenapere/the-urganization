@@ -211,16 +211,6 @@ export function SocialProofSection() {
             quote="“Mad. It works as a storage system also.”"
             supportingText="Built for managers and small label teams handling multiple artists"
           />
-
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.18)]">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#d8ffab]">
-              Why it matters
-            </p>
-            <p className="mb-0 text-base leading-7 text-white/78">
-              The product itself becomes the source of truth for submissions, so proof of progress
-              is already inside the release instead of buried in messages and notes.
-            </p>
-          </div>
         </div>
       </div>
     </SectionShell>

@@ -14,7 +14,7 @@ export default function TeamPage() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Lucky Wenapere</div>
-            <div className="text-emerald-400 font-semibold mt-1">Co-Founder & CEO</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder and CEO</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -24,7 +24,7 @@ export default function TeamPage() {
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-xl font-bold">Jacob Ngalato</div>
-            <div className="text-emerald-400 font-semibold mt-1">Co-Founder</div>
+            <div className="text-emerald-400 font-semibold mt-1">Co-Founder and CTO</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">

@@ -234,6 +234,7 @@ export function SubmissionProofMockup() {
       title="Real credits collected in one place"
       subtitle="Track incoming credits inside the release instead of chasing updates across tools"
       aspectClassName="aspect-[887/693]"
+      showHeader={false}
     />
   );
 }
