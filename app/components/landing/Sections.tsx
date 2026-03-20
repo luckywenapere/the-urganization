@@ -136,12 +136,6 @@ export function DirectiveSection() {
 export function SocialProofSection() {
   return (
     <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Built for real release workflows
-        </h2>
-      </div>
-
       <div className="mt-12 grid items-center gap-6 lg:grid-cols-[1.08fr_0.92fr]">
         <SubmissionProofMockup />
 
