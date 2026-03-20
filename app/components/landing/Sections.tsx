@@ -15,6 +15,7 @@ import {
   HeroCommandCenterMockup,
   MetadataPageMockup,
   PublicCreditFormMockup,
+  SubmissionProofMockup,
 } from "./Mockups";
 import { PricingCard } from "./PricingCard";
 import { ProblemCard } from "./ProblemCard";
@@ -293,17 +294,35 @@ export function SocialProofSection() {
   return (
     <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
       <div className="mx-auto max-w-4xl text-center">
-        <Eyebrow>Social proof</Eyebrow>
+        <Eyebrow>Submission proof</Eyebrow>
         <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Built for real release workflows
         </h2>
+        <p className="mt-5 mb-0 text-base leading-8 text-white/68">
+          Real submissions live inside the release so managers and artists can see what&apos;s in,
+          what&apos;s missing, and what still needs a follow-up.
+        </p>
       </div>
 
-      <div className="mt-12">
-        <TestimonialCard
-          quote="“Mad. It works as a storage system also.”"
-          supportingText="Built for managers and small label teams handling multiple artists"
-        />
+      <div className="mt-12 grid items-center gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+        <SubmissionProofMockup />
+
+        <div className="space-y-5">
+          <TestimonialCard
+            quote="“Mad. It works as a storage system also.”"
+            supportingText="Built for managers and small label teams handling multiple artists"
+          />
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.18)]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#d8ffab]">
+              Why it matters
+            </p>
+            <p className="mb-0 text-base leading-7 text-white/78">
+              The product itself becomes the source of truth for submissions, so proof of progress
+              is already inside the workspace instead of buried in messages and notes.
+            </p>
+          </div>
+        </div>
       </div>
     </SectionShell>
   );
