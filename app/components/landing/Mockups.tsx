@@ -99,8 +99,8 @@ function InfoPill({
   value,
   tone = "default",
 }: {
-  icon: ReactNode;
-  label: string;
+  icon?: ReactNode;
+  label?: string;
   value: string;
   tone?: "default" | "success" | "accent";
 }) {
@@ -113,10 +113,12 @@ function InfoPill({
         tone === "accent" && "border-[#94c4ff]/18 bg-[#94c4ff]/10",
       )}
     >
-      <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55">
-        <span className="text-[#b7ff6e]">{icon}</span>
-        <span>{label}</span>
-      </div>
+      {icon || label ? (
+        <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55">
+          {icon ? <span className="text-[#b7ff6e]">{icon}</span> : null}
+          {label ? <span>{label}</span> : null}
+        </div>
+      ) : null}
       <p className="mb-0 text-sm font-medium leading-5 sm:leading-6 text-white/88">{value}</p>
     </div>
   );
@@ -153,8 +155,7 @@ export function PublicCreditFormMockup() {
     >
       <div className="grid gap-3">
         <InfoPill
-          icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Release Info"
+          label=""
           value="Submissions stay urganized."
         />
       </div>

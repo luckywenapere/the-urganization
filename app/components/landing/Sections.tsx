@@ -63,6 +63,8 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
             Send one link. Collect all your song credits.
           </h1>
 
+          
+
           <div className="mt-8">
             <LandingCTAGroup
               startReleaseHref={startReleaseHref}
@@ -70,9 +72,7 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
             />
           </div>
 
-          <div className="mt-5">
-            <ProofLine>100+ credits collected through Urganize</ProofLine>
-          </div>
+        
 
         </div>
 
@@ -88,7 +88,7 @@ export function SolutionStepsSection() {
       <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="max-w-xl">
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            One link. All credits. Organized release info.
+            Une link. All credits. Urganized release info.
           </h2>
           <div className="mt-8">
             <FeatureStepList steps={solutionSteps} />
@@ -111,9 +111,6 @@ export function MetadataPayoffSection() {
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Collect once. Use everywhere.
           </h2>
-          <p className="mt-5 mb-0 text-base leading-8 text-white/72">
-            Every credit submitted is organized into release info you can actually use.
-          </p>
         </div>
       </div>
     </SectionShell>
@@ -138,7 +135,7 @@ export function DirectiveSection() {
 
 export function SocialProofSection() {
   return (
-    <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] pb-2 sm:pb-3 lg:pb-4">
+    <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Built for real release workflows
@@ -161,7 +158,7 @@ export function SocialProofSection() {
 
 export function FooterTagline() {
   return (
-    <footer className="border-t border-white/8 pt-2 pb-[0.5px] sm:pt-3 sm:pb-[0.5px]">
+    <footer className="border-t border-white/8 py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p className="mb-0 text-sm font-medium text-white/78">
           Urganize is the operating system for music teams.
