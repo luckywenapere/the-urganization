@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { RiInstagramLine, RiLinkedinFill, RiTwitterXLine } from "react-icons/ri";
 import { FeatureStepList } from "./FeatureStepList";
 import { LandingCTAGroup } from "./LandingCTAGroup";
 import {
@@ -18,6 +19,24 @@ const solutionSteps = [
   "Send anywhere",
   "Credits come in",
   "Release info, urganized",
+];
+
+const socialLinks = [
+  {
+    href: "https://instagram.com/urganize",
+    label: "Instagram",
+    icon: RiInstagramLine,
+  },
+  {
+    href: "https://linkedin.com/company/urganize",
+    label: "LinkedIn",
+    icon: RiLinkedinFill,
+  },
+  {
+    href: "https://x.com/urganize",
+    label: "X",
+    icon: RiTwitterXLine,
+  },
 ];
 
 function Eyebrow({ children }: { children: ReactNode }) {
@@ -88,7 +107,7 @@ export function SolutionStepsSection() {
       <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="max-w-xl">
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Une link. All credits. Urganized release info.
+            Urganized release info.
           </h2>
           <div className="mt-8">
             <FeatureStepList steps={solutionSteps} />
@@ -114,7 +133,33 @@ export function MetadataPayoffSection() {
 
         <div className="max-w-xl">
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Collect once. Use everywhere.
+            Use everywhere.
+          </h2>
+
+          <div className="mt-8">
+            <a
+              href={bookDemoHref}
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white hover:border-white/22 hover:bg-white/[0.08] sm:w-auto sm:text-base"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+export function DirectiveSection() {
+  const bookDemoHref =
+    "mailto:theurganization@gmail.com?subject=Book%20a%20demo%20with%20Urganize";
+
+  return (
+    <SectionShell id="directive">
+      <div className="grid items-center gap-12 lg:grid-cols-[0.98fr_1.02fr]">
+        <div className="order-2 max-w-xl lg:order-1">
+          <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            Always know the next action
           </h2>
 
           <div className="mt-8">
@@ -125,20 +170,6 @@ export function MetadataPayoffSection() {
               Book a demo
             </a>
           </div>
-        </div>
-      </div>
-    </SectionShell>
-  );
-}
-
-export function DirectiveSection() {
-  return (
-    <SectionShell id="directive">
-      <div className="grid items-center gap-12 lg:grid-cols-[0.98fr_1.02fr]">
-        <div className="order-2 max-w-xl lg:order-1">
-          <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Always know the next action
-          </h2>
         </div>
 
         <div className="order-1 lg:order-2">
@@ -171,13 +202,37 @@ export function FooterTagline() {
     <footer className="border-t border-white/8 py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p className="mb-0 text-sm font-medium text-white/78">
-          Urganize is the uperating system fur music business.
+          Music Business Operating System
         </p>
 
-        <div className="flex items-center gap-5 text-sm text-white/52">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-white/52">
+          <div className="flex items-center gap-2">
+            {socialLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={item.label}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/72 transition hover:border-white/18 hover:bg-white/[0.08] hover:text-white"
+              >
+                <item.icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
+
           <Link href="/privacy" className="hover:text-white">
             Privacy
           </Link>
+          <Link href="/team" className="hover:text-white">
+            Team
+          </Link>
+          <a
+            href="mailto:theurganization@gmail.com"
+            className="hover:text-white"
+          >
+            Contact
+          </a>
           <Link href="/terms" className="hover:text-white">
             Terms
           </Link>
