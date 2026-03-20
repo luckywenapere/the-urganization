@@ -157,7 +157,7 @@ export function FooterTagline() {
     <footer className="border-t border-white/8 py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p className="mb-0 text-sm font-medium text-white/78">
-          Urganize is the operating system for music teams.
+          Urganize is the uperating system fur music teams.
         </p>
 
         <div className="flex items-center gap-5 text-sm text-white/52">
