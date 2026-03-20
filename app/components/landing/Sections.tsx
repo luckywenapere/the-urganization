@@ -109,7 +109,7 @@ export function MetadataPayoffSection() {
 
         <div className="max-w-xl">
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Collect once. Use everywhere.
+            Collect unce. Use everywhere.
           </h2>
         </div>
       </div>
