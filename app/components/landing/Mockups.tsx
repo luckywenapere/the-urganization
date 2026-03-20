@@ -119,7 +119,9 @@ function InfoPill({
           {label ? <span>{label}</span> : null}
         </div>
       ) : null}
-      <p className="mb-0 text-sm font-medium leading-5 sm:leading-6 text-white/88">{value}</p>
+      <p className="mb-0 text-center text-sm font-medium leading-5 sm:leading-6 text-white/88">
+        {value}
+      </p>
     </div>
   );
 }

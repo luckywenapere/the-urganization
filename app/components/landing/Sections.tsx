@@ -95,13 +95,18 @@ export function SolutionStepsSection() {
           </div>
         </div>
 
-        <PublicCreditFormMockup />
+        <div>
+          <PublicCreditFormMockup />
+        </div>
       </div>
     </SectionShell>
   );
 }
 
 export function MetadataPayoffSection() {
+  const bookDemoHref =
+    "mailto:theurganization@gmail.com?subject=Book%20a%20demo%20with%20Urganize";
+
   return (
     <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
       <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
@@ -111,6 +116,15 @@ export function MetadataPayoffSection() {
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Collect once. Use everywhere.
           </h2>
+
+          <div className="mt-8">
+            <a
+              href={bookDemoHref}
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white hover:border-white/22 hover:bg-white/[0.08] sm:w-auto sm:text-base"
+            >
+              Book a demo
+            </a>
+          </div>
         </div>
       </div>
     </SectionShell>
