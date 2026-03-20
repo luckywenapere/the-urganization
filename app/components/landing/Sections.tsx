@@ -112,27 +112,10 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
             />
           </div>
 
-          <div className="mt-5 space-y-2">
+          <div className="mt-5">
             <ProofLine>100+ credits collected through Urganize</ProofLine>
-            <p className="mb-0 text-sm font-medium text-white/62">
-              Free 1-month trial • No credit card required
-            </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/55">
-            {[
-              "Copy Credit Link",
-              "Collect Credits",
-              "Next Action",
-            ].map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/10 bg-black/20 px-4 py-2"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
         </div>
 
         <HeroCommandCenterMockup />

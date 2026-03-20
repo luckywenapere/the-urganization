@@ -149,18 +149,13 @@ export function PublicCreditFormMockup() {
       className="mx-auto max-w-[23rem]"
       imageClassName="object-contain bg-[#050806]"
       chrome="mobile"
+      showHeader={false}
     >
-      <div className="grid gap-3 sm:grid-cols-2">
-        <InfoPill
-          icon={<Sparkles className="h-4 w-4" />}
-          label="Copy Credit Link"
-          value="Share once and collect credits in a format the team can actually use."
-          tone="success"
-        />
+      <div className="grid gap-3">
         <InfoPill
           icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Credits"
-          value="The form keeps every submission clean before it reaches the release."
+          label="Release Info"
+          value="Submissions stay urganized."
         />
       </div>
     </ProductScreenshot>
