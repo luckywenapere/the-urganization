@@ -87,7 +87,7 @@ export function LandingHeader({
 
         <div
           className={clsx(
-            "overflow-hidden transition-[max-height,opacity] duration-300 lg:hidden",
+            "overflow-hidden bg-[#06100d]/94 backdrop-blur-xl transition-[max-height,opacity] duration-300 lg:hidden",
             isOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0",
           )}
         >
@@ -105,13 +105,7 @@ export function LandingHeader({
               ))}
             </nav>
 
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              <a
-                href={startReleaseHref}
-                className="inline-flex items-center justify-center rounded-full border border-[#b7ff6e]/25 bg-[#b7ff6e] px-4 py-3 text-sm font-semibold text-[#08110a]"
-              >
-                Start your release
-              </a>
+            <div className="mt-4">
               <a
                 href={bookDemoHref}
                 className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-white/82"

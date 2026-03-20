@@ -35,7 +35,7 @@ export function LandingCTAGroup({
         className,
       )}
     >
-      <a
+      {/* <a
         href={startReleaseHref}
         className={clsx(
           "inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#b7ff6e]/30 bg-[#b7ff6e] font-semibold text-[#08110a] shadow-[0_22px_60px_rgba(183,255,110,0.18)] hover:border-[#b7ff6e]/40 hover:bg-[#b7ff6e] sm:w-auto",
@@ -44,7 +44,7 @@ export function LandingCTAGroup({
       >
         <span>Start your release</span>
         <ArrowRight className="h-4 w-4" />
-      </a>
+      </a> */}
 
       <a
         href={bookDemoHref}

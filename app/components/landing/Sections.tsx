@@ -121,13 +121,15 @@ export function DirectiveSection() {
   return (
     <SectionShell id="directive">
       <div className="grid items-center gap-12 lg:grid-cols-[0.98fr_1.02fr]">
-        <div className="max-w-xl">
+        <div className="order-2 max-w-xl lg:order-1">
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Always know the next action
           </h2>
         </div>
 
-        <DirectiveCardMockup />
+        <div className="order-1 lg:order-2">
+          <DirectiveCardMockup />
+        </div>
       </div>
     </SectionShell>
   );
