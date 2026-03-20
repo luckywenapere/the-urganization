@@ -10,10 +10,8 @@ import {
   PublicCreditFormMockup,
   SubmissionProofMockup,
 } from "./Mockups";
-import { PricingCard } from "./PricingCard";
 import { SectionShell } from "./SectionShell";
 import { TestimonialCard } from "./TestimonialCard";
-import { WorkflowComparisonBlock } from "./WorkflowComparisonBlock";
 
 const solutionSteps = [
   "Create your release",
@@ -21,40 +19,6 @@ const solutionSteps = [
   "Send it anywhere",
   "Credits come in",
   "Release info is organized",
-];
-
-const currentWorkflowItems = [
-  "WhatsApp",
-  "Notes",
-  "Spreadsheets",
-  "Distributor dashboards",
-];
-
-const urganizeItems = [
-  "Release Dashboard",
-  "Collect credits",
-  "Release info",
-  "Clear readiness",
-];
-
-const pricingPlans = [
-  {
-    name: "Monthly",
-    price: "₦8,000 / month",
-    summary: "For teams testing the workflow on their next release.",
-  },
-  {
-    name: "8 Months",
-    price: "₦54,000",
-    summary: "For active teams that need one system across a full release cycle.",
-    highlight: true,
-    badge: "Recommended",
-  },
-  {
-    name: "Yearly",
-    price: "₦80,000 / year",
-    summary: "For managers and label teams running releases all year.",
-  },
 ];
 
 function Eyebrow({ children }: { children: ReactNode }) {
@@ -129,7 +93,6 @@ export function SolutionStepsSection() {
     <SectionShell id="mechanism">
       <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="max-w-xl">
-          <Eyebrow>The mechanism</Eyebrow>
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             One link. All credits. Organized release info.
           </h2>
@@ -183,27 +146,10 @@ export function DirectiveSection() {
   return (
     <SectionShell id="directive">
       <div className="grid items-center gap-12 lg:grid-cols-[0.98fr_1.02fr]">
-        <DirectiveCardMockup />
-
         <div className="max-w-xl">
-          <Eyebrow>Readiness</Eyebrow>
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Always know the next action
           </h2>
-          <p className="mt-5 mb-0 text-base leading-8 text-white/72">
-            Urganize shows you what&apos;s ready, what&apos;s missing, and what to do next — from
-            collecting credits to preparing your release for distribution.
-          </p>
-
-          <div className="mt-6 rounded-[1.75rem] border border-[#d0ff97]/16 bg-[#b7ff6e]/8 p-5">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#d8ffab]">
-              The difference
-            </p>
-            <p className="mb-0 text-base leading-7 text-white/82">
-              Most tools show information. Urganize shows the next action.
-            </p>
-          </div>
-
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               {
@@ -237,6 +183,8 @@ export function DirectiveSection() {
             ))}
           </div>
         </div>
+
+        <DirectiveCardMockup />
       </div>
     </SectionShell>
   );
@@ -246,7 +194,6 @@ export function SocialProofSection() {
   return (
     <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
       <div className="mx-auto max-w-4xl text-center">
-        <Eyebrow>Submission proof</Eyebrow>
         <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Built for real release workflows
         </h2>
@@ -273,99 +220,6 @@ export function SocialProofSection() {
               The product itself becomes the source of truth for submissions, so proof of progress
               is already inside the release instead of buried in messages and notes.
             </p>
-          </div>
-        </div>
-      </div>
-    </SectionShell>
-  );
-}
-
-export function ComparisonSection() {
-  return (
-    <SectionShell id="comparison">
-      <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow>Why switch</Eyebrow>
-        <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Stop using tools that weren&apos;t built for releases
-        </h2>
-        <p className="mt-5 mb-0 text-base leading-8 text-white/68">
-          WhatsApp, Notes, spreadsheets, and distributor dashboards create fragments.
-          Urganize gives your team one release dashboard instead.
-        </p>
-      </div>
-
-      <div className="mt-12">
-        <WorkflowComparisonBlock
-          currentWorkflow={currentWorkflowItems}
-          urganizeWorkflow={urganizeItems}
-        />
-      </div>
-    </SectionShell>
-  );
-}
-
-export function PricingSection({ startReleaseHref, bookDemoHref }: CTAProps) {
-  return (
-    <SectionShell
-      id="pricing"
-      className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]"
-    >
-      <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow>Pricing</Eyebrow>
-        <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Simple pricing for growing teams
-        </h2>
-        <p className="mt-5 mb-0 text-base leading-8 text-white/68">
-          Free 1-month trial • No credit card required
-        </p>
-      </div>
-
-      <div className="mt-12 grid gap-5 lg:grid-cols-3">
-        {pricingPlans.map((plan) => (
-          <PricingCard
-            key={plan.name}
-            name={plan.name}
-            price={plan.price}
-            summary={plan.summary}
-            highlight={plan.highlight}
-            badge={plan.badge}
-          />
-        ))}
-      </div>
-
-      <div className="mt-10">
-        <LandingCTAGroup
-          startReleaseHref={startReleaseHref}
-          bookDemoHref={bookDemoHref}
-          align="center"
-        />
-      </div>
-    </SectionShell>
-  );
-}
-
-export function FinalCTASection({ startReleaseHref, bookDemoHref }: CTAProps) {
-  return (
-    <SectionShell className="pb-16 sm:pb-20 lg:pb-24">
-      <div className="overflow-hidden rounded-[2.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(183,255,110,0.14),rgba(255,255,255,0.03)_55%,rgba(120,182,255,0.09))] p-8 shadow-[0_28px_90px_rgba(0,0,0,0.24)] sm:p-10 lg:p-12">
-        <div className="max-w-3xl">
-          <Eyebrow>Final call</Eyebrow>
-          <h2 className="mt-6 mb-0 max-w-[15ch] text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Stop chasing credits. Start collecting them.
-          </h2>
-          <p className="mt-5 mb-0 max-w-2xl text-base leading-8 text-white/78">
-            Create a release, send one link, and get your credits organized properly.
-          </p>
-
-          <div className="mt-4">
-            <ProofLine>Already used to collect 100+ credits</ProofLine>
-          </div>
-
-          <div className="mt-8">
-            <LandingCTAGroup
-              startReleaseHref={startReleaseHref}
-              bookDemoHref={bookDemoHref}
-            />
           </div>
         </div>
       </div>

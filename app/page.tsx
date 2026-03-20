@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import { LandingHeader } from "./components/landing/LandingHeader";
 import {
-  ComparisonSection,
   DirectiveSection,
-  FinalCTASection,
   FooterTagline,
   HeroSection,
   MetadataPayoffSection,
-  PricingSection,
   SolutionStepsSection,
   SocialProofSection,
 } from "./components/landing/Sections";
@@ -46,15 +43,6 @@ export default function Home() {
           <MetadataPayoffSection />
           <DirectiveSection />
           <SocialProofSection />
-          <ComparisonSection />
-          <PricingSection
-            startReleaseHref={START_RELEASE_HREF}
-            bookDemoHref={BOOK_DEMO_HREF}
-          />
-          <FinalCTASection
-            startReleaseHref={START_RELEASE_HREF}
-            bookDemoHref={BOOK_DEMO_HREF}
-          />
         </main>
 
         <FooterTagline />

@@ -171,6 +171,7 @@ export function MetadataPageMockup() {
       title="Release info, already organized"
       subtitle="Use the real release record instead of re-typing details in distributor tools"
       aspectClassName="aspect-[1403/848]"
+      showHeader={false}
     >
       <div className="grid gap-3 sm:grid-cols-2">
         <InfoPill
@@ -199,6 +200,7 @@ export function DirectiveCardMockup() {
       title="Guidance built into the release"
       subtitle="Track blockers, readiness, and the next action from the product itself"
       aspectClassName="aspect-[1410/837]"
+      showHeader={false}
     >
       <div className="grid gap-3 sm:grid-cols-3">
         <InfoPill
