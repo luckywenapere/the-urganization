@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { clsx } from "clsx";
 
@@ -35,12 +36,19 @@ export function LandingHeader({
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 w-full">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 sm:px-8">
           <Link
             href="/"
-            className="text-sm font-semibold uppercase tracking-[0.28em] text-[#f6f7ef]"
+            className="flex h-14 items-center overflow-hidden sm:h-16"
           >
-            Urganize
+            <Image
+              src="/images/urganize-logo.svg"
+              alt="Urganize"
+              width={680}
+              height={144}
+              className="mt-[-0.65rem] h-28 w-auto max-w-none sm:mt-[-0.8rem] sm:h-32"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm text-white/60 lg:flex">
@@ -115,7 +123,7 @@ export function LandingHeader({
         </div>
       </header>
 
-      <div className="h-[76px] sm:h-[78px]" />
+      <div className="h-[68px] sm:h-[74px]" />
     </>
   );
 }

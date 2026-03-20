@@ -186,27 +186,7 @@ export function DirectiveCardMockup() {
       subtitle="Track blockers, readiness, and the next action from the product itself"
       aspectClassName="aspect-[1410/837]"
       showHeader={false}
-    >
-      <div className="grid gap-3 sm:grid-cols-3">
-        <InfoPill
-          icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Ready"
-          value="Spot completed work at a glance."
-          tone="success"
-        />
-        <InfoPill
-          icon={<BellRing className="h-4 w-4" />}
-          label="Missing"
-          value="Catch blockers before deadline week."
-        />
-        <InfoPill
-          icon={<Sparkles className="h-4 w-4" />}
-          label="Next Action"
-          value="Give the team one clear action to keep moving."
-          tone="accent"
-        />
-      </div>
-    </ProductScreenshot>
+    />
   );
 }
 

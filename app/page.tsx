@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#06100d] text-[#f6f7ef] selection:bg-[#b7ff6e]/30">
+    <div className="overflow-x-hidden bg-[#06100d] text-[#f6f7ef] selection:bg-[#b7ff6e]/30">
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-x-0 top-0 h-[34rem] overflow-hidden sm:h-[40rem] lg:h-[46rem]">
           <Image
-            src="/images/hero-image.webp"
+            src="/images/hero-image.png"
             alt=""
             fill
             priority

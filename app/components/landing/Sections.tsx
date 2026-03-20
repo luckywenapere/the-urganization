@@ -95,15 +95,6 @@ export function SolutionStepsSection() {
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             One link. All credits. Organized release info.
           </h2>
-          <p className="mt-5 mb-0 max-w-[52ch] text-base leading-8 text-white/70">
-            Copy your credit link once, send it anywhere, and let Urganize collect credits inside
-            the release.
-          </p>
-
-          <div className="mt-4">
-            <ProofLine>Used on real releases — 100+ credits collected</ProofLine>
-          </div>
-
           <div className="mt-8">
             <FeatureStepList steps={solutionSteps} />
           </div>
@@ -152,7 +143,7 @@ export function DirectiveSection() {
 
 export function SocialProofSection() {
   return (
-    <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
+    <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] pb-2 sm:pb-3 lg:pb-4">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Built for real release workflows
@@ -175,7 +166,7 @@ export function SocialProofSection() {
 
 export function FooterTagline() {
   return (
-    <footer className="border-t border-white/8 py-8">
+    <footer className="border-t border-white/8 pt-2 pb-[0.5px] sm:pt-3 sm:pb-[0.5px]">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p className="mb-0 text-sm font-medium text-white/78">
           Urganize is the operating system for music teams.
