@@ -1,13 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import {
-  Check,
-  ChevronRight,
-  CircleAlert,
-  Clock3,
-  Copy,
-  Folder,
-} from "lucide-react";
+import { Check, ChevronRight, CircleAlert } from "lucide-react";
 import { FeatureStepList } from "./FeatureStepList";
 import { LandingCTAGroup } from "./LandingCTAGroup";
 import {
@@ -18,31 +11,9 @@ import {
   SubmissionProofMockup,
 } from "./Mockups";
 import { PricingCard } from "./PricingCard";
-import { ProblemCard } from "./ProblemCard";
 import { SectionShell } from "./SectionShell";
 import { TestimonialCard } from "./TestimonialCard";
 import { WorkflowComparisonBlock } from "./WorkflowComparisonBlock";
-
-const problemCards = [
-  {
-    icon: Clock3,
-    title: "Chasing credits",
-    body: "Still waiting for people to send the details you need",
-    tone: "warning" as const,
-  },
-  {
-    icon: Folder,
-    title: "Scattered information",
-    body: "Notes, WhatsApp, docs, and spreadsheets everywhere",
-    tone: "neutral" as const,
-  },
-  {
-    icon: Copy,
-    title: "Re-typing release info",
-    body: "Copying the same credits and release details into distributor dashboards",
-    tone: "accent" as const,
-  },
-];
 
 const solutionSteps = [
   "Create your release",
@@ -165,34 +136,6 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
         </div>
 
         <HeroCommandCenterMockup />
-      </div>
-    </SectionShell>
-  );
-}
-
-export function ProblemCardsSection() {
-  return (
-    <SectionShell
-      id="problem"
-      className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]"
-    >
-      <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow>The broken workflow</Eyebrow>
-        <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Releases break down before they even start
-        </h2>
-      </div>
-
-      <div className="mt-12 grid gap-5 lg:grid-cols-3">
-        {problemCards.map((card) => (
-          <ProblemCard
-            key={card.title}
-            icon={card.icon}
-            title={card.title}
-            body={card.body}
-            tone={card.tone}
-          />
-        ))}
       </div>
     </SectionShell>
   );

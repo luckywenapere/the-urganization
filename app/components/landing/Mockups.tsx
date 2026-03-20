@@ -133,27 +133,7 @@ export function HeroCommandCenterMockup() {
       aspectClassName="aspect-[1895/890]"
       priority
       showHeader={false}
-    >
-      <div className="grid gap-3 sm:grid-cols-3">
-        <InfoPill
-          icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Readiness"
-          value="See what is complete without opening five different tools."
-          tone="success"
-        />
-        <InfoPill
-          icon={<Sparkles className="h-4 w-4" />}
-          label="Release Info"
-          value="Credits come in and the release info stays organized in one place."
-          tone="accent"
-        />
-        <InfoPill
-          icon={<BellRing className="h-4 w-4" />}
-          label="Next Action"
-          value="The dashboard keeps the team moving instead of waiting in chats."
-        />
-      </div>
-    </ProductScreenshot>
+    />
   );
 }
 

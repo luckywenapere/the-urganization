@@ -8,7 +8,6 @@ import {
   HeroSection,
   MetadataPayoffSection,
   PricingSection,
-  ProblemCardsSection,
   SolutionStepsSection,
   SocialProofSection,
 } from "./components/landing/Sections";
@@ -43,7 +42,6 @@ export default function Home() {
             startReleaseHref={START_RELEASE_HREF}
             bookDemoHref={BOOK_DEMO_HREF}
           />
-          <ProblemCardsSection />
           <SolutionStepsSection />
           <MetadataPayoffSection />
           <DirectiveSection />
