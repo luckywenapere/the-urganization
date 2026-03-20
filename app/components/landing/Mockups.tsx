@@ -109,12 +109,12 @@ function InfoPill({
       className={clsx(
         "rounded-[1.4rem] border px-3.5 py-3 sm:px-4 shadow-[0_16px_35px_rgba(0,0,0,0.18)] backdrop-blur-xl",
         tone === "default" && "border-white/10 bg-black/28",
-        tone === "success" && "border-[#d0ff97]/18 bg-[#b7ff6e]/10",
+        tone === "success" && "border-[#b7ff6e]/18 bg-[#b7ff6e]/10",
         tone === "accent" && "border-[#94c4ff]/18 bg-[#94c4ff]/10",
       )}
     >
       <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55">
-        <span className="text-[#d8ffab]">{icon}</span>
+        <span className="text-[#b7ff6e]">{icon}</span>
         <span>{label}</span>
       </div>
       <p className="mb-0 text-sm font-medium leading-5 sm:leading-6 text-white/88">{value}</p>
@@ -172,22 +172,7 @@ export function MetadataPageMockup() {
       subtitle="Use the real release record instead of re-typing details in distributor tools"
       aspectClassName="aspect-[1403/848]"
       showHeader={false}
-    >
-      <div className="grid gap-3 sm:grid-cols-2">
-        <InfoPill
-          icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Readiness"
-          value="Credit details are grouped and ready before distribution week."
-          tone="success"
-        />
-        <InfoPill
-          icon={<Sparkles className="h-4 w-4" />}
-          label="Release Info"
-          value="The page gives teams one organized source of truth for every release."
-          tone="accent"
-        />
-      </div>
-    </ProductScreenshot>
+    />
   );
 }
 

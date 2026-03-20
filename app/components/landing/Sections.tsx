@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Check, ChevronRight, CircleAlert } from "lucide-react";
 import { FeatureStepList } from "./FeatureStepList";
 import { LandingCTAGroup } from "./LandingCTAGroup";
 import {
@@ -123,18 +122,11 @@ export function MetadataPayoffSection() {
         <MetadataPageMockup />
 
         <div className="max-w-xl">
-          <Eyebrow>Release Info</Eyebrow>
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Collect once. Use everywhere.
           </h2>
           <p className="mt-5 mb-0 text-base leading-8 text-white/72">
             Every credit submitted is organized into release info you can actually use.
-          </p>
-          <p className="mt-4 mb-0 text-base leading-8 text-white/72">
-            When it&apos;s time to distribute your release, the details are already prepared.
-          </p>
-          <p className="mt-4 mb-0 text-base leading-8 text-white/72">
-            No more re-entering credits across distributor forms.
           </p>
         </div>
       </div>
@@ -150,38 +142,6 @@ export function DirectiveSection() {
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Always know the next action
           </h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {[
-              {
-                label: "Ready",
-                body: "See what is complete without opening five different tools.",
-                icon: Check,
-              },
-              {
-                label: "Missing",
-                body: "See blockers early enough to fix them before deadline week.",
-                icon: CircleAlert,
-              },
-              {
-                label: "Next Action",
-                body: "See the next action without guessing or chasing updates.",
-                icon: ChevronRight,
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-4"
-              >
-                <div className="mb-3 flex items-center gap-2 text-[#d8ffab]">
-                  <item.icon className="h-4 w-4" />
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-                    {item.label}
-                  </span>
-                </div>
-                <p className="mb-0 text-sm leading-6 text-white/68">{item.body}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         <DirectiveCardMockup />
@@ -197,10 +157,6 @@ export function SocialProofSection() {
         <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Built for real release workflows
         </h2>
-        <p className="mt-5 mb-0 text-base leading-8 text-white/68">
-          Real submissions live inside the release so managers and artists can see what&apos;s in,
-          what&apos;s missing, and what still needs a follow-up.
-        </p>
       </div>
 
       <div className="mt-12 grid items-center gap-6 lg:grid-cols-[1.08fr_0.92fr]">

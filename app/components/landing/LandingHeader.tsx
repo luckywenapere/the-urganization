@@ -60,7 +60,7 @@ export function LandingHeader({
             </a>
             <a
               href={startReleaseHref}
-              className="inline-flex rounded-full border border-[#d0ff97]/25 bg-[#b7ff6e] px-4 py-2 text-sm font-semibold text-[#08110a] shadow-[0_18px_50px_rgba(183,255,110,0.16)] hover:bg-[#ceff98]"
+              className="inline-flex rounded-full border border-[#b7ff6e]/25 bg-[#b7ff6e] px-4 py-2 text-sm font-semibold text-[#08110a] shadow-[0_18px_50px_rgba(183,255,110,0.16)] hover:border-[#b7ff6e]/35 hover:bg-[#b7ff6e]"
             >
               Start your release
             </a>
@@ -100,7 +100,7 @@ export function LandingHeader({
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <a
                 href={startReleaseHref}
-                className="inline-flex items-center justify-center rounded-full border border-[#d0ff97]/25 bg-[#b7ff6e] px-4 py-3 text-sm font-semibold text-[#08110a]"
+                className="inline-flex items-center justify-center rounded-full border border-[#b7ff6e]/25 bg-[#b7ff6e] px-4 py-3 text-sm font-semibold text-[#08110a]"
               >
                 Start your release
               </a>

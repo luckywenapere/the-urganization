@@ -38,7 +38,7 @@ export function LandingCTAGroup({
       <a
         href={startReleaseHref}
         className={clsx(
-          "inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#d0ff97]/30 bg-[#b7ff6e] font-semibold text-[#08110a] shadow-[0_22px_60px_rgba(183,255,110,0.18)] hover:bg-[#ceff98] sm:w-auto",
+          "inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#b7ff6e]/30 bg-[#b7ff6e] font-semibold text-[#08110a] shadow-[0_22px_60px_rgba(183,255,110,0.18)] hover:border-[#b7ff6e]/40 hover:bg-[#b7ff6e] sm:w-auto",
           sizeClasses[size].primary,
         )}
       >

@@ -31,8 +31,8 @@ export function WorkflowComparisonBlock({
         </div>
       </article>
 
-      <article className="rounded-[2rem] border border-[#d0ff97]/18 bg-[#b7ff6e]/9 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.18)]">
-        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#d8ffab]">
+      <article className="rounded-[2rem] border border-[#b7ff6e]/18 bg-[#b7ff6e]/9 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.18)]">
+        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#b7ff6e]">
           Urganize
         </p>
 
@@ -42,7 +42,7 @@ export function WorkflowComparisonBlock({
               key={item}
               className="flex items-center gap-3 rounded-2xl border border-white/8 bg-black/20 px-4 py-3"
             >
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#b7ff6e]/12 text-[#d8ffab]">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#b7ff6e]/12 text-[#b7ff6e]">
                 <Check className="h-4 w-4" />
               </span>
               <span className="text-sm font-medium text-white">{item}</span>

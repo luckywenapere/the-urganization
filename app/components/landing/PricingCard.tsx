@@ -20,7 +20,7 @@ export function PricingCard({
       className={clsx(
         "relative h-full rounded-[2rem] border p-6 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-xl",
         highlight
-          ? "border-[#d0ff97]/24 bg-[linear-gradient(180deg,rgba(183,255,110,0.12),rgba(255,255,255,0.04))]"
+          ? "border-[#b7ff6e]/24 bg-[linear-gradient(180deg,rgba(183,255,110,0.12),rgba(255,255,255,0.04))]"
           : "border-white/10 bg-white/[0.05]",
       )}
     >
@@ -35,7 +35,7 @@ export function PricingCard({
         </div>
 
         {badge ? (
-          <span className="rounded-full border border-[#d0ff97]/24 bg-[#b7ff6e]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#d8ffab]">
+          <span className="rounded-full border border-[#b7ff6e]/24 bg-[#b7ff6e]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#b7ff6e]">
             {badge}
           </span>
         ) : null}
