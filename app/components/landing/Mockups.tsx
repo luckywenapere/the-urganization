@@ -41,12 +41,12 @@ function ProductScreenshot({
       <div className="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-white/45 to-transparent" />
 
       <div className="relative overflow-hidden rounded-[1.95rem] border border-white/8 bg-[#09120f]">
-        <div className="flex items-center justify-between gap-4 border-b border-white/8 px-5 py-4">
+        <div className="flex items-start justify-between gap-4 border-b border-white/8 px-4 py-3 sm:px-5 sm:py-4">
           <div className="min-w-0">
             <p className="mb-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/42">
               {eyebrow}
             </p>
-            <p className="mt-1 mb-0 truncate text-sm font-medium text-white/82">{title}</p>
+            <p className="mt-1 mb-0 text-sm font-medium leading-5 text-white/82">{title}</p>
           </div>
 
           {chrome === "desktop" ? (
@@ -62,8 +62,8 @@ function ProductScreenshot({
           )}
         </div>
 
-        <div className="border-b border-white/8 px-5 py-3">
-          <p className="mb-0 text-sm text-white/58">{subtitle}</p>
+        <div className="border-b border-white/8 px-4 py-3 sm:px-5">
+          <p className="mb-0 text-sm leading-6 text-white/58">{subtitle}</p>
         </div>
 
         <div className={clsx("relative overflow-hidden bg-[#050806]", aspectClassName)}>
@@ -82,7 +82,7 @@ function ProductScreenshot({
         </div>
       </div>
 
-      {children ? <div className="relative mt-4">{children}</div> : null}
+      {children ? <div className="relative mt-3 sm:mt-4">{children}</div> : null}
     </div>
   );
 }
@@ -101,7 +101,7 @@ function InfoPill({
   return (
     <div
       className={clsx(
-        "rounded-[1.4rem] border px-4 py-3 shadow-[0_16px_35px_rgba(0,0,0,0.18)] backdrop-blur-xl",
+        "rounded-[1.4rem] border px-3.5 py-3 sm:px-4 shadow-[0_16px_35px_rgba(0,0,0,0.18)] backdrop-blur-xl",
         tone === "default" && "border-white/10 bg-black/28",
         tone === "success" && "border-[#d0ff97]/18 bg-[#b7ff6e]/10",
         tone === "accent" && "border-[#94c4ff]/18 bg-[#94c4ff]/10",
@@ -111,7 +111,7 @@ function InfoPill({
         <span className="text-[#d8ffab]">{icon}</span>
         <span>{label}</span>
       </div>
-      <p className="mb-0 text-sm font-medium leading-6 text-white/88">{value}</p>
+      <p className="mb-0 text-sm font-medium leading-5 sm:leading-6 text-white/88">{value}</p>
     </div>
   );
 }
@@ -120,29 +120,29 @@ export function HeroCommandCenterMockup() {
   return (
     <ProductScreenshot
       src="/images/landing/hero-dashboard.png"
-      alt="Urganize release dashboard showing collaborator credits, structured metadata, and release readiness."
-      eyebrow="Release command center"
-      title="The real Urganize workspace"
-      subtitle="Credits, release structure, and readiness in one dashboard"
+      alt="Urganize release dashboard showing credits, release info, readiness, and the next action."
+      eyebrow="Release Dashboard"
+      title="Credits, Release Info, and Readiness"
+      subtitle="Copy Credit Link, collect credits, and keep the release moving"
       aspectClassName="aspect-[1895/890]"
       priority
     >
       <div className="grid gap-3 sm:grid-cols-3">
         <InfoPill
           icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Live status"
+          label="Readiness"
           value="See what is complete without opening five different tools."
           tone="success"
         />
         <InfoPill
           icon={<Sparkles className="h-4 w-4" />}
-          label="Structured"
-          value="Collaborator inputs turn into organized release data automatically."
+          label="Release Info"
+          value="Credits come in and the release info stays organized in one place."
           tone="accent"
         />
         <InfoPill
           icon={<BellRing className="h-4 w-4" />}
-          label="Next action"
+          label="Next Action"
           value="The dashboard keeps the team moving instead of waiting in chats."
         />
       </div>
@@ -154,10 +154,10 @@ export function PublicCreditFormMockup() {
   return (
     <ProductScreenshot
       src="/images/landing/credit-form-mobile.png"
-      alt="Urganize mobile credit form used by collaborators to submit release information."
-      eyebrow="Public credit link"
-      title="Collaborators submit from their phone"
-      subtitle="One secure link collects the details you need without back-and-forth"
+      alt="Urganize mobile credit form used to collect credits from one shared link."
+      eyebrow="Collect Credits"
+      title="Copy Credit Link"
+      subtitle="Send it anywhere and credits come in without the back-and-forth"
       aspectClassName="aspect-[499/1080]"
       className="mx-auto max-w-[23rem]"
       imageClassName="object-contain bg-[#050806]"
@@ -166,14 +166,14 @@ export function PublicCreditFormMockup() {
       <div className="grid gap-3 sm:grid-cols-2">
         <InfoPill
           icon={<Sparkles className="h-4 w-4" />}
-          label="One link"
+          label="Copy Credit Link"
           value="Share once and collect credits in a format the team can actually use."
           tone="success"
         />
         <InfoPill
           icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Cleaner intake"
-          value="The form keeps submissions structured before they ever reach the release workspace."
+          label="Credits"
+          value="The form keeps every submission clean before it reaches the release."
         />
       </div>
     </ProductScreenshot>
@@ -184,23 +184,23 @@ export function MetadataPageMockup() {
   return (
     <ProductScreenshot
       src="/images/landing/release-info.png"
-      alt="Urganize release information page showing structured output for a release."
-      eyebrow="Structured output"
-      title="Release information, already organized"
-      subtitle="Use the real release record instead of rebuilding metadata in distributor tools"
+      alt="Urganize release info page showing organized credits and release details."
+      eyebrow="Release Info"
+      title="Release info, already organized"
+      subtitle="Use the real release record instead of re-typing details in distributor tools"
       aspectClassName="aspect-[1403/848]"
     >
       <div className="grid gap-3 sm:grid-cols-2">
         <InfoPill
           icon={<CheckCircle2 className="h-4 w-4" />}
-          label="Prepared"
+          label="Readiness"
           value="Credit details are grouped and ready before distribution week."
           tone="success"
         />
         <InfoPill
           icon={<Sparkles className="h-4 w-4" />}
-          label="Less re-entry"
-          value="The page gives teams a structured source of truth for every release."
+          label="Release Info"
+          value="The page gives teams one organized source of truth for every release."
           tone="accent"
         />
       </div>
@@ -213,7 +213,7 @@ export function DirectiveCardMockup() {
     <ProductScreenshot
       src="/images/landing/readiness-next-action.png"
       alt="Urganize readiness view highlighting release guidance and next actions."
-      eyebrow="Readiness guidance"
+      eyebrow="Readiness"
       title="Guidance built into the release"
       subtitle="Track blockers, readiness, and the next action from the product itself"
       aspectClassName="aspect-[1410/837]"
@@ -232,7 +232,7 @@ export function DirectiveCardMockup() {
         />
         <InfoPill
           icon={<Sparkles className="h-4 w-4" />}
-          label="Next"
+          label="Next Action"
           value="Give the team one clear action to keep moving."
           tone="accent"
         />
@@ -245,9 +245,9 @@ export function SubmissionProofMockup() {
   return (
     <ProductScreenshot
       src="/images/landing/credits-section.png"
-      alt="Urganize credits section showing collaborator submissions inside a release."
+      alt="Urganize credits section showing credits collected inside a release."
       eyebrow="Submission proof"
-      title="Real collaborator submissions in one place"
+      title="Real credits collected in one place"
       subtitle="Track incoming credits inside the release instead of chasing updates across tools"
       aspectClassName="aspect-[887/693]"
     />

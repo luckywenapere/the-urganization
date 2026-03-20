@@ -26,8 +26,8 @@ import { WorkflowComparisonBlock } from "./WorkflowComparisonBlock";
 const problemCards = [
   {
     icon: Clock3,
-    title: "Chasing collaborators",
-    body: "Still waiting for credits and details",
+    title: "Chasing credits",
+    body: "Still waiting for people to send the details you need",
     tone: "warning" as const,
   },
   {
@@ -38,18 +38,18 @@ const problemCards = [
   },
   {
     icon: Copy,
-    title: "Re-typing metadata",
-    body: "Copying the same details into distributor dashboards",
+    title: "Re-typing release info",
+    body: "Copying the same credits and release details into distributor dashboards",
     tone: "accent" as const,
   },
 ];
 
 const solutionSteps = [
-  "Create a release",
-  "Add collaborators",
-  "Send a credit link",
-  "Collect credits",
-  "Review structured metadata",
+  "Create your release",
+  "Copy your credit link",
+  "Send it anywhere",
+  "Credits come in",
+  "Release info is organized",
 ];
 
 const currentWorkflowItems = [
@@ -60,10 +60,10 @@ const currentWorkflowItems = [
 ];
 
 const urganizeItems = [
-  "One release workspace",
-  "Structured metadata",
-  "Collaborator credit collection",
-  "Clear release readiness",
+  "Release Dashboard",
+  "Collect credits",
+  "Release info",
+  "Clear readiness",
 ];
 
 const pricingPlans = [
@@ -106,13 +106,13 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
         <div className="max-w-2xl">
           <Eyebrow>Release operations software for music teams</Eyebrow>
 
-          <h1 className="mt-8 mb-0 max-w-[13ch] text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.75rem] lg:leading-[0.96]">
-            Stop chasing collaborators and re-typing song credits
+          <h1 className="mt-8 mb-0 max-w-[12ch] text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.75rem] lg:leading-[0.96]">
+            Send one link. Collect all your song credits.
           </h1>
 
           <p className="mt-6 mb-0 max-w-[62ch] text-base leading-8 text-white/72 sm:text-lg">
-            Urganize helps music teams collect collaborator credits and automatically organize
-            release metadata so releases are ready weeks before deadlines.
+            Create a release, copy one credit link, collect credits, and keep your release info
+            organized before deadline week.
           </p>
 
           <div className="mt-8">
@@ -128,9 +128,9 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/55">
             {[
-              "Collect credits once",
-              "Structure metadata automatically",
-              "Know what to do next",
+              "Copy Credit Link",
+              "Collect Credits",
+              "Next Action",
             ].map((item) => (
               <span
                 key={item}
@@ -183,11 +183,11 @@ export function SolutionStepsSection() {
         <div className="max-w-xl">
           <Eyebrow>The mechanism</Eyebrow>
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            One link. All credits. Ready metadata.
+            One link. All credits. Organized release info.
           </h2>
           <p className="mt-5 mb-0 max-w-[52ch] text-base leading-8 text-white/70">
-            Stop chasing details across chats, notes, Notion pages, and spreadsheets. Send a
-            public credit link once and let Urganize organize every submission inside the release.
+            Copy your credit link once, send it anywhere, and let Urganize collect credits inside
+            the release.
           </p>
 
           <div className="mt-8">
@@ -208,18 +208,18 @@ export function MetadataPayoffSection() {
         <MetadataPageMockup />
 
         <div className="max-w-xl">
-          <Eyebrow>Metadata payoff</Eyebrow>
+          <Eyebrow>Release Info</Eyebrow>
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Collect once. Use everywhere.
           </h2>
           <p className="mt-5 mb-0 text-base leading-8 text-white/72">
-            Every credit submitted is automatically organized into structured metadata.
+            Every credit submitted is organized into release info you can actually use.
           </p>
           <p className="mt-4 mb-0 text-base leading-8 text-white/72">
-            When it&apos;s time to distribute your release, your information is already prepared.
+            When it&apos;s time to distribute your release, the details are already prepared.
           </p>
           <p className="mt-4 mb-0 text-base leading-8 text-white/72">
-            No more re-entering details into distributor forms.
+            No more re-entering credits across distributor forms.
           </p>
         </div>
       </div>
@@ -234,9 +234,9 @@ export function DirectiveSection() {
         <DirectiveCardMockup />
 
         <div className="max-w-xl">
-          <Eyebrow>The directive system</Eyebrow>
+          <Eyebrow>Readiness</Eyebrow>
           <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Always know what to do next
+            Always know the next action
           </h2>
           <p className="mt-5 mb-0 text-base leading-8 text-white/72">
             Urganize shows you what&apos;s ready, what&apos;s missing, and what to do next — from
@@ -265,7 +265,7 @@ export function DirectiveSection() {
                 icon: CircleAlert,
               },
               {
-                label: "Next",
+                label: "Next Action",
                 body: "See the next action without guessing or chasing updates.",
                 icon: ChevronRight,
               },
@@ -319,7 +319,7 @@ export function SocialProofSection() {
             </p>
             <p className="mb-0 text-base leading-7 text-white/78">
               The product itself becomes the source of truth for submissions, so proof of progress
-              is already inside the workspace instead of buried in messages and notes.
+              is already inside the release instead of buried in messages and notes.
             </p>
           </div>
         </div>
@@ -338,7 +338,7 @@ export function ComparisonSection() {
         </h2>
         <p className="mt-5 mb-0 text-base leading-8 text-white/68">
           WhatsApp, Notes, spreadsheets, and distributor dashboards create fragments.
-          Urganize gives your team one release workspace instead.
+          Urganize gives your team one release dashboard instead.
         </p>
       </div>
 
@@ -398,13 +398,11 @@ export function FinalCTASection({ startReleaseHref, bookDemoHref }: CTAProps) {
       <div className="overflow-hidden rounded-[2.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(183,255,110,0.14),rgba(255,255,255,0.03)_55%,rgba(120,182,255,0.09))] p-8 shadow-[0_28px_90px_rgba(0,0,0,0.24)] sm:p-10 lg:p-12">
         <div className="max-w-3xl">
           <Eyebrow>Final call</Eyebrow>
-          <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Prepare your next release the right way
+          <h2 className="mt-6 mb-0 max-w-[15ch] text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            Stop chasing credits. Start collecting them.
           </h2>
-          <p className="mt-5 mb-0 text-base leading-8 text-white/78">
-            <span className="block">Stop chasing collaborators.</span>
-            <span className="block">Stop re-typing metadata.</span>
-            <span className="block">Start organizing your releases properly.</span>
+          <p className="mt-5 mb-0 max-w-2xl text-base leading-8 text-white/78">
+            Create a release, send one link, and get your credits organized properly.
           </p>
 
           <div className="mt-8">

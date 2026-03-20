@@ -18,9 +18,9 @@ const BOOK_DEMO_HREF =
   "mailto:theurganization@gmail.com?subject=Book%20a%20demo%20with%20Urganize";
 
 export const metadata: Metadata = {
-  title: "Stop chasing collaborators and re-typing song credits",
+  title: "Send one link. Collect all your song credits.",
   description:
-    "Stop chasing collaborators and re-typing song credits. Collect collaborator credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
+    "Create a release, copy one credit link, collect credits, and organize release info weeks before deadline week.",
 };
 
 export default function Home() {
