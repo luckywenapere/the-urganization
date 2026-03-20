@@ -63,11 +63,6 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
             Send one link. Collect all your song credits.
           </h1>
 
-          <p className="mt-6 mb-0 max-w-[62ch] text-base leading-8 text-white/72 sm:text-lg">
-            Create a release, copy one credit link, collect credits, and keep your release info
-            organized before deadline week.
-          </p>
-
           <div className="mt-8">
             <LandingCTAGroup
               startReleaseHref={startReleaseHref}
