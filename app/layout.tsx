@@ -65,6 +65,18 @@ const homepageSchema = {
   }
 } as const;
 
+const marketingThemeScript = `
+  try {
+    const storageKey = "urganize-marketing-theme";
+    const storedTheme = window.localStorage.getItem(storageKey);
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : systemTheme;
+    document.documentElement.dataset.marketingTheme = theme;
+  } catch (error) {
+    document.documentElement.dataset.marketingTheme = "light";
+  }
+`;
+
 export const metadata: Metadata = {
   title: {
     default: "Urganize",
@@ -123,9 +135,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${dmSans.variable}`}
+    >
       <head>
         <meta name="apple-mobile-web-app-title" content="Urganize" />
+        <script dangerouslySetInnerHTML={{ __html: marketingThemeScript }} />
 
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4PX21EV8K"></script>

@@ -31,11 +31,11 @@ function ProductScreenshot({
   return (
     <div
       className={clsx(
-        "relative overflow-hidden rounded-[2rem] border border-[#e2d9cc] bg-white p-3 shadow-[0_28px_60px_rgba(23,19,17,0.08)]",
+        "relative overflow-hidden rounded-[2rem] border border-[color:var(--marketing-border)] bg-[var(--marketing-screen-shell)] p-3 shadow-[0_28px_60px_var(--marketing-shadow-strong)]",
         className,
       )}
     >
-      <div className="relative overflow-hidden rounded-[1.55rem] border border-[#ddd3c7] bg-[#16120f]">
+      <div className="relative overflow-hidden rounded-[1.55rem] border border-[color:var(--marketing-screen-border)] bg-[#16120f]">
         {showHeader ? (
           <>
             <div className="flex items-start justify-between gap-4 border-b border-white/8 px-4 py-3 sm:px-5 sm:py-4">
@@ -110,9 +110,10 @@ export function CollaboratorLinkMockup() {
       title="Collect the right details"
       subtitle="Send one form and capture the information every release needs"
       aspectClassName="aspect-[499/1080]"
-      className="mx-auto max-w-[22rem]"
+      className="mx-auto max-w-[16rem] sm:max-w-[18rem] lg:max-w-[15.5rem]"
       imageClassName="object-contain bg-[#120f0d]"
       chrome="mobile"
+      showHeader={false}
     />
   );
 }

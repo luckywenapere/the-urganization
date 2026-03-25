@@ -11,16 +11,16 @@ export function FeatureStepList({ steps }: FeatureStepListProps) {
         return (
           <li key={step} className="flex gap-4">
             <div className="flex flex-col items-center">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#ddd2c3] bg-white text-sm font-semibold text-[#171311] shadow-sm">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[color:var(--marketing-border-strong)] bg-[var(--marketing-surface)] text-sm font-semibold text-[var(--marketing-text)] shadow-[0_12px_24px_var(--marketing-shadow)]">
                 {index + 1}
               </span>
               {!isLast ? (
-                <span className="mt-3 h-10 w-px bg-gradient-to-b from-[#d7cbbb] to-transparent" />
+                <span className="mt-3 h-10 w-px bg-gradient-to-b from-[var(--marketing-border-strong)] to-transparent" />
               ) : null}
             </div>
 
             <div className="pt-2">
-              <p className="mb-0 text-base font-medium text-[#171311]">{step}</p>
+              <p className="mb-0 text-base font-medium text-[var(--marketing-text)]">{step}</p>
             </div>
           </li>
         );

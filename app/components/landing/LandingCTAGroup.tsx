@@ -23,9 +23,9 @@ const sizeClasses = {
 const toneClasses = {
   light: {
     primary:
-      "bg-[#171311] text-white shadow-[0_20px_45px_rgba(23,19,17,0.14)] hover:bg-[#2b241f]",
+      "bg-[var(--marketing-primary)] text-[var(--marketing-primary-text)] shadow-[0_20px_45px_var(--marketing-shadow-strong)] hover:bg-[var(--marketing-primary-hover)]",
     secondary:
-      "border border-[#dcd3c6] bg-white text-[#171311] hover:border-[#cbbfad] hover:bg-[#f8f4ed]",
+      "border border-[color:var(--marketing-secondary-border)] bg-[var(--marketing-secondary)] text-[var(--marketing-secondary-text)] hover:border-[color:var(--marketing-border-strong)] hover:bg-[var(--marketing-secondary-hover)]",
   },
   dark: {
     primary:

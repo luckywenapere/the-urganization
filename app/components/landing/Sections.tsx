@@ -52,7 +52,32 @@ type SocialProofLogo = {
   height: number;
 };
 
-const socialProofLogos: SocialProofLogo[] = [];
+const socialProofLogos: SocialProofLogo[] = [
+  {
+    src: "/images/logos/logo-1.svg",
+    alt: "Logo 1",
+    width: 140,
+    height: 48,
+  },
+  {
+    src: "/images/logos/logo-2.svg",
+    alt: "Logo 2",
+    width: 140,
+    height: 48,
+  },
+  {
+    src: "/images/logos/logo-3.svg",
+    alt: "Logo 3",
+    width: 140,
+    height: 48,
+  },
+  {
+    src: "/images/logos/logo-4.svg",
+    alt: "Logo 4",
+    width: 140,
+    height: 48,
+  },
+];
 
 const socialLinks = [
   {
@@ -86,15 +111,15 @@ function SectionHeading({
   return (
     <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
       {eyebrow ? (
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#7a7063]">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--marketing-text-subtle)]">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="mb-0 text-balance text-[2rem] font-semibold tracking-tight text-[#171311] sm:text-[2.6rem]">
+      <h2 className="mb-0 text-balance text-[2rem] font-semibold tracking-tight text-[var(--marketing-text)] sm:text-[2.6rem]">
         {title}
       </h2>
       {body ? (
-        <p className="mt-4 mb-0 text-lg leading-8 text-[#5c544a]">{body}</p>
+        <p className="mt-4 mb-0 text-lg leading-8 text-[var(--marketing-text-muted)]">{body}</p>
       ) : null}
     </div>
   );
@@ -109,7 +134,7 @@ function SectionCard({
 }) {
   return (
     <div
-      className={`rounded-[2rem] border border-[#e2d9cc] bg-white p-6 shadow-[0_20px_45px_rgba(23,19,17,0.05)] sm:p-8 ${className}`}
+      className={`rounded-[2rem] border border-[color:var(--marketing-border)] bg-[var(--marketing-surface)] p-6 shadow-[0_20px_45px_var(--marketing-shadow)] sm:p-8 ${className}`}
     >
       {children}
     </div>
@@ -126,12 +151,12 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
     <SectionShell className="pt-10 sm:pt-14 lg:pt-20">
       <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
         <div className="max-w-2xl">
-          <h1 className="mb-0 text-balance text-[2.9rem] font-semibold tracking-[-0.04em] text-[#171311] sm:text-[4.2rem] sm:leading-[1.02]">
+          <h1 className="mb-0 text-balance text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--marketing-text)] sm:text-[4.2rem] sm:leading-[1.02]">
             <span className="block">Collect song credits with one link.</span>
             <span className="mt-2 block">Run your entire release in one place.</span>
           </h1>
 
-          <p className="mt-6 mb-0 max-w-xl text-lg leading-8 text-[#5c544a] sm:text-xl">
+          <p className="mt-6 mb-0 max-w-xl text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-xl">
             Send one link to collaborators, collect structured credits, and keep your
             release organized from start to finish.
           </p>
@@ -151,9 +176,9 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
 
 export function LogoStripSection() {
   return (
-    <section className="border-y border-[#ece4d8] bg-[#fbf8f2] py-8 sm:py-10">
+    <section className="border-y border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)] py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <p className="mb-5 text-center text-sm font-medium text-[#6d6459]">
+        <p className="mb-5 text-center text-sm font-medium text-[var(--marketing-text-subtle)]">
           Trusted by artists, managers, and release teams
         </p>
 
@@ -162,7 +187,7 @@ export function LogoStripSection() {
             {socialProofLogos.map((logo) => (
               <div
                 key={logo.alt}
-                className="flex h-16 items-center justify-center rounded-2xl border border-[#ece4d8] bg-white/80 px-6"
+                className="flex h-16 items-center justify-center rounded-2xl border border-[color:var(--marketing-border)] bg-[var(--marketing-logo-card-bg)] px-6"
               >
                 <Image
                   src={logo.src}
@@ -182,7 +207,7 @@ export function LogoStripSection() {
             {Array.from({ length: 5 }).map((_, index) => (
               <div
                 key={index}
-                className="h-16 rounded-2xl border border-[#ece4d8] bg-white/75"
+                className="h-16 rounded-2xl border border-[color:var(--marketing-border)] bg-[var(--marketing-logo-card-bg)]"
                 aria-hidden="true"
               />
             ))}
@@ -204,10 +229,10 @@ export function ProductValueSection() {
       <div className="mt-10 grid gap-5 lg:grid-cols-3">
         {productValueCards.map((card) => (
           <SectionCard key={card.title} className="h-full">
-            <h3 className="mb-3 text-2xl font-semibold tracking-tight text-[#171311]">
+            <h3 className="mb-3 text-2xl font-semibold tracking-tight text-[var(--marketing-text)]">
               {card.title}
             </h3>
-            <p className="mb-0 text-base leading-7 text-[#5c544a]">{card.body}</p>
+            <p className="mb-0 text-base leading-7 text-[var(--marketing-text-muted)]">{card.body}</p>
           </SectionCard>
         ))}
       </div>
@@ -217,7 +242,7 @@ export function ProductValueSection() {
 
 export function VisualProofSection() {
   return (
-    <SectionShell className="border-y border-[#ece4d8] bg-[#fbf8f2]">
+    <SectionShell className="border-y border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)]">
       <SectionHeading
         title="Start with the information every release needs. Then run the release with clarity."
         align="center"
@@ -225,12 +250,12 @@ export function VisualProofSection() {
 
       <div className="mt-12 space-y-8">
         <SectionCard>
-          <div className="grid items-center gap-10 lg:grid-cols-[0.84fr_1.16fr]">
-            <div className="max-w-xl">
-              <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[#171311]">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start lg:gap-12">
+            <div className="max-w-xl lg:pt-6">
+              <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[var(--marketing-text)]">
                 Collect structured credits from collaborators
               </h3>
-              <p className="mb-0 text-lg leading-8 text-[#5c544a]">
+              <p className="mb-0 text-lg leading-8 text-[var(--marketing-text-muted)]">
                 Use a simple link to gather the information every release needs.
               </p>
             </div>
@@ -244,10 +269,10 @@ export function VisualProofSection() {
             <ReleaseWorkspaceMockup />
 
             <div className="max-w-xl">
-              <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[#171311]">
+              <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[var(--marketing-text)]">
                 Track tasks, timelines, and assets in one place
               </h3>
-              <p className="mb-0 text-lg leading-8 text-[#5c544a]">
+              <p className="mb-0 text-lg leading-8 text-[var(--marketing-text-muted)]">
                 Turn release chaos into a structured workflow your team can actually
                 execute.
               </p>
@@ -275,7 +300,7 @@ export function HowItWorksSection() {
 
 export function TrustSection() {
   return (
-    <SectionShell className="border-y border-[#ece4d8] bg-[#fbf8f2]">
+    <SectionShell className="border-y border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)]">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <SectionCard>
           <SectionHeading
@@ -287,7 +312,7 @@ export function TrustSection() {
             {trustBullets.map((bullet) => (
               <li
                 key={bullet}
-                className="rounded-2xl border border-[#ece3d7] bg-[#fbf8f2] px-4 py-3 text-base font-medium text-[#171311]"
+                className="rounded-2xl border border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)] px-4 py-3 text-base font-medium text-[var(--marketing-text)]"
               >
                 {bullet}
               </li>
@@ -327,13 +352,13 @@ export function FinalCTASection({ startReleaseHref, bookDemoHref }: CTAProps) {
 
 export function FooterTagline() {
   return (
-    <footer className="border-t border-[#e6ded1] py-8">
+    <footer className="border-t border-[color:var(--marketing-border)] py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p className="mb-0 text-sm font-medium text-[#4c443b]">
+        <p className="mb-0 text-sm font-medium text-[var(--marketing-text-muted)]">
           Built for serious release teams
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 text-sm text-[#7a7063]">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-[var(--marketing-text-subtle)]">
           <div className="flex items-center gap-2">
             {socialLinks.map((item) => (
               <a
@@ -342,26 +367,26 @@ export function FooterTagline() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={item.label}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e6ddd1] bg-white text-[#4c443b] transition hover:border-[#d7ccbe] hover:text-[#171311]"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--marketing-border)] bg-[var(--marketing-surface)] text-[var(--marketing-text-muted)] transition hover:border-[color:var(--marketing-border-strong)] hover:text-[var(--marketing-text)]"
               >
                 <item.icon className="h-4 w-4" />
               </a>
             ))}
           </div>
 
-          <Link href="/privacy" className="hover:text-[#171311]">
+          <Link href="/privacy" className="hover:text-[var(--marketing-text)]">
             Privacy
           </Link>
-          <Link href="/team" className="hover:text-[#171311]">
+          <Link href="/team" className="hover:text-[var(--marketing-text)]">
             Team
           </Link>
           <a
             href="mailto:theurganization@gmail.com"
-            className="hover:text-[#171311]"
+            className="hover:text-[var(--marketing-text)]"
           >
             Contact
           </a>
-          <Link href="/terms" className="hover:text-[#171311]">
+          <Link href="/terms" className="hover:text-[var(--marketing-text)]">
             Terms
           </Link>
         </div>

@@ -39,9 +39,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f7f4ee] text-[#171311] selection:bg-[#ddd2c3] selection:text-[#171311]">
+    <div className="min-h-screen overflow-x-hidden bg-[var(--marketing-bg)] text-[var(--marketing-text)] selection:bg-[var(--marketing-selection)] selection:text-[var(--marketing-text)]">
       <div className="pointer-events-none fixed inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(228,220,208,0.78),transparent_38%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.96),transparent_42%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,var(--marketing-glow-left),transparent_38%),radial-gradient(circle_at_top_right,var(--marketing-glow-right),transparent_42%)]" />
       </div>
 
       <div className="relative z-10">
