@@ -50,32 +50,37 @@ type SocialProofLogo = {
   alt: string;
   width: number;
   height: number;
+  imageClassName?: string;
 };
 
 const socialProofLogos: SocialProofLogo[] = [
   {
     src: "/images/logos/logo-1.svg",
     alt: "Logo 1",
-    width: 140,
-    height: 48,
+    width: 160,
+    height: 160,
+    imageClassName: "max-h-10 sm:max-h-11",
   },
   {
     src: "/images/logos/logo-2.svg",
     alt: "Logo 2",
-    width: 140,
-    height: 48,
+    width: 160,
+    height: 160,
+    imageClassName: "max-h-10 sm:max-h-11",
   },
   {
     src: "/images/logos/logo-3.svg",
     alt: "Logo 3",
-    width: 140,
-    height: 48,
+    width: 160,
+    height: 160,
+    imageClassName: "max-h-10 sm:max-h-11",
   },
   {
     src: "/images/logos/logo-4.svg",
     alt: "Logo 4",
-    width: 140,
-    height: 48,
+    width: 240,
+    height: 80,
+    imageClassName: "max-h-7 sm:max-h-8",
   },
 ];
 
@@ -176,43 +181,53 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
 
 export function LogoStripSection() {
   return (
-    <section className="border-y border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)] py-8 sm:py-10">
+    <section className="py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <p className="mb-5 text-center text-sm font-medium text-[var(--marketing-text-subtle)]">
-          Trusted by artists, managers, and release teams
-        </p>
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center gap-4">
+            <span className="h-px flex-1 bg-[color:var(--marketing-border)]" />
+            <p className="mb-0 text-center text-xs font-semibold uppercase tracking-[0.22em] text-[var(--marketing-text-subtle)]">
+              Trusted by artists, managers, and release teams
+            </p>
+            <span className="h-px flex-1 bg-[color:var(--marketing-border)]" />
+          </div>
 
-        {socialProofLogos.length > 0 ? (
-          <div className="grid grid-cols-2 items-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {socialProofLogos.map((logo) => (
-              <div
-                key={logo.alt}
-                className="flex h-16 items-center justify-center rounded-2xl border border-[color:var(--marketing-border)] bg-[var(--marketing-logo-card-bg)] px-6"
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="h-auto max-h-8 w-auto opacity-60 grayscale"
-                />
+          {socialProofLogos.length > 0 ? (
+            <div className="mt-5 rounded-[2rem] border border-[color:var(--marketing-border)] bg-[var(--marketing-surface)] p-3 shadow-[0_20px_45px_var(--marketing-shadow)] sm:p-4">
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                {socialProofLogos.map((logo) => (
+                  <div
+                    key={logo.alt}
+                    className="flex h-20 items-center justify-center rounded-[1.5rem] border border-white/6 bg-black px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:h-24"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={logo.width}
+                      height={logo.height}
+                      className={`h-auto w-auto opacity-90 ${logo.imageClassName ?? "max-h-10 sm:max-h-11"}`}
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ) : (
-          <div
-            className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
-            aria-label="Social proof logo slots ready for approved artist and team logos"
-          >
-            {Array.from({ length: 5 }).map((_, index) => (
-              <div
-                key={index}
-                className="h-16 rounded-2xl border border-[color:var(--marketing-border)] bg-[var(--marketing-logo-card-bg)]"
-                aria-hidden="true"
-              />
-            ))}
-          </div>
-        )}
+            </div>
+          ) : (
+            <div
+              className="mt-5 rounded-[2rem] border border-[color:var(--marketing-border)] bg-[var(--marketing-surface)] p-3 shadow-[0_20px_45px_var(--marketing-shadow)] sm:p-4"
+              aria-label="Social proof logo slots ready for approved artist and team logos"
+            >
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-5">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <div
+                    key={index}
+                    className="h-20 rounded-[1.5rem] border border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)] sm:h-24"
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
