@@ -1,25 +1,58 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { RiInstagramLine, RiLinkedinFill, RiTwitterXLine } from "react-icons/ri";
+import {
+  RiInstagramLine,
+  RiLinkedinFill,
+  RiTwitterXLine,
+} from "react-icons/ri";
 import { FeatureStepList } from "./FeatureStepList";
 import { LandingCTAGroup } from "./LandingCTAGroup";
 import {
-  DirectiveCardMockup,
-  HeroCommandCenterMockup,
-  MetadataPageMockup,
-  PublicCreditFormMockup,
-  SubmissionProofMockup,
+  CollaboratorLinkMockup,
+  HeroReleaseWorkspaceMockup,
+  ReleaseWorkspaceMockup,
 } from "./Mockups";
 import { SectionShell } from "./SectionShell";
 import { TestimonialCard } from "./TestimonialCard";
 
-const solutionSteps = [
-  "Create release",
-  "Copy credit link",
-  "Send anywhere",
-  "Credits come in",
-  "Release info, urganized",
-];
+const productValueCards = [
+  {
+    title: "Collect credits without chasing anyone",
+    body: "Send one link. Collaborators fill in their details. Everything is structured automatically.",
+  },
+  {
+    title: "Keep your release organized",
+    body: "Assets, timelines, notes, and responsibilities all live in one workspace.",
+  },
+  {
+    title: "Always know what happens next",
+    body: "Each stage of your release is mapped so nothing gets missed.",
+  },
+] as const;
+
+const workflowSteps = [
+  "Create your release",
+  "Send your collaborator link",
+  "Collect credits automatically",
+  "Track tasks and timelines",
+  "Execute without missing steps",
+] as const;
+
+const trustBullets = [
+  "One source of truth",
+  "Clear timelines",
+  "No scattered tools",
+] as const;
+
+type SocialProofLogo = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+const socialProofLogos: SocialProofLogo[] = [];
 
 const socialLinks = [
   {
@@ -37,32 +70,49 @@ const socialLinks = [
     label: "X",
     icon: RiTwitterXLine,
   },
-];
+] as const;
 
-function Eyebrow({ children }: { children: ReactNode }) {
+function SectionHeading({
+  title,
+  body,
+  align = "left",
+  eyebrow,
+}: {
+  title: string;
+  body?: string;
+  align?: "left" | "center";
+  eyebrow?: string;
+}) {
   return (
-    <div className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/62">
-      {children}
+    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+      {eyebrow ? (
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#7a7063]">
+          {eyebrow}
+        </p>
+      ) : null}
+      <h2 className="mb-0 text-balance text-[2rem] font-semibold tracking-tight text-[#171311] sm:text-[2.6rem]">
+        {title}
+      </h2>
+      {body ? (
+        <p className="mt-4 mb-0 text-lg leading-8 text-[#5c544a]">{body}</p>
+      ) : null}
     </div>
   );
 }
 
-function ProofLine({
+function SectionCard({
   children,
-  align = "left",
+  className = "",
 }: {
   children: ReactNode;
-  align?: "left" | "center";
+  className?: string;
 }) {
   return (
-    <p
-      className={[
-        "mb-0 text-sm font-medium leading-6 text-white/64",
-        align === "center" ? "text-center" : "text-left",
-      ].join(" ")}
+    <div
+      className={`rounded-[2rem] border border-[#e2d9cc] bg-white p-6 shadow-[0_20px_45px_rgba(23,19,17,0.05)] sm:p-8 ${className}`}
     >
       {children}
-    </p>
+    </div>
   );
 }
 
@@ -73,123 +123,201 @@ interface CTAProps {
 
 export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
   return (
-    <SectionShell className="pt-12 sm:pt-16 lg:pt-20">
-      <div className="grid items-center gap-10 xl:gap-14 lg:grid-cols-[0.86fr_1.14fr]">
+    <SectionShell className="pt-10 sm:pt-14 lg:pt-20">
+      <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
         <div className="max-w-2xl">
-          <Eyebrow>Music Business Operations Software</Eyebrow>
-
-          <h1 className="mt-8 mb-0 max-w-[12ch] text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.75rem] lg:leading-[0.96]">
-            Send one link. Collect all your song credits.
+          <h1 className="mb-0 text-balance text-[2.9rem] font-semibold tracking-[-0.04em] text-[#171311] sm:text-[4.2rem] sm:leading-[1.02]">
+            <span className="block">Collect song credits with one link.</span>
+            <span className="mt-2 block">Run your entire release in one place.</span>
           </h1>
 
-          
+          <p className="mt-6 mb-0 max-w-xl text-lg leading-8 text-[#5c544a] sm:text-xl">
+            Send one link to collaborators, collect structured credits, and keep your
+            release organized from start to finish.
+          </p>
 
-          <div className="mt-8">
-            <LandingCTAGroup
-              startReleaseHref={startReleaseHref}
-              bookDemoHref={bookDemoHref}
-            />
-          </div>
-
-        
-
+          <LandingCTAGroup
+            startReleaseHref={startReleaseHref}
+            bookDemoHref={bookDemoHref}
+            className="mt-8"
+          />
         </div>
 
-        <HeroCommandCenterMockup />
+        <HeroReleaseWorkspaceMockup />
       </div>
     </SectionShell>
   );
 }
 
-export function SolutionStepsSection() {
+export function LogoStripSection() {
   return (
-    <SectionShell id="mechanism">
-      <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="max-w-xl">
-          <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Urganized release info.
+    <section className="border-y border-[#ece4d8] bg-[#fbf8f2] py-8 sm:py-10">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+        <p className="mb-5 text-center text-sm font-medium text-[#6d6459]">
+          Trusted by artists, managers, and release teams
+        </p>
+
+        {socialProofLogos.length > 0 ? (
+          <div className="grid grid-cols-2 items-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {socialProofLogos.map((logo) => (
+              <div
+                key={logo.alt}
+                className="flex h-16 items-center justify-center rounded-2xl border border-[#ece4d8] bg-white/80 px-6"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className="h-auto max-h-8 w-auto opacity-60 grayscale"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div
+            className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
+            aria-label="Social proof logo slots ready for approved artist and team logos"
+          >
+            {Array.from({ length: 5 }).map((_, index) => (
+              <div
+                key={index}
+                className="h-16 rounded-2xl border border-[#ece4d8] bg-white/75"
+                aria-hidden="true"
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+export function ProductValueSection() {
+  return (
+    <SectionShell>
+      <SectionHeading
+        title="Everything your release needs. In one place."
+        align="center"
+      />
+
+      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        {productValueCards.map((card) => (
+          <SectionCard key={card.title} className="h-full">
+            <h3 className="mb-3 text-2xl font-semibold tracking-tight text-[#171311]">
+              {card.title}
+            </h3>
+            <p className="mb-0 text-base leading-7 text-[#5c544a]">{card.body}</p>
+          </SectionCard>
+        ))}
+      </div>
+    </SectionShell>
+  );
+}
+
+export function VisualProofSection() {
+  return (
+    <SectionShell className="border-y border-[#ece4d8] bg-[#fbf8f2]">
+      <SectionHeading
+        title="Start with the information every release needs. Then run the release with clarity."
+        align="center"
+      />
+
+      <div className="mt-12 space-y-8">
+        <SectionCard>
+          <div className="grid items-center gap-10 lg:grid-cols-[0.84fr_1.16fr]">
+            <div className="max-w-xl">
+              <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[#171311]">
+                Collect structured credits from collaborators
+              </h3>
+              <p className="mb-0 text-lg leading-8 text-[#5c544a]">
+                Use a simple link to gather the information every release needs.
+              </p>
+            </div>
+
+            <CollaboratorLinkMockup />
+          </div>
+        </SectionCard>
+
+        <SectionCard>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <ReleaseWorkspaceMockup />
+
+            <div className="max-w-xl">
+              <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[#171311]">
+                Track tasks, timelines, and assets in one place
+              </h3>
+              <p className="mb-0 text-lg leading-8 text-[#5c544a]">
+                Turn release chaos into a structured workflow your team can actually
+                execute.
+              </p>
+            </div>
+          </div>
+        </SectionCard>
+      </div>
+    </SectionShell>
+  );
+}
+
+export function HowItWorksSection() {
+  return (
+    <SectionShell>
+      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <SectionHeading title="Set up your release in minutes" />
+
+        <SectionCard>
+          <FeatureStepList steps={[...workflowSteps]} />
+        </SectionCard>
+      </div>
+    </SectionShell>
+  );
+}
+
+export function TrustSection() {
+  return (
+    <SectionShell className="border-y border-[#ece4d8] bg-[#fbf8f2]">
+      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <SectionCard>
+          <SectionHeading
+            title="Built for teams that take releases seriously"
+            body="Urganize gives artist teams structure, visibility, and control across the full release process."
+          />
+
+          <ul className="mt-8 grid gap-3">
+            {trustBullets.map((bullet) => (
+              <li
+                key={bullet}
+                className="rounded-2xl border border-[#ece3d7] bg-[#fbf8f2] px-4 py-3 text-base font-medium text-[#171311]"
+              >
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </SectionCard>
+
+        <TestimonialCard
+          quote="It’s actually an industry need."
+          attribution="Artist Manager"
+        />
+      </div>
+    </SectionShell>
+  );
+}
+
+export function FinalCTASection({ startReleaseHref, bookDemoHref }: CTAProps) {
+  return (
+    <SectionShell>
+      <div className="rounded-[2.25rem] bg-[#171311] px-6 py-12 text-white shadow-[0_30px_80px_rgba(23,19,17,0.18)] sm:px-10 sm:py-14">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-0 text-balance text-[2rem] font-semibold tracking-tight text-white sm:text-[2.8rem]">
+            Run your next release with clarity
           </h2>
-          <div className="mt-8">
-            <FeatureStepList steps={solutionSteps} />
-          </div>
-        </div>
-
-        <div>
-          <PublicCreditFormMockup />
-        </div>
-      </div>
-    </SectionShell>
-  );
-}
-
-export function MetadataPayoffSection() {
-  const bookDemoHref =
-    "mailto:theurganization@gmail.com?subject=Book%20a%20demo%20with%20Urganize";
-
-  return (
-    <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
-      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <MetadataPageMockup />
-
-        <div className="max-w-xl">
-          <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Use everywhere.
-          </h2>
-
-          <div className="mt-8">
-            <a
-              href={bookDemoHref}
-              className="inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white hover:border-white/22 hover:bg-white/[0.08] sm:w-auto sm:text-base"
-            >
-              Learn more
-            </a>
-          </div>
-        </div>
-      </div>
-    </SectionShell>
-  );
-}
-
-export function DirectiveSection() {
-  const bookDemoHref =
-    "mailto:theurganization@gmail.com?subject=Book%20a%20demo%20with%20Urganize";
-
-  return (
-    <SectionShell id="directive">
-      <div className="grid items-center gap-12 lg:grid-cols-[0.98fr_1.02fr]">
-        <div className="order-2 max-w-xl lg:order-1">
-          <h2 className="mt-6 mb-0 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Always know the next action
-          </h2>
-
-          <div className="mt-8">
-            <a
-              href={bookDemoHref}
-              className="inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white hover:border-white/22 hover:bg-white/[0.08] sm:w-auto sm:text-base"
-            >
-              Book a demo
-            </a>
-          </div>
-        </div>
-
-        <div className="order-1 lg:order-2">
-          <DirectiveCardMockup />
-        </div>
-      </div>
-    </SectionShell>
-  );
-}
-
-export function SocialProofSection() {
-  return (
-    <SectionShell className="border-y border-white/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
-      <div className="mt-12 grid items-center gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-        <SubmissionProofMockup />
-
-        <div className="space-y-5">
-          <TestimonialCard
-            quote="“Mad. It works as a storage system also.”"
-            supportingText="Built for managers and small label teams handling multiple artists"
+          <LandingCTAGroup
+            startReleaseHref={startReleaseHref}
+            bookDemoHref={bookDemoHref}
+            align="center"
+            tone="dark"
+            className="mt-8"
           />
         </div>
       </div>
@@ -199,13 +327,13 @@ export function SocialProofSection() {
 
 export function FooterTagline() {
   return (
-    <footer className="border-t border-white/8 py-8">
+    <footer className="border-t border-[#e6ded1] py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p className="mb-0 text-sm font-medium text-white/78">
-          Music Business Operating System
+        <p className="mb-0 text-sm font-medium text-[#4c443b]">
+          Built for serious release teams
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 text-sm text-white/52">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-[#7a7063]">
           <div className="flex items-center gap-2">
             {socialLinks.map((item) => (
               <a
@@ -214,26 +342,26 @@ export function FooterTagline() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={item.label}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/72 transition hover:border-white/18 hover:bg-white/[0.08] hover:text-white"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e6ddd1] bg-white text-[#4c443b] transition hover:border-[#d7ccbe] hover:text-[#171311]"
               >
                 <item.icon className="h-4 w-4" />
               </a>
             ))}
           </div>
 
-          <Link href="/privacy" className="hover:text-white">
+          <Link href="/privacy" className="hover:text-[#171311]">
             Privacy
           </Link>
-          <Link href="/team" className="hover:text-white">
+          <Link href="/team" className="hover:text-[#171311]">
             Team
           </Link>
           <a
             href="mailto:theurganization@gmail.com"
-            className="hover:text-white"
+            className="hover:text-[#171311]"
           >
             Contact
           </a>
-          <Link href="/terms" className="hover:text-white">
+          <Link href="/terms" className="hover:text-[#171311]">
             Terms
           </Link>
         </div>

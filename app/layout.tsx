@@ -25,7 +25,7 @@ const organizationSchema = {
   "name": "Urganize",
   "url": "https://urganize.app",
   "logo": "https://urganize.app/images/urganize-logo.png",
-  "description": "Release operations software for music managers and small label teams. Collect collaborator credits, structure release metadata automatically, and track what is ready next.",
+  "description": "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
   "sameAs": [
     "https://x.com/urganize",
     "https://linkedin.com/company/urganize",
@@ -43,14 +43,14 @@ const websiteSchema = {
   "@type": "WebSite",
   "name": "Urganize",
   "url": "https://urganize.app",
-  "description": "Release operations software for music teams. Stop chasing collaborators and re-typing song credits."
+  "description": "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish."
 } as const;
 
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Urganize",
-  "description": "Stop chasing collaborators and re-typing song credits. Collect credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
+  "description": "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
   "url": "https://urganize.app",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     template: "%s | Urganize",
   },
   description:
-    "Release operations software for music teams. Collect collaborator credits, structure metadata automatically, and know what is ready, what is missing, and what to do next.",
+    "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
   verification: {
     google: "",
   },
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Urganize",
     description:
-      "Stop chasing collaborators and re-typing song credits. Collect credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
+      "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
     url: "https://urganize.app",
     siteName: "Urganize",
     locale: "en_US",
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Urganize",
     description:
-      "Stop chasing collaborators and re-typing song credits. Collect credits once, structure metadata automatically, and prepare releases weeks before deadlines.",
+      "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
     images: ["/opengraph-image.png?v=2"],
   },
   keywords: [

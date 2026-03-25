@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { clsx } from "clsx";
 
 interface LandingCTAGroupProps {
@@ -6,6 +5,7 @@ interface LandingCTAGroupProps {
   bookDemoHref: string;
   align?: "left" | "center";
   size?: "sm" | "md";
+  tone?: "light" | "dark";
   className?: string;
 }
 
@@ -20,11 +20,27 @@ const sizeClasses = {
   },
 };
 
+const toneClasses = {
+  light: {
+    primary:
+      "bg-[#171311] text-white shadow-[0_20px_45px_rgba(23,19,17,0.14)] hover:bg-[#2b241f]",
+    secondary:
+      "border border-[#dcd3c6] bg-white text-[#171311] hover:border-[#cbbfad] hover:bg-[#f8f4ed]",
+  },
+  dark: {
+    primary:
+      "bg-[#f6f0e6] text-[#171311] shadow-[0_20px_45px_rgba(0,0,0,0.24)] hover:bg-white",
+    secondary:
+      "border border-white/18 bg-white/8 text-white hover:border-white/28 hover:bg-white/12",
+  },
+};
+
 export function LandingCTAGroup({
   startReleaseHref,
   bookDemoHref,
   align = "left",
   size = "md",
+  tone = "light",
   className,
 }: LandingCTAGroupProps) {
   return (
@@ -35,25 +51,26 @@ export function LandingCTAGroup({
         className,
       )}
     >
-      {/* <a
+      <a
         href={startReleaseHref}
         className={clsx(
-          "inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#b7ff6e]/30 bg-[#b7ff6e] font-semibold text-[#08110a] shadow-[0_22px_60px_rgba(183,255,110,0.18)] hover:border-[#b7ff6e]/40 hover:bg-[#b7ff6e] sm:w-auto",
+          "inline-flex w-full items-center justify-center rounded-full font-semibold transition sm:w-auto",
           sizeClasses[size].primary,
+          toneClasses[tone].primary,
         )}
       >
-        <span>Start your release</span>
-        <ArrowRight className="h-4 w-4" />
-      </a> */}
+        Start your first release
+      </a>
 
       <a
         href={bookDemoHref}
         className={clsx(
-          "inline-flex w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.04] font-semibold text-white hover:border-white/22 hover:bg-white/[0.08] sm:w-auto",
+          "inline-flex w-full items-center justify-center rounded-full font-semibold transition sm:w-auto",
           sizeClasses[size].secondary,
+          toneClasses[tone].secondary,
         )}
       >
-        Book a demo
+        Book a walkthrough
       </a>
     </div>
   );

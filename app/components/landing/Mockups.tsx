@@ -1,7 +1,5 @@
-import type { ReactNode } from "react";
 import Image from "next/image";
 import { clsx } from "clsx";
-import { BellRing, CheckCircle2, Sparkles } from "lucide-react";
 
 interface ProductScreenshotProps {
   src: string;
@@ -15,7 +13,6 @@ interface ProductScreenshotProps {
   chrome?: "desktop" | "mobile";
   priority?: boolean;
   showHeader?: boolean;
-  children?: ReactNode;
 }
 
 function ProductScreenshot({
@@ -30,34 +27,32 @@ function ProductScreenshot({
   chrome = "desktop",
   priority = false,
   showHeader = true,
-  children,
 }: ProductScreenshotProps) {
   return (
     <div
       className={clsx(
-        "group relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))] p-3 shadow-[0_32px_100px_rgba(0,0,0,0.30)]",
+        "relative overflow-hidden rounded-[2rem] border border-[#e2d9cc] bg-white p-3 shadow-[0_28px_60px_rgba(23,19,17,0.08)]",
         className,
       )}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(183,255,110,0.18),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(120,182,255,0.14),transparent_24%)] opacity-90" />
-      <div className="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-white/45 to-transparent" />
-
-      <div className="relative overflow-hidden rounded-[1.95rem] border border-white/8 bg-[#09120f]">
+      <div className="relative overflow-hidden rounded-[1.55rem] border border-[#ddd3c7] bg-[#16120f]">
         {showHeader ? (
           <>
             <div className="flex items-start justify-between gap-4 border-b border-white/8 px-4 py-3 sm:px-5 sm:py-4">
               <div className="min-w-0">
-                <p className="mb-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/42">
+                <p className="mb-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/45">
                   {eyebrow}
                 </p>
-                <p className="mt-1 mb-0 text-sm font-medium leading-5 text-white/82">{title}</p>
+                <p className="mt-1 mb-0 text-sm font-medium leading-5 text-white/82">
+                  {title}
+                </p>
               </div>
 
               {chrome === "desktop" ? (
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#ff8d79]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#ffd76d]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#b7ff6e]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#f6f0e6]" />
                 </div>
               ) : (
                 <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
@@ -72,136 +67,65 @@ function ProductScreenshot({
           </>
         ) : null}
 
-        <div className={clsx("relative overflow-hidden bg-[#050806]", aspectClassName)}>
+        <div className={clsx("relative overflow-hidden bg-[#120f0d]", aspectClassName)}>
           <Image
             src={src}
             alt={alt}
             fill
             priority={priority}
-            sizes="(min-width: 1280px) 700px, (min-width: 1024px) 55vw, (min-width: 640px) 88vw, 100vw"
+            sizes="(min-width: 1280px) 720px, (min-width: 1024px) 56vw, (min-width: 640px) 88vw, 100vw"
             className={clsx(
-              "object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]",
+              "object-cover object-top transition-transform duration-500",
               imageClassName,
             )}
           />
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,6,0)_0%,rgba(5,8,6,0.06)_65%,rgba(5,8,6,0.18)_100%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(18,15,13,0)_0%,rgba(18,15,13,0.04)_72%,rgba(18,15,13,0.12)_100%)]" />
         </div>
       </div>
-
-      {children ? <div className="relative mt-3 sm:mt-4">{children}</div> : null}
     </div>
   );
 }
 
-function InfoPill({
-  icon,
-  label,
-  value,
-  tone = "default",
-}: {
-  icon?: ReactNode;
-  label?: string;
-  value: string;
-  tone?: "default" | "success" | "accent";
-}) {
-  return (
-    <div
-      className={clsx(
-        "rounded-[1.4rem] border px-3.5 py-3 sm:px-4 shadow-[0_16px_35px_rgba(0,0,0,0.18)] backdrop-blur-xl",
-        tone === "default" && "border-white/10 bg-black/28",
-        tone === "success" && "border-[#b7ff6e]/18 bg-[#b7ff6e]/10",
-        tone === "accent" && "border-[#94c4ff]/18 bg-[#94c4ff]/10",
-      )}
-    >
-      {icon || label ? (
-        <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55">
-          {icon ? <span className="text-[#b7ff6e]">{icon}</span> : null}
-          {label ? <span>{label}</span> : null}
-        </div>
-      ) : null}
-      <p className="mb-0 text-center text-sm font-medium leading-5 sm:leading-6 text-white/88">
-        {value}
-      </p>
-    </div>
-  );
-}
-
-export function HeroCommandCenterMockup() {
+export function HeroReleaseWorkspaceMockup() {
   return (
     <ProductScreenshot
-      src="/images/landing/hero-dashboard.png"
-      alt="Urganize release dashboard showing credits, release info, readiness, and the next action."
-      eyebrow="Release Dashboard"
-      title="Credits, Release Info, and Readiness"
-      subtitle="Copy Credit Link, collect credits, and keep the release moving"
-      aspectClassName="aspect-[1895/890]"
+      src="/images/landing/hero-dashboard - Copy.png"
+      alt="Urganize release dashboard showing a release workspace, credit-link flow, and active releases."
+      eyebrow="Release Workspace"
+      title="Create the release, send the link, track progress"
+      subtitle="One workspace for credits, release info, and execution"
+      aspectClassName="aspect-[1664/754]"
       priority
       showHeader={false}
     />
   );
 }
 
-export function PublicCreditFormMockup() {
+export function CollaboratorLinkMockup() {
   return (
     <ProductScreenshot
       src="/images/landing/credit-form-mobile.png"
-      alt="Urganize mobile credit form used to collect credits from one shared link."
-      eyebrow="Collect Credits"
-      title="Copy Credit Link"
-      subtitle="Send it anywhere and credits come in without the back-and-forth"
+      alt="Urganize collaborator form showing a no-login credit submission flow."
+      eyebrow="Collaborator Link"
+      title="Collect the right details"
+      subtitle="Send one form and capture the information every release needs"
       aspectClassName="aspect-[499/1080]"
-      className="mx-auto max-w-[23rem]"
-      imageClassName="object-contain bg-[#050806]"
+      className="mx-auto max-w-[22rem]"
+      imageClassName="object-contain bg-[#120f0d]"
       chrome="mobile"
-      showHeader={false}
-    >
-      <div className="grid gap-3">
-        <InfoPill
-          label=""
-          value="Submissions stay urganized."
-        />
-      </div>
-    </ProductScreenshot>
-  );
-}
-
-export function MetadataPageMockup() {
-  return (
-    <ProductScreenshot
-      src="/images/landing/release-info.png"
-      alt="Urganize release info page showing organized credits and release details."
-      eyebrow="Release Info"
-      title="Release info, already organized"
-      subtitle="Use the real release record instead of re-typing details in distributor tools"
-      aspectClassName="aspect-[1403/848]"
-      showHeader={false}
     />
   );
 }
 
-export function DirectiveCardMockup() {
+export function ReleaseWorkspaceMockup() {
   return (
     <ProductScreenshot
-      src="/images/landing/readiness-next-action.png"
-      alt="Urganize readiness view highlighting release guidance and next actions."
-      eyebrow="Readiness"
-      title="Guidance built into the release"
-      subtitle="Track blockers, readiness, and the next action from the product itself"
-      aspectClassName="aspect-[1410/837]"
-      showHeader={false}
-    />
-  );
-}
-
-export function SubmissionProofMockup() {
-  return (
-    <ProductScreenshot
-      src="/images/landing/credits-section.png"
-      alt="Urganize credits section showing credits collected inside a release."
-      eyebrow="Submission proof"
-      title="Real credits collected in one place"
-      subtitle="Track incoming credits inside the release instead of chasing updates across tools"
-      aspectClassName="aspect-[887/693]"
+      src="/images/landing/readiness-next-action2.png"
+      alt="Urganize release playbook showing progress, phases, and what to do next."
+      eyebrow="Release Playbook"
+      title="Keep execution visible"
+      subtitle="Track progress, ownership, and the next action from one place"
+      aspectClassName="aspect-[1324/768]"
       showHeader={false}
     />
   );
