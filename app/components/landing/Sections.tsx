@@ -265,8 +265,11 @@ export function VisualProofSection() {
 
       <div className="mt-12 space-y-8">
         <SectionCard>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start lg:gap-12">
-            <div className="max-w-xl lg:pt-6">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,19rem)] lg:items-center lg:gap-12">
+            <div className="max-w-xl">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--marketing-text-subtle)]">
+                Collaborator Link
+              </p>
               <h3 className="mb-3 text-3xl font-semibold tracking-tight text-[var(--marketing-text)]">
                 Collect structured credits from collaborators
               </h3>
@@ -275,7 +278,11 @@ export function VisualProofSection() {
               </p>
             </div>
 
-            <CollaboratorLinkMockup />
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-full rounded-[1.75rem] border border-[color:var(--marketing-border)] bg-[var(--marketing-bg-muted)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] sm:p-5">
+                <CollaboratorLinkMockup />
+              </div>
+            </div>
           </div>
         </SectionCard>
 

@@ -110,7 +110,7 @@ export function CollaboratorLinkMockup() {
       title="Collect the right details"
       subtitle="Send one form and capture the information every release needs"
       aspectClassName="aspect-[499/1080]"
-      className="mx-auto max-w-[16rem] sm:max-w-[18rem] lg:max-w-[15.5rem]"
+      className="mx-auto w-full max-w-[15rem] sm:max-w-[17rem] lg:w-[15.5rem] lg:max-w-[15.5rem]"
       imageClassName="object-contain bg-[#120f0d]"
       chrome="mobile"
       showHeader={false}
