@@ -157,8 +157,8 @@ export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
       <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
         <div className="max-w-2xl">
           <h1 className="mb-0 text-balance text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--marketing-text)] sm:text-[4.2rem] sm:leading-[1.02]">
-            <span className="block">Collect song credits with one link.</span>
-            <span className="mt-2 block">Run your entire release in one place.</span>
+            {/* <span className="block">Collect song credits with one link.</span> */}
+            <span className="block">Run your entire release in one place.</span>
           </h1>
 
           <p className="mt-6 mb-0 max-w-xl text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-xl">
