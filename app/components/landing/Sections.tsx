@@ -64,18 +64,20 @@ const solidButtonClassName =
 export function HeroSection() {
   return (
     <SectionShell
-      className="pt-8 sm:pt-14 lg:pt-20"
+      className="pb-20 pt-[120px] sm:pb-24 sm:pt-[140px] lg:pb-32 lg:pt-[168px]"
       containerClassName="max-w-[84rem] px-6 sm:px-8 lg:px-10"
     >
-      <div className="mx-auto max-w-[56rem] text-center">
-        <h1 className="hero-fade-in text-balance text-[3.6rem] font-semibold tracking-[-0.055em] text-[var(--marketing-text)] sm:text-[5.4rem] lg:text-[7.1rem]">
-          Your release deserves a process.
-        </h1>
+      <div className="mx-auto flex max-w-[56rem] flex-col items-center text-center">
+        <div className="flex flex-col items-center gap-12 sm:gap-14">
+          <h1 className="hero-fade-in mx-auto max-w-[16ch] text-balance text-[3.6rem] font-semibold leading-[1.02] tracking-[-0.055em] text-[var(--marketing-text)] sm:text-[5.4rem] lg:text-[7.1rem]">
+            Your release deserves a process.
+          </h1>
 
-        <p className="hero-fade-in hero-delay-1 mx-auto mt-6 max-w-[40rem] text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-[1.3rem] sm:leading-9">
-          Urganize gives artist teams one place to run every stage of a release
-          from credits to launch.
-        </p>
+          <p className="hero-fade-in hero-delay-1 mx-auto block w-full max-w-[42rem] text-balance text-center text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-[1.3rem] sm:leading-9">
+            Urganize gives artist teams one place to run every stage of a release
+            from credits to launch.
+          </p>
+        </div>
 
         <div className="hero-fade-in hero-delay-2 mt-10 flex justify-center">
           <Link
@@ -107,7 +109,7 @@ export function LogoStripSection() {
     <ScrollReveal>
       <SectionShell
         containerClassName="max-w-[84rem] px-6 sm:px-8 lg:px-10"
-        className="bg-[var(--marketing-primary)] py-[80px] sm:py-[80px] lg:py-[80px]"
+        className="bg-transparent py-[80px] sm:py-[80px] lg:py-[80px]"
       >
         <p className="mono-label text-center text-[var(--marketing-text-subtle)]">
           Release teams at these labels are already inside.
@@ -122,7 +124,7 @@ export function LogoStripSection() {
                   alt={logo.alt}
                   width={logo.width}
                   height={logo.height}
-                  className={`h-auto w-auto brightness-0 invert opacity-60 ${logo.imageClassName ?? ""}`}
+                  className={`h-auto w-auto opacity-70 ${logo.imageClassName ?? ""}`}
                 />
               </div>
             ))}
@@ -166,7 +168,7 @@ export function PlaybookSpotlightSection() {
           </h2>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-16 w-full">
           <Image
             src="/images/landing/release-playbook.png"
             alt="Urganize release playbook showing phased release progress and structured tasks."
@@ -175,12 +177,20 @@ export function PlaybookSpotlightSection() {
             className="block h-auto w-full"
             sizes="(min-width: 1440px) 1344px, (min-width: 1024px) calc(100vw - 80px), 100vw"
           />
-        </div>
 
-        <p className="mx-auto mt-6 block w-full max-w-[42rem] text-center text-lg leading-8 text-[var(--marketing-text-muted)]">
-          From pre-production to release day - every step is mapped so nothing
-          gets missed.
-        </p>
+          <p
+            className="max-w-[42rem] text-lg leading-8 text-[var(--marketing-text-muted)]"
+            style={{
+              textAlign: "center",
+              display: "block",
+              width: "100%",
+              margin: "24px auto 0 auto",
+            }}
+          >
+            From pre-production to release day - every step is mapped so nothing
+            gets missed.
+          </p>
+        </div>
       </SectionShell>
     </ScrollReveal>
   );
@@ -239,19 +249,12 @@ export function FinalCTASection() {
             Releases shouldn&apos;t be this hard to run.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[30rem] text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-[1.25rem]">
-            This is where it starts.
-          </p>
-
           <div className="mt-10 flex justify-center">
             <TypeformWaitlistButton className={solidButtonClassName}>
               Join the waitlist
             </TypeformWaitlistButton>
           </div>
 
-          <p className="mt-8 font-mono text-[0.78rem] uppercase tracking-[0.22em] text-[var(--marketing-text-subtle)]">
-            We&apos;re onboarding in batches. Your spot is reserved when you join.
-          </p>
         </div>
       </SectionShell>
     </ScrollReveal>
@@ -283,9 +286,6 @@ export function FooterTagline() {
               />
             </Link>
 
-            <p className="mt-4 font-mono text-[0.76rem] tracking-[0.16em] text-[var(--marketing-text-subtle)]">
-              Built for serious release teams.
-            </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm tracking-[-0.01em] text-[var(--marketing-text-subtle)]">
