@@ -402,6 +402,9 @@ export function FooterTagline() {
           <Link href="/team" className="hover:text-[var(--marketing-text)]">
             Team
           </Link>
+          <Link href="/press" className="hover:text-[var(--marketing-text)]">
+            Press
+          </Link>
           <a
             href="mailto:theurganization@gmail.com"
             className="hover:text-[var(--marketing-text)]"
