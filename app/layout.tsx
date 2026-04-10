@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   Cormorant_Garamond,
   IBM_Plex_Mono,
@@ -155,18 +156,6 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Urganize" />
         <script dangerouslySetInnerHTML={{ __html: marketingThemeScript }} />
 
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4PX21EV8K"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-X4PX21EV8K');
-          `,
-        }} />
-
         {/* Manual canonical tag - always include this */}
         <link rel="canonical" href="https://urganize.app" />
 
@@ -188,6 +177,18 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X4PX21EV8K"
+          strategy="afterInteractive"
+        />
+        <Script id="urganize-ga" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X4PX21EV8K');
+          `}
+        </Script>
         <Suspense>
           <FormbricksProvider />
         </Suspense>

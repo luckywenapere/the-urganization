@@ -13,10 +13,9 @@ import {
 
 const SIGN_IN_HREF = "https://app.urganize.app/auth";
 
-const HOMEPAGE_TITLE =
-  "Urganize — Collect Song Credits and Run Releases in One Place";
+const HOMEPAGE_TITLE = "Urganize — Your Release Deserves a Process";
 const HOMEPAGE_DESCRIPTION =
-  "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.";
+  "Urganize gives artist teams one place to run every stage of a release, from credits to launch.";
 
 export const metadata: Metadata = {
   title: {
