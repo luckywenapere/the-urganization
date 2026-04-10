@@ -11,8 +11,8 @@ import {
   VisualProofSection,
 } from "./components/landing/Sections";
 
-const START_RELEASE_HREF = "https://app.urganize.app/auth";
 const SIGN_IN_HREF = "https://app.urganize.app/auth";
+const START_RELEASE_HREF = "https://app.urganize.app/auth";
 const BOOK_WALKTHROUGH_HREF =
   "mailto:theurganization@gmail.com?subject=Book%20a%20walkthrough%20with%20Urganize";
 
@@ -45,17 +45,10 @@ export default function Home() {
       </div>
 
       <div className="relative z-10">
-        <LandingHeader
-          startReleaseHref={START_RELEASE_HREF}
-          signInHref={SIGN_IN_HREF}
-          bookDemoHref={BOOK_WALKTHROUGH_HREF}
-        />
+        <LandingHeader signInHref={SIGN_IN_HREF} />
 
         <main>
-          <HeroSection
-            startReleaseHref={START_RELEASE_HREF}
-            bookDemoHref={BOOK_WALKTHROUGH_HREF}
-          />
+          <HeroSection />
           <LogoStripSection />
           <ProductValueSection />
           <VisualProofSection />

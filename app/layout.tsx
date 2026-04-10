@@ -1,21 +1,32 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, DM_Sans } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  IBM_Plex_Mono,
+  Instrument_Sans,
+} from "next/font/google";
 import "./globals.css";
+import "@typeform/embed/build/css/popup.css";
 import { Suspense } from "react";
 import FormbricksProvider from "./formbricks-provider";
 import { Analytics } from "@vercel/analytics/next";
 
 // Typography
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-display",
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-urg-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-urg-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-sans",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-urg-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 // JSON-LD Schema Data
@@ -138,7 +149,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${dmSans.variable}`}
+      className={`${cormorantGaramond.variable} ${instrumentSans.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         <meta name="apple-mobile-web-app-title" content="Urganize" />

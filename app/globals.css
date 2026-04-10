@@ -48,18 +48,18 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans), system-ui, sans-serif;
-  --font-display: var(--font-display), system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 * {
-  /* margin: 0;
-  padding: 0; */
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  background: var(--marketing-bg);
 }
 
 html[data-marketing-theme="light"] {
@@ -105,68 +105,123 @@ html[data-marketing-theme="dark"] .marketing-wordmark {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--marketing-bg);
+  color: var(--marketing-text);
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.618;
-  letter-spacing: -0.3px;
+  line-height: 1.6;
+  letter-spacing: -0.015em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Premium Typography */
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--marketing-text);
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -1.2px;
-  margin-bottom: var(--space-13);
-}
-
-h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.8px;
-  margin-bottom: var(--space-8);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  margin: 0;
 }
 
-h3 {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.5px;
-  margin-bottom: var(--space-6);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 p {
   font-size: 1rem;
-  line-height: 1.7;
-  color: inherit; 
-  margin-bottom: var(--space-6);
-  opacity: 0.9;
+  line-height: 1.72;
+  letter-spacing: -0.012em;
+  color: inherit;
+  margin: 0;
 }
 
-/* Smooth transitions */
+::selection {
+  background: var(--marketing-selection);
+  color: var(--marketing-text);
+}
+
 button,
 input,
 a {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
-/* Focus states for accessibility */
 button:focus-visible,
 input:focus-visible,
 a:focus-visible {
-  outline: 2px solid rgba(34, 211, 238, 0.5);
-  outline-offset: 2px;
+  outline: 2px solid var(--marketing-text);
+  outline-offset: 4px;
 }
 
-/* Custom scrollbar */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  opacity: 0;
+  animation: hero-fade-up 0.6s ease forwards;
+}
+
+.hero-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.hero-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.hero-delay-3 {
+  animation-delay: 0.6s;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -182,4 +237,21 @@ a:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  button,
+  input,
+  a,
+  .scroll-reveal,
+  .hero-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

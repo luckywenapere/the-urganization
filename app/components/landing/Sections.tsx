@@ -10,7 +10,6 @@ import { FeatureStepList } from "./FeatureStepList";
 import { LandingCTAGroup } from "./LandingCTAGroup";
 import {
   CollaboratorLinkMockup,
-  HeroReleaseWorkspaceMockup,
   ReleaseWorkspaceMockup,
 } from "./Mockups";
 import { SectionShell } from "./SectionShell";
@@ -151,29 +150,39 @@ interface CTAProps {
   bookDemoHref: string;
 }
 
-export function HeroSection({ startReleaseHref, bookDemoHref }: CTAProps) {
+export function HeroSection() {
   return (
-    <SectionShell className="pt-10 sm:pt-14 lg:pt-20">
-      <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
-        <div className="max-w-2xl">
-          <h1 className="mb-0 text-balance text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--marketing-text)] sm:text-[4.2rem] sm:leading-[1.02]">
-            {/* <span className="block">Collect song credits with one link.</span> */}
-            <span className="block">Run your entire release in one place.</span>
-          </h1>
+    <SectionShell className="pt-8 sm:pt-14 lg:pt-20" containerClassName="max-w-[84rem] px-6 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-[56rem] text-center">
+        <h1 className="hero-fade-in text-balance text-[3.6rem] font-semibold tracking-[-0.055em] text-[var(--marketing-text)] sm:text-[5.4rem] lg:text-[7.1rem]">
+          Your release deserves a process.
+        </h1>
 
-          <p className="mt-6 mb-0 max-w-xl text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-xl">
-            Send one link to collaborators, collect structured credits, and keep your
-            release organized from start to finish.
-          </p>
+        <p className="hero-fade-in hero-delay-1 mx-auto mt-6 max-w-[40rem] text-lg leading-8 text-[var(--marketing-text-muted)] sm:text-[1.3rem] sm:leading-9">
+          Urganize gives artist teams one place to run every stage of a release
+          from credits to launch.
+        </p>
 
-          <LandingCTAGroup
-            startReleaseHref={startReleaseHref}
-            bookDemoHref={bookDemoHref}
-            className="mt-8"
-          />
+        <div className="hero-fade-in hero-delay-2 mt-10 flex justify-center">
+          <Link
+            href="#waitlist"
+            className="inline-flex items-center justify-center rounded-full bg-[var(--marketing-primary)] px-7 py-3.5 text-sm font-medium tracking-[-0.02em] text-[var(--marketing-primary-text)] shadow-[0_20px_45px_var(--marketing-shadow-strong)] hover:bg-[var(--marketing-primary-hover)] sm:text-base"
+          >
+            Join the waitlist
+          </Link>
         </div>
+      </div>
 
-        <HeroReleaseWorkspaceMockup />
+      <div className="hero-fade-in hero-delay-3 mt-14 sm:mt-18 lg:mt-24">
+        <Image
+          src="/images/landing/hero-dashboard.png"
+          alt="Urganize dashboard showing releases, search, and readiness progress in one workspace."
+          width={1920}
+          height={1396}
+          priority
+          className="h-auto w-full"
+          sizes="(min-width: 1440px) 1344px, (min-width: 1024px) calc(100vw - 80px), 100vw"
+        />
       </div>
     </SectionShell>
   );
@@ -353,7 +362,7 @@ export function TrustSection() {
 
 export function FinalCTASection({ startReleaseHref, bookDemoHref }: CTAProps) {
   return (
-    <SectionShell>
+    <SectionShell id="waitlist">
       <div className="rounded-[2.25rem] bg-[#171311] px-6 py-12 text-white shadow-[0_30px_80px_rgba(23,19,17,0.18)] sm:px-10 sm:py-14">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-0 text-balance text-[2rem] font-semibold tracking-tight text-white sm:text-[2.8rem]">
