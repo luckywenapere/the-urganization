@@ -78,7 +78,10 @@ export function HeroSection() {
         </p>
 
         <div className="hero-fade-in hero-delay-2 mt-10 flex justify-center">
-          <Link href="#waitlist" className={solidButtonClassName}>
+          <Link
+            href="#waitlist"
+            className={`${solidButtonClassName} bg-[var(--marketing-surface-muted)] text-[#0a0a0a] hover:bg-[var(--marketing-surface)]`}
+          >
             Join the waitlist
           </Link>
         </div>
@@ -104,7 +107,7 @@ export function LogoStripSection() {
     <ScrollReveal>
       <SectionShell
         containerClassName="max-w-[84rem] px-6 sm:px-8 lg:px-10"
-        className="pt-0 sm:pt-6 lg:pt-10"
+        className="bg-[var(--marketing-primary)] py-[80px] sm:py-[80px] lg:py-[80px]"
       >
         <p className="mono-label text-center text-[var(--marketing-text-subtle)]">
           Release teams at these labels are already inside.
@@ -119,7 +122,7 @@ export function LogoStripSection() {
                   alt={logo.alt}
                   width={logo.width}
                   height={logo.height}
-                  className={`h-auto w-auto opacity-60 ${logo.imageClassName ?? ""}`}
+                  className={`h-auto w-auto brightness-0 invert opacity-60 ${logo.imageClassName ?? ""}`}
                 />
               </div>
             ))}
@@ -133,14 +136,17 @@ export function LogoStripSection() {
 export function MirrorSection() {
   return (
     <ScrollReveal>
-      <SectionShell containerClassName="max-w-[74rem] px-6 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-[64rem] text-center">
-          <p className="text-balance font-display text-[3rem] font-semibold leading-[0.98] tracking-[-0.05em] text-[var(--marketing-text)] sm:text-[4.2rem] lg:text-[5.5rem]">
+      <SectionShell
+        className="py-[100px] lg:py-[140px]"
+        containerClassName="max-w-[74rem] px-6 sm:px-8 lg:px-10"
+      >
+        <div className="mx-auto flex w-full flex-col items-center text-center">
+          <p className="mx-auto block w-full max-w-[800px] text-center font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.02] tracking-[-0.05em] text-[var(--marketing-text)]">
             Most artists are running releases out of Notes apps, group chats,
             and memory.
           </p>
 
-          <p className="mx-auto mt-20 max-w-[50rem] text-balance text-lg leading-8 text-[var(--marketing-text-muted)] sm:mt-24 sm:text-[1.35rem] sm:leading-9 lg:mt-28">
+          <p className="mx-auto mt-12 block w-full max-w-[640px] text-center font-sans text-[clamp(1.1rem,2vw,1.4rem)] leading-8 text-[var(--marketing-text-muted)]">
             Urganize replaces all of that with one structured workspace your
             entire team can actually use.
           </p>
@@ -166,12 +172,12 @@ export function PlaybookSpotlightSection() {
             alt="Urganize release playbook showing phased release progress and structured tasks."
             width={1920}
             height={932}
-            className="h-auto w-full"
+            className="block h-auto w-full"
             sizes="(min-width: 1440px) 1344px, (min-width: 1024px) calc(100vw - 80px), 100vw"
           />
         </div>
 
-        <p className="mx-auto mt-10 max-w-[42rem] text-center text-lg leading-8 text-[var(--marketing-text-muted)]">
+        <p className="mx-auto mt-6 block w-full max-w-[42rem] text-center text-lg leading-8 text-[var(--marketing-text-muted)]">
           From pre-production to release day - every step is mapped so nothing
           gets missed.
         </p>

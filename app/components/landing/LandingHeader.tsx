@@ -8,7 +8,7 @@ interface LandingHeaderProps {
 export function LandingHeader({ signInHref }: LandingHeaderProps) {
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[color:var(--marketing-border)] bg-[color:rgba(247,244,238,0.9)] backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[color:var(--marketing-border)] bg-transparent">
         <div className="mx-auto flex max-w-[84rem] items-center justify-between gap-6 px-6 py-4 sm:px-8 lg:px-10">
           <Link
             href="/"
