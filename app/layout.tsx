@@ -11,6 +11,20 @@ import { Suspense } from "react";
 import FormbricksProvider from "./formbricks-provider";
 import { Analytics } from "@vercel/analytics/next";
 
+const SITE_URL = "https://urganize.app";
+const LANDING_TITLE = "Urganize — Your release deserves a process.";
+const LANDING_DESCRIPTION =
+  "Urganize gives artist teams one place to run every stage of a release — from credits to launch. Join the waitlist.";
+const LANDING_KEYWORDS = [
+  "music release management",
+  "artist release tool",
+  "release playbook",
+  "music credits",
+  "release workflow",
+  "artist team software",
+  "music SaaS",
+] as const;
+
 // Typography
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-urg-display",
@@ -35,9 +49,9 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Urganize",
-  "url": "https://urganize.app",
+  "url": SITE_URL,
   "logo": "https://urganize.app/images/urganize-logo.png",
-  "description": "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
+  "description": LANDING_DESCRIPTION,
   "sameAs": [
     "https://x.com/urganize",
     "https://linkedin.com/company/urganize",
@@ -54,16 +68,16 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Urganize",
-  "url": "https://urganize.app",
-  "description": "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish."
+  "url": SITE_URL,
+  "description": LANDING_DESCRIPTION
 } as const;
 
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Urganize",
-  "description": "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
-  "url": "https://urganize.app",
+  "name": LANDING_TITLE,
+  "description": LANDING_DESCRIPTION,
+  "url": SITE_URL,
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -71,7 +85,7 @@ const homepageSchema = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://urganize.app"
+        "item": SITE_URL
       }
     ]
   }
@@ -94,51 +108,13 @@ export const metadata: Metadata = {
     default: "Urganize",
     template: "%s | Urganize",
   },
-  description:
-    "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
-  verification: {
-    google: "",
+  description: LANDING_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  keywords: [...LANDING_KEYWORDS],
+  robots: {
+    index: true,
+    follow: true,
   },
-
-  metadataBase: new URL("https://urganize.app"),
-  openGraph: {
-    title: "Urganize",
-    description:
-      "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
-    url: "https://urganize.app",
-    siteName: "Urganize",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image.png?v=2",
-        width: 1200,
-        height: 630,
-        alt: "Urganize release operations software for music teams",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Urganize",
-    description:
-      "Urganize helps artist teams collect collaborator credits, organize release assets, and track every step of a release from start to finish.",
-    images: ["/opengraph-image.png?v=2"],
-  },
-  keywords: [
-    "music release operations software",
-    "music manager tools",
-    "small label workflow",
-    "collaborator credit collection",
-    "release metadata software",
-    "release readiness tracking",
-    "music metadata management",
-    "release command center",
-    "music team workspace",
-    "release operations platform",
-    "song credits workflow",
-    "music release management",
-  ],
 };
 
 export default function RootLayout({
@@ -155,9 +131,6 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Urganize" />
         <script dangerouslySetInnerHTML={{ __html: marketingThemeScript }} />
-
-        {/* Manual canonical tag - always include this */}
-        <link rel="canonical" href="https://urganize.app" />
 
         {/* JSON-LD STRUCTURED DATA */}
         <script

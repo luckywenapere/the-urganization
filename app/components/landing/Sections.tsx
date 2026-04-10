@@ -80,12 +80,9 @@ export function HeroSection() {
         </div>
 
         <div className="hero-fade-in hero-delay-2 mt-10 flex justify-center">
-          <Link
-            href="#waitlist"
-            className={`${solidButtonClassName} bg-[var(--marketing-surface-muted)] text-[#0a0a0a] hover:bg-[var(--marketing-surface)]`}
-          >
+          <TypeformWaitlistButton className={solidButtonClassName}>
             Join the waitlist
-          </Link>
+          </TypeformWaitlistButton>
         </div>
       </div>
 
@@ -112,7 +109,7 @@ export function LogoStripSection() {
         className="bg-transparent py-[80px] sm:py-[80px] lg:py-[80px]"
       >
         <p className="mono-label text-center text-[var(--marketing-text-subtle)]">
-          Release teams at these labels are already inside.
+          Labels are already inside.
         </p>
 
         <div className="mt-10 overflow-x-auto pb-2">

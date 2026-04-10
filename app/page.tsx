@@ -13,23 +13,47 @@ import {
 
 const SIGN_IN_HREF = "https://app.urganize.app/auth";
 
-const HOMEPAGE_TITLE = "Urganize — Your Release Deserves a Process";
-const HOMEPAGE_DESCRIPTION =
-  "Urganize gives artist teams one place to run every stage of a release, from credits to launch.";
-
 export const metadata: Metadata = {
-  title: {
-    absolute: HOMEPAGE_TITLE,
-  },
-  description: HOMEPAGE_DESCRIPTION,
+  title: "Urganize — Your release deserves a process.",
+  description:
+    "Urganize gives artist teams one place to run every stage of a release — from credits to launch. Join the waitlist.",
+  metadataBase: new URL("https://urganize.app"),
   openGraph: {
-    title: HOMEPAGE_TITLE,
-    description: HOMEPAGE_DESCRIPTION,
+    title: "Urganize — Your release deserves a process.",
+    description:
+      "Urganize gives artist teams one place to run every stage of a release — from credits to launch.",
     url: "https://urganize.app",
+    siteName: "Urganize",
+    images: [
+      {
+        url: "/images/landing/hero-dashboard.png",
+        width: 1280,
+        height: 800,
+        alt: "Urganize release dashboard — track every release in one place.",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    title: HOMEPAGE_TITLE,
-    description: HOMEPAGE_DESCRIPTION,
+    card: "summary_large_image",
+    title: "Urganize — Your release deserves a process.",
+    description:
+      "Urganize gives artist teams one place to run every stage of a release — from credits to launch.",
+    images: ["/images/landing/hero-dashboard.png"],
+  },
+  keywords: [
+    "music release management",
+    "artist release tool",
+    "release playbook",
+    "music credits",
+    "release workflow",
+    "artist team software",
+    "music SaaS",
+  ],
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
