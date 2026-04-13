@@ -4,14 +4,11 @@ import {
   FinalCTASection,
   FooterTagline,
   HeroSection,
-  LogoStripSection,
   MirrorSection,
   PlaybookSpotlightSection,
   TestimonialSection,
   ThreeFeaturesSection,
 } from "./components/landing/Sections";
-
-const SIGN_IN_HREF = "https://app.urganize.app/auth";
 
 export const metadata: Metadata = {
   title: "Urganize — Your release deserves a process.",
@@ -61,11 +58,10 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[var(--marketing-bg)] text-[var(--marketing-text)] selection:bg-[var(--marketing-selection)] selection:text-[var(--marketing-text)]">
       <div className="relative">
-        <LandingHeader signInHref={SIGN_IN_HREF} />
+        <LandingHeader />
 
         <main>
           <HeroSection />
-          <LogoStripSection />
           <MirrorSection />
           <PlaybookSpotlightSection />
           <ThreeFeaturesSection />

@@ -61,6 +61,39 @@ const featureColumns = [
 const solidButtonClassName =
   "inline-flex items-center justify-center rounded-full bg-[var(--marketing-primary)] px-7 py-3.5 text-sm font-medium tracking-[-0.02em] text-[var(--marketing-primary-text)] shadow-[0_20px_45px_var(--marketing-shadow-strong)] hover:bg-[var(--marketing-primary-hover)] sm:text-base";
 
+function LogoStrip({
+  className = "",
+}: {
+  className?: string;
+}) {
+  return (
+    <div className={className}>
+      <p className="mono-label text-center text-[var(--marketing-text-subtle)]">
+        Labels are already inside.
+      </p>
+
+      <div className="mt-10 overflow-x-auto overscroll-x-contain pb-2">
+        <div className="flex w-max min-w-full items-center justify-center gap-12 px-1 sm:gap-16">
+          {socialProofLogos.map((logo) => (
+            <div
+              key={logo.alt}
+              className="flex min-w-[9rem] shrink-0 items-center justify-center"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
+                className={`h-auto w-auto opacity-70 ${logo.imageClassName ?? ""}`}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function HeroSection() {
   return (
     <SectionShell
@@ -84,6 +117,8 @@ export function HeroSection() {
             Join the waitlist
           </TypeformWaitlistButton>
         </div>
+
+        <LogoStrip className="hero-fade-in hero-delay-3 mt-14 w-full max-w-[64rem] sm:mt-16" />
       </div>
 
       <div className="hero-fade-in hero-delay-3 mt-14 sm:mt-18 lg:mt-24">
@@ -108,25 +143,7 @@ export function LogoStripSection() {
         containerClassName="max-w-[84rem] px-6 sm:px-8 lg:px-10"
         className="bg-transparent py-[80px] sm:py-[80px] lg:py-[80px]"
       >
-        <p className="mono-label text-center text-[var(--marketing-text-subtle)]">
-          Labels are already inside.
-        </p>
-
-        <div className="mt-10 overflow-x-auto pb-2">
-          <div className="flex min-w-max items-center justify-between gap-12 px-1 sm:gap-16 md:min-w-0">
-            {socialProofLogos.map((logo) => (
-              <div key={logo.alt} className="flex min-w-[9rem] items-center justify-center">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className={`h-auto w-auto opacity-70 ${logo.imageClassName ?? ""}`}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <LogoStrip />
       </SectionShell>
     </ScrollReveal>
   );

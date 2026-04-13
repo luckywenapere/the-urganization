@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TypeformWaitlistButton } from "./TypeformWaitlistButton";
 
-interface LandingHeaderProps {
-  signInHref: string;
-}
-
-export function LandingHeader({ signInHref }: LandingHeaderProps) {
+export function LandingHeader() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[color:var(--marketing-border)] bg-transparent">
@@ -26,18 +23,16 @@ export function LandingHeader({ signInHref }: LandingHeaderProps) {
           </Link>
 
           <div className="flex items-center gap-4 sm:gap-6">
-            <a
-              href={signInHref}
+            <TypeformWaitlistButton
               className="text-sm font-medium tracking-[-0.02em] text-[var(--marketing-text-muted)] hover:text-[var(--marketing-text)]"
             >
-              Sign in
-            </a>
-            <Link
-              href="#waitlist"
+              Login
+            </TypeformWaitlistButton>
+            <TypeformWaitlistButton
               className="inline-flex items-center justify-center rounded-full border border-[color:var(--marketing-border-strong)] px-4 py-2.5 text-sm font-medium tracking-[-0.02em] text-[var(--marketing-text)] hover:border-[color:var(--marketing-text)] hover:bg-[var(--marketing-surface)] sm:px-5"
             >
-              Join waitlist
-            </Link>
+              Get started
+            </TypeformWaitlistButton>
           </div>
         </div>
       </header>
