@@ -2,6 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Create a `.env.local` file with your PostHog project settings:
+
+```bash
+NEXT_PUBLIC_POSTHOG_TOKEN=phc_your_project_token
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+```
+
 First, run the development server:
 
 ```bash
