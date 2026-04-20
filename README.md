@@ -7,7 +7,11 @@ Create a `.env.local` file with your PostHog project settings:
 ```bash
 NEXT_PUBLIC_POSTHOG_TOKEN=phc_your_project_token
 NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+ADMIN_WAITLIST_TOKEN=use-a-long-random-token
 ```
+
+The internal waitlist viewer is available at `/admin/waitlist` after entering
+`ADMIN_WAITLIST_TOKEN`.
 
 First, run the development server:
 

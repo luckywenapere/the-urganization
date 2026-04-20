@@ -2,8 +2,6 @@ import { neon } from "@neondatabase/serverless";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-let waitlistColumnsReady = false;
-
 const metadataSchema = z
   .object({
     source: z.string().max(100).optional(),
@@ -56,24 +54,6 @@ function getSqlClient() {
   return neon(databaseUrl);
 }
 
-async function ensureWaitlistColumns(sql: ReturnType<typeof getSqlClient>) {
-  if (waitlistColumnsReady) {
-    return;
-  }
-
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "phone" TEXT`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "role" TEXT`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "teamSize" TEXT`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "releaseVolume" TEXT`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "primaryNeed" TEXT`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "metadata" JSONB`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "isLaunchPartner" BOOLEAN NOT NULL DEFAULT false`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "referralCode" TEXT`;
-  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP`;
-
-  waitlistColumnsReady = true;
-}
-
 function createReferralCode(email: string) {
   return email.split("@")[0].toLowerCase().replace(/[^a-z0-9]/g, "");
 }
@@ -109,24 +89,6 @@ export async function POST(req: Request) {
     const normalizedEmail = email.toLowerCase();
     const sql = getSqlClient();
 
-    await ensureWaitlistColumns(sql);
-
-    const existing = await sql`
-      SELECT id FROM "User"
-      WHERE email = ${normalizedEmail}
-      LIMIT 1
-    `;
-
-    if (existing.length > 0) {
-      return NextResponse.json(
-        {
-          error: "That email is already on the waitlist.",
-          code: "DUPLICATE_EMAIL",
-        },
-        { status: 409 },
-      );
-    }
-
     const enrichedMetadata = {
       ...metadata,
       userAgent: metadata?.userAgent ?? req.headers.get("user-agent") ?? undefined,
@@ -135,7 +97,7 @@ export async function POST(req: Request) {
     const metadataJson = JSON.stringify(enrichedMetadata);
     const referralCode = createReferralCode(normalizedEmail);
 
-    await sql`
+    const inserted = await sql`
       INSERT INTO "User" (
         email,
         name,
@@ -164,7 +126,19 @@ export async function POST(req: Request) {
         NOW(),
         NOW()
       )
+      ON CONFLICT (email) DO NOTHING
+      RETURNING id
     `;
+
+    if (inserted.length === 0) {
+      return NextResponse.json(
+        {
+          error: "That email is already on the waitlist.",
+          code: "DUPLICATE_EMAIL",
+        },
+        { status: 409 },
+      );
+    }
 
     return NextResponse.json({
       success: true,
