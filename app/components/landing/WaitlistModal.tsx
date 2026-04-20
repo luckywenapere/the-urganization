@@ -121,7 +121,7 @@ const urganizeSocialLinks = [
 const founderSocialLinks = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/luckydidthis",
+    href: "https://linkedin.com/in/lucky-wenapere",
     icon: "linkedin",
   },
   {
