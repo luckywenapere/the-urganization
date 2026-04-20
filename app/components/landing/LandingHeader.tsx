@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TypeformWaitlistButton } from "./TypeformWaitlistButton";
+import { WaitlistButton } from "./WaitlistButton";
 
 export function LandingHeader() {
   return (
@@ -23,16 +23,18 @@ export function LandingHeader() {
           </Link>
 
           <div className="flex items-center gap-4 sm:gap-6">
-            <TypeformWaitlistButton
+            <WaitlistButton
               className="text-sm font-medium tracking-[-0.02em] text-[var(--marketing-text-muted)] hover:text-[var(--marketing-text)]"
+              source="header_login"
             >
               Login
-            </TypeformWaitlistButton>
-            <TypeformWaitlistButton
+            </WaitlistButton>
+            <WaitlistButton
               className="inline-flex items-center justify-center rounded-full border border-[color:var(--marketing-border-strong)] px-4 py-2.5 text-sm font-medium tracking-[-0.02em] text-[var(--marketing-text)] hover:border-[color:var(--marketing-text)] hover:bg-[var(--marketing-surface)] sm:px-5"
+              source="header_get_started"
             >
               Get started
-            </TypeformWaitlistButton>
+            </WaitlistButton>
           </div>
         </div>
       </header>

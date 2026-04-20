@@ -136,6 +136,11 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         className={clsx(
           'icon-btn',
           {
+            'bg-bg-elevated border border-stroke-default hover:bg-bg-hover':
+              variant === 'default',
+            'bg-transparent hover:bg-bg-hover': variant === 'ghost',
+          },
+          {
             'w-7 h-7': size === 'sm',
             'w-9 h-9': size === 'md',
             'w-11 h-11': size === 'lg',

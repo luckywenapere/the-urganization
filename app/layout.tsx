@@ -6,7 +6,6 @@ import {
   Instrument_Sans,
 } from "next/font/google";
 import "./globals.css";
-import "@typeform/embed/build/css/popup.css";
 import { Suspense } from "react";
 import FormbricksProvider from "./formbricks-provider";
 import { Analytics } from "@vercel/analytics/next";

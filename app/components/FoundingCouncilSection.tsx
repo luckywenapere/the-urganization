@@ -182,7 +182,7 @@ export const FoundingCouncilSection: React.FC = () => {
                 Are you one of the 10?
               </h3>
               <p className="text-content-secondary">
-                Join the waitlist. We'll send you your unique referral link.
+                Join the waitlist. We&apos;ll send you your unique referral link.
               </p>
             </div>
 
@@ -227,7 +227,7 @@ export const FoundingCouncilSection: React.FC = () => {
         {/* Fine Print */}
         <div className="mt-12 text-center space-y-2 animate-in delay-8">
           <p className="text-sm text-content-tertiary">
-            <span className="font-semibold text-content-secondary">This is permanent.</span> Once you're in the Council, you're in for life.
+            <span className="font-semibold text-content-secondary">This is permanent.</span> Once you&apos;re in the Council, you&apos;re in for life.
           </p>
           <p className="text-xs text-content-quaternary">
             Council closes when 10 spots are filled. Revenue share terms apply to active paying accounts only.

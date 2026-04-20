@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionShell } from "./SectionShell";
-import { TypeformWaitlistButton } from "./TypeformWaitlistButton";
+import { WaitlistButton } from "./WaitlistButton";
 
 type SocialProofLogo = {
   src: string;
@@ -113,9 +113,9 @@ export function HeroSection() {
         </div>
 
         <div className="hero-fade-in hero-delay-2 mt-10 flex justify-center">
-          <TypeformWaitlistButton className={solidButtonClassName}>
+          <WaitlistButton className={solidButtonClassName} source="hero_waitlist">
             Join the waitlist
-          </TypeformWaitlistButton>
+          </WaitlistButton>
         </div>
 
         <LogoStrip className="hero-fade-in hero-delay-3 mt-14 w-full max-w-[64rem] sm:mt-16" />
@@ -264,9 +264,9 @@ export function FinalCTASection() {
           </h2>
 
           <div className="mt-10 flex justify-center">
-            <TypeformWaitlistButton className={solidButtonClassName}>
+            <WaitlistButton className={solidButtonClassName} source="final_cta_waitlist">
               Join the waitlist
-            </TypeformWaitlistButton>
+            </WaitlistButton>
           </div>
 
         </div>

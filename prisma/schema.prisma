@@ -8,8 +8,17 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  name      String
-  createdAt DateTime @default(now())
+  id              Int      @id @default(autoincrement())
+  email           String   @unique
+  name            String
+  phone           String?
+  role            String?
+  teamSize        String?
+  releaseVolume   String?
+  primaryNeed     String?
+  metadata        Json?
+  isLaunchPartner Boolean  @default(false)
+  referralCode    String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @default(now()) @updatedAt
 }

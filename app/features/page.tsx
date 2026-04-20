@@ -184,7 +184,7 @@ export default function FeaturesPage() {
                   </div>
                   <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Promotion First</h2>
                   <p className="text-xl text-neutral-400 mb-8 leading-relaxed">
-                    Promotion is where releases fail. That's why it's built into every release from day one — not an afterthought.
+                    Promotion is where releases fail. That&apos;s why it&apos;s built into every release from day one — not an afterthought.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
@@ -202,7 +202,7 @@ export default function FeaturesPage() {
                       </div>
                       <div>
                         <p className="font-semibold mb-1">No last-minute scrambling</p>
-                        <p className="text-neutral-500 text-sm">Timeline guidance prevents "we'll figure it out later"</p>
+                        <p className="text-neutral-500 text-sm">Timeline guidance prevents &quot;we&apos;ll figure it out later&quot;</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -321,7 +321,7 @@ export default function FeaturesPage() {
                   </div>
                   <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">Timeline Guidance</h2>
                   <p className="text-xl text-neutral-400 mb-8 leading-relaxed">
-                    The system prompts you when dates are missing. No more "we'll figure it out later" that turns into last-minute panic.
+                    The system prompts you when dates are missing. No more &quot;we&apos;ll figure it out later&quot; that turns into last-minute panic.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
@@ -363,28 +363,28 @@ export default function FeaturesPage() {
         <section className="py-32 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
           <div className="max-w-4xl mx-auto">
             <motion.div {...fadeInUp} className="text-center mb-16">
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8">What Urganize Doesn't Do</h2>
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8">What Urganize Doesn&apos;t Do</h2>
               <p className="text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-                We're opinionated about what we build. If a feature doesn't reduce operational chaos, it's out.
+                We&apos;re opinionated about what we build. If a feature doesn&apos;t reduce operational chaos, it&apos;s out.
               </p>
             </motion.div>
 
             <motion.div {...fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
                 <h3 className="text-xl font-bold mb-3 text-neutral-400">❌ Revenue Tracking</h3>
-                <p className="text-neutral-500">We don't track streams, splits, or royalties. That's what distributors are for.</p>
+                <p className="text-neutral-500">We don&apos;t track streams, splits, or royalties. That&apos;s what distributors are for.</p>
               </div>
               <div className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
                 <h3 className="text-xl font-bold mb-3 text-neutral-400">❌ Legal Contracts</h3>
-                <p className="text-neutral-500">We don't generate or enforce contracts. Get a lawyer for that.</p>
+                <p className="text-neutral-500">We don&apos;t generate or enforce contracts. Get a lawyer for that.</p>
               </div>
               <div className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
                 <h3 className="text-xl font-bold mb-3 text-neutral-400">❌ Analytics</h3>
-                <p className="text-neutral-500">We don't show streaming numbers or social media metrics. Check your platforms.</p>
+                <p className="text-neutral-500">We don&apos;t show streaming numbers or social media metrics. Check your platforms.</p>
               </div>
               <div className="p-8 rounded-[2rem] bg-neutral-900/50 border border-white/5">
                 <h3 className="text-xl font-bold mb-3 text-neutral-400">❌ Music Distribution</h3>
-                <p className="text-neutral-500">We don't upload to Spotify or Apple Music. Use your preferred distributor.</p>
+                <p className="text-neutral-500">We don&apos;t upload to Spotify or Apple Music. Use your preferred distributor.</p>
               </div>
             </motion.div>
           </div>

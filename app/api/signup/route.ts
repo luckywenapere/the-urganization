@@ -1,11 +1,49 @@
+import { neon } from "@neondatabase/serverless";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { neon } from "@neondatabase/serverless";
+
+let waitlistColumnsReady = false;
+
+const metadataSchema = z
+  .object({
+    source: z.string().max(100).optional(),
+    pageUrl: z.string().max(1000).optional(),
+    referrer: z.string().max(1000).optional(),
+    userAgent: z.string().max(1000).optional(),
+    utmSource: z.string().max(200).optional(),
+    utmMedium: z.string().max(200).optional(),
+    utmCampaign: z.string().max(200).optional(),
+    utmTerm: z.string().max(200).optional(),
+    utmContent: z.string().max(200).optional(),
+    ref: z.string().max(200).optional(),
+  })
+  .optional();
 
 const signupSchema = z.object({
-  email: z.string().email(),
-  name: z.string().optional(),
-  isLaunchPartner: z.boolean().optional().default(false),
+  email: z.string().trim().email(),
+  name: z.string().trim().min(1).max(160),
+  phone: z
+    .string()
+    .trim()
+    .min(7)
+    .max(32)
+    .regex(/^[+\d\s().-]+$/),
+  role: z.enum([
+    "independent_artist",
+    "artist_manager",
+    "a_and_r",
+    "music_producer",
+    "label_manager_executive",
+  ]),
+  teamSize: z.enum(["solo", "two_to_three", "four_to_six", "seven_plus"]),
+  releaseVolume: z.enum(["one", "two_to_four", "five_plus", "not_sure"]),
+  primaryNeed: z.enum([
+    "release_playbook",
+    "collaborator_credits",
+    "team_handoff",
+    "all_of_it",
+  ]),
+  metadata: metadataSchema,
 });
 
 function getSqlClient() {
@@ -18,85 +56,135 @@ function getSqlClient() {
   return neon(databaseUrl);
 }
 
+async function ensureWaitlistColumns(sql: ReturnType<typeof getSqlClient>) {
+  if (waitlistColumnsReady) {
+    return;
+  }
+
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "phone" TEXT`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "role" TEXT`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "teamSize" TEXT`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "releaseVolume" TEXT`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "primaryNeed" TEXT`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "metadata" JSONB`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "isLaunchPartner" BOOLEAN NOT NULL DEFAULT false`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "referralCode" TEXT`;
+  await sql`ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP`;
+
+  waitlistColumnsReady = true;
+}
+
+function createReferralCode(email: string) {
+  return email.split("@")[0].toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function isUniqueViolation(error: unknown) {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    (error as { code?: string }).code === "23505"
+  );
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     const parsed = signupSchema.safeParse(body);
 
     if (!parsed.success) {
-      return NextResponse.json(
-        { error: "Invalid input" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid input" }, { status: 400 });
     }
 
-    const { email, name, isLaunchPartner } = parsed.data;
+    const {
+      email,
+      name,
+      phone,
+      role,
+      teamSize,
+      releaseVolume,
+      primaryNeed,
+      metadata,
+    } = parsed.data;
+    const normalizedEmail = email.toLowerCase();
     const sql = getSqlClient();
 
-    // Generate simple referral code from email
-    const referralCode = email.split('@')[0].toLowerCase().replace(/[^a-z0-9]/g, '');
+    await ensureWaitlistColumns(sql);
 
-    // 1. Save to Neon with Launch Partner status
-    await sql`
-      INSERT INTO "User" (email, name, "isLaunchPartner", "referralCode", "createdAt")
-      VALUES (${email}, ${name}, ${isLaunchPartner}, ${referralCode}, NOW())
-      ON CONFLICT (email) DO UPDATE
-      SET "isLaunchPartner" = ${isLaunchPartner},
-          "referralCode" = ${referralCode};
+    const existing = await sql`
+      SELECT id FROM "User"
+      WHERE email = ${normalizedEmail}
+      LIMIT 1
     `;
 
-    // 2. Sync to MailerLite with custom fields
-    try {
-      const groups = process.env.MAILERLITE_GROUP_ID
-        ? [process.env.MAILERLITE_GROUP_ID]
-        : [];
-
-      const mailerliteBody: {
-        email: string;
-        fields: {
-          name?: string;
-          launch_partner: "Yes" | "No";
-          referral_code: string;
-        };
-        groups: string[];
-      } = {
-        email,
-        fields: { 
-          name,
-          launch_partner: isLaunchPartner ? "Yes" : "No",
-          referral_code: referralCode,
-        },
-        groups,
-      };
-
-      const res = await fetch(
-        "https://connect.mailerlite.com/api/subscribers",
+    if (existing.length > 0) {
+      return NextResponse.json(
         {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${process.env.MAILERLITE_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(mailerliteBody),
-        }
+          error: "That email is already on the waitlist.",
+          code: "DUPLICATE_EMAIL",
+        },
+        { status: 409 },
       );
-
-      if (!res.ok) {
-        console.error("MailerLite error:", await res.text());
-      }
-    } catch (err) {
-      console.error("MailerLite request failed:", err);
     }
 
-    return NextResponse.json({ 
+    const enrichedMetadata = {
+      ...metadata,
+      userAgent: metadata?.userAgent ?? req.headers.get("user-agent") ?? undefined,
+      submittedAt: new Date().toISOString(),
+    };
+    const metadataJson = JSON.stringify(enrichedMetadata);
+    const referralCode = createReferralCode(normalizedEmail);
+
+    await sql`
+      INSERT INTO "User" (
+        email,
+        name,
+        phone,
+        role,
+        "teamSize",
+        "releaseVolume",
+        "primaryNeed",
+        "metadata",
+        "isLaunchPartner",
+        "referralCode",
+        "createdAt",
+        "updatedAt"
+      )
+      VALUES (
+        ${normalizedEmail},
+        ${name},
+        ${phone},
+        ${role},
+        ${teamSize},
+        ${releaseVolume},
+        ${primaryNeed},
+        CAST(${metadataJson} AS JSONB),
+        false,
+        ${referralCode},
+        NOW(),
+        NOW()
+      )
+    `;
+
+    return NextResponse.json({
       success: true,
-      referralCode: isLaunchPartner ? referralCode : null,
+      referralCode,
     });
-  } catch (err) {
-    console.error("Signup error:", err);
+  } catch (error) {
+    if (isUniqueViolation(error)) {
+      return NextResponse.json(
+        {
+          error: "That email is already on the waitlist.",
+          code: "DUPLICATE_EMAIL",
+        },
+        { status: 409 },
+      );
+    }
+
+    console.error("Signup error:", error);
     return NextResponse.json(
       { error: "Something went wrong" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
