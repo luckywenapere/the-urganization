@@ -59,7 +59,7 @@ const featureColumns = [
 ] as const;
 
 const solidButtonClassName =
-  "inline-flex items-center justify-center rounded-full bg-[var(--marketing-primary)] px-7 py-3.5 text-sm font-medium tracking-[-0.02em] text-[var(--marketing-primary-text)] shadow-[0_20px_45px_var(--marketing-shadow-strong)] hover:bg-[var(--marketing-primary-hover)] sm:text-base";
+  "relative z-20 inline-flex cursor-pointer touch-manipulation items-center justify-center rounded-full bg-[var(--marketing-primary)] px-7 py-3.5 text-sm font-medium tracking-[-0.02em] text-[var(--marketing-primary-text)] shadow-[0_20px_45px_var(--marketing-shadow-strong)] hover:bg-[var(--marketing-primary-hover)] sm:text-base";
 
 function LogoStrip({
   className = "",
@@ -112,7 +112,7 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="hero-fade-in hero-delay-2 mt-10 flex justify-center">
+        <div className="hero-fade-in hero-delay-2 relative z-20 mt-10 flex justify-center">
           <WaitlistButton className={solidButtonClassName} source="hero_waitlist">
             Join the waitlist
           </WaitlistButton>
@@ -263,7 +263,7 @@ export function FinalCTASection() {
             Releases shouldn&apos;t be this hard to run.
           </h2>
 
-          <div className="mt-10 flex justify-center">
+          <div className="relative z-20 mt-10 flex justify-center">
             <WaitlistButton className={solidButtonClassName} source="final_cta_waitlist">
               Join the waitlist
             </WaitlistButton>

@@ -27,6 +27,7 @@ type PrimaryNeed =
   | "collaborator_credits"
   | "team_handoff"
   | "all_of_it";
+type SocialIconName = "instagram" | "x" | "linkedin" | "youtube" | "whatsapp";
 
 type WaitlistForm = {
   name: string;
@@ -98,16 +99,40 @@ const primaryNeedOptions: ChoiceOption<PrimaryNeed>[] = [
   { label: "All of it", value: "all_of_it" },
 ];
 
-const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com/urganize" },
-  { label: "X", href: "https://x.com/urganize" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/urganize" },
-  { label: "YouTube", href: "https://youtube.com/@urganize" },
+const urganizeSocialLinks = [
   {
-    label: "WhatsApp community",
-    href: "https://chat.whatsapp.com/DGUGyC2GK3d5v6KPGw5aft",
+    label: "Instagram",
+    href: "https://instagram.com/urganize",
+    icon: "instagram",
+  },
+  { label: "X", href: "https://x.com/urganize", icon: "x" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/urganize",
+    icon: "linkedin",
+  },
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@urganize",
+    icon: "youtube",
   },
 ] as const;
+
+const founderSocialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/luckydidthis",
+    icon: "linkedin",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/luckydidthis",
+    icon: "instagram",
+  },
+  { label: "X", href: "https://x.com/luckydidthis", icon: "x" },
+] as const;
+
+const whatsappCommunityLink = "https://chat.whatsapp.com/DGUGyC2GK3d5v6KPGw5aft";
 
 const waitlistStepNames = [
   "welcome",
@@ -173,6 +198,83 @@ function validatePhone(phone: string) {
 
 function hasDraftData(form: WaitlistForm, step: number) {
   return step > 0 || Object.values(form).some((value) => value.length > 0);
+}
+
+function SocialIcon({ name }: { name: SocialIconName }) {
+  const baseClassName = "h-4 w-4 shrink-0";
+
+  if (name === "instagram") {
+    return (
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="none"
+        className={baseClassName}
+      >
+        <rect
+          width="16"
+          height="16"
+          x="4"
+          y="4"
+          rx="4.5"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <circle cx="12" cy="12" r="3.4" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17" cy="7" r="1.1" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (name === "x") {
+    return (
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={baseClassName}
+      >
+        <path d="M14.2 10.4 21.9 2h-1.8l-6.7 7.3L8.1 2H2l8.1 11.2L2 22h1.8l7.1-7.7 5.7 7.7H22l-7.8-11.6Zm-2.5 2.7-.8-1.1L4.4 3.3h2.8l5.3 7.1.8 1.1 6.8 9.2h-2.8l-5.6-7.6Z" />
+      </svg>
+    );
+  }
+
+  if (name === "linkedin") {
+    return (
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={baseClassName}
+      >
+        <path d="M5.2 8.9h3.3V20H5.2V8.9Zm1.7-5.4a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8ZM10.6 8.9h3.1v1.5h.1c.4-.8 1.5-1.8 3.2-1.8 3.4 0 4 2.2 4 5.1V20h-3.3v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V20h-3.3V8.9Z" />
+      </svg>
+    );
+  }
+
+  if (name === "youtube") {
+    return (
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={baseClassName}
+      >
+        <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1C2 9 2 12 2 12s0 3 .4 4.8a3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1c.4-1.8.4-4.8.4-4.8s0-3-.4-4.8ZM10 15.4V8.6l5.8 3.4L10 15.4Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={baseClassName}
+    >
+      <path d="M12 2a9.8 9.8 0 0 0-8.5 14.7L2.2 22l5.4-1.3A9.8 9.8 0 1 0 12 2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1 1 12 19.7Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4.2-.4c.1-.2 0-.3 0-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3Z" />
+    </svg>
+  );
 }
 
 export function WaitlistModal({
@@ -633,23 +735,67 @@ export function WaitlistModal({
           : "We already have this email on the waitlist. We'll reach out when your spot is ready."}
       </p>
 
-      <div className="mt-10">
+      <div className="mt-10 space-y-6">
         <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
           Follow and join the community
         </p>
-        <div className="mt-5 flex flex-wrap justify-center gap-3">
-          {socialLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white/80 hover:border-white/60 hover:bg-white hover:text-black"
-            >
-              {link.label}
-            </a>
-          ))}
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+            <p className="text-sm font-semibold text-white">Urganize</p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {urganizeSocialLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1.5 text-sm font-medium text-white/80 hover:border-white/60 hover:bg-white hover:text-black"
+                >
+                  <SocialIcon name={link.icon} />
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+            <p className="text-sm font-semibold text-white">
+              Founder <span className="text-white/45">@luckydidthis</span>
+            </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {founderSocialLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => {
+                    captureWaitlistEvent("waitlist_founder_social_clicked", {
+                      source: ctaSource,
+                      platform: link.label,
+                      href: link.href,
+                    });
+                  }}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1.5 text-sm font-medium text-white/80 hover:border-white/60 hover:bg-white hover:text-black"
+                >
+                  <SocialIcon name={link.icon} />
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
+
+        <a
+          href={whatsappCommunityLink}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black hover:bg-white/90"
+        >
+          <SocialIcon name="whatsapp" />
+          Join the WhatsApp community
+        </a>
       </div>
     </div>
   );

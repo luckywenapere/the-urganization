@@ -88,7 +88,11 @@ export function WaitlistButton({
 
   return (
     <>
-      <button type="button" onClick={openModal} className={clsx(className)}>
+      <button
+        type="button"
+        onClick={openModal}
+        className={clsx("cursor-pointer touch-manipulation", className)}
+      >
         {children}
       </button>
 
