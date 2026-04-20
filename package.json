@@ -7,6 +7,7 @@
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
+    "smoke:waitlist": "node scripts/smoke-waitlist.mjs",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma db push --schema prisma/schema.prisma",
     "prisma:seed": "node prisma/seed.js"

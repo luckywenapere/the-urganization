@@ -27,6 +27,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+To smoke-test the waitlist CTAs against a running local server:
+
+```bash
+npm run smoke:waitlist
+```
+
+Set `WAITLIST_SMOKE_URL` to test a different URL, or `CHROME_PATH` if Chrome,
+Edge, or Chromium is not found automatically.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
