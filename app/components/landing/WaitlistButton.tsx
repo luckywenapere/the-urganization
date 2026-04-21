@@ -1,7 +1,8 @@
 "use client";
 
 import { clsx } from "clsx";
-import { ComponentType, ReactNode, useMemo, useState } from "react";
+import { ComponentType, ReactNode, useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 
 type WaitlistModalProps = {
   ctaSource: string;
@@ -51,6 +52,11 @@ export function WaitlistButton({
   const [isLoading, setIsLoading] = useState(false);
   const [ModalComponent, setModalComponent] =
     useState<WaitlistModalComponent | null>(null);
+  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setPortalTarget(document.body);
+  }, []);
 
   const ctaSource = useMemo(() => {
     if (source) {
@@ -96,11 +102,18 @@ export function WaitlistButton({
         {children}
       </button>
 
-      {isOpen && ModalComponent && (
-        <ModalComponent ctaSource={ctaSource} onClose={closeModal} />
-      )}
+      {isOpen &&
+        ModalComponent &&
+        portalTarget &&
+        createPortal(
+          <ModalComponent ctaSource={ctaSource} onClose={closeModal} />,
+          portalTarget,
+        )}
 
-      {isOpen && !ModalComponent && <WaitlistLoading onClose={closeModal} />}
+      {isOpen &&
+        !ModalComponent &&
+        portalTarget &&
+        createPortal(<WaitlistLoading onClose={closeModal} />, portalTarget)}
     </>
   );
 }
