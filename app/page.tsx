@@ -4,10 +4,12 @@ import {
   FinalCTASection,
   FooterTagline,
   HeroSection,
+  LogoStripSection,
   MirrorSection,
   PlaybookSpotlightSection,
   TestimonialSection,
   ThreeFeaturesSection,
+  VideoSection,
 } from "./components/landing/Sections";
 
 export const metadata: Metadata = {
@@ -62,6 +64,8 @@ export default function Home() {
 
         <main>
           <HeroSection />
+          <LogoStripSection />
+          <VideoSection />
           <MirrorSection />
           <PlaybookSpotlightSection />
           <ThreeFeaturesSection />

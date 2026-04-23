@@ -117,8 +117,6 @@ export function HeroSection() {
             Join the waitlist
           </WaitlistButton>
         </div>
-
-        <LogoStrip className="hero-fade-in hero-delay-3 mt-14 w-full max-w-[64rem] sm:mt-16" />
       </div>
 
       <div className="hero-fade-in hero-delay-3 mt-14 sm:mt-18 lg:mt-24">
@@ -144,6 +142,29 @@ export function LogoStripSection() {
         className="bg-transparent py-[80px] sm:py-[80px] lg:py-[80px]"
       >
         <LogoStrip />
+      </SectionShell>
+    </ScrollReveal>
+  );
+}
+
+export function VideoSection() {
+  return (
+    <ScrollReveal>
+      <SectionShell
+        containerClassName="max-w-[84rem] px-6 sm:px-8 lg:px-10"
+        className="py-0"
+      >
+        <div className="relative mx-auto my-12 aspect-video w-full max-w-3xl px-4 md:px-0">
+          <iframe
+            className="absolute inset-0 h-full w-full rounded-xl"
+            src="https://www.youtube.com/embed/nfOjPlmDpFw?si=MJRNEVc6MT3pFw"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
       </SectionShell>
     </ScrollReveal>
   );
