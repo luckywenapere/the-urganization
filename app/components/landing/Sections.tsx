@@ -157,7 +157,7 @@ export function VideoSection() {
         <div className="relative mx-auto my-12 aspect-video w-full max-w-3xl px-4 md:px-0">
           <iframe
             className="absolute inset-0 h-full w-full rounded-xl"
-            src="https://www.youtube.com/embed/nfOjPlmDpFw?si=MJRNEVc6MT3pFw"
+            src="https://www.youtube.com/embed/hfeXoogShgE?si=2OsOJWGifbQTUve5"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
