@@ -334,6 +334,14 @@ export function FooterTagline() {
               Press
             </Link>
             <a
+              href="https://hark.site/s/62947350-2627-4b85-b1fd-eb6a66ffe317?hark_region=us"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--marketing-text)]"
+            >
+              One-pager
+            </a>
+            <a
               href="mailto:theurganization@gmail.com"
               className="hover:text-[var(--marketing-text)]"
             >
