@@ -1,8 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# the-urganization
 
-## Getting Started
+The earlier marketing site for Urganize, the operating system for independent music careers.
 
-Create a `.env.local` file with your PostHog project settings:
+Urganize helps independent artists and managers run their careers as businesses, across the full life cycle of a music career. A music career shouldn't run on a group chat.
+
+The live marketing site now lives in the main Urganize repository (`apps/homepage` in `luckywenapere/urganize`) at https://urganize.app. This repository is kept for its history and its waitlist data tooling. The company site is a separate repository, `the-urganization-website`, at https://theurganization.com.
+
+## What is in here
+
+- Next.js App Router, React 19, Tailwind v4.
+- Waitlist sign-up, stored in Neon with Prisma (`prisma/`, `app/api/signup`).
+- PostHog and Formbricks for analytics and surveys.
+- Press, team, privacy, terms and subprocessors pages, and an internal waitlist viewer at `/admin/waitlist`.
+
+## Run it
+
+Create a `.env.local` file:
 
 ```bash
 NEXT_PUBLIC_POSTHOG_TOKEN=phc_your_project_token
@@ -10,47 +23,21 @@ NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ADMIN_WAITLIST_TOKEN=use-a-long-random-token
 ```
 
-The internal waitlist viewer is available at `/admin/waitlist` after entering
-`ADMIN_WAITLIST_TOKEN`.
-
-First, run the development server:
+Then set up the database and start the dev server (see `SIGNUP_SETUP.md` for the database steps):
 
 ```bash
+npm install
+npm run prisma:generate
+npm run prisma:migrate
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The waitlist viewer at `/admin/waitlist` asks for `ADMIN_WAITLIST_TOKEN`.
 
-To smoke-test the waitlist CTAs against a running local server:
+To smoke-test the waitlist buttons against a running local server:
 
 ```bash
 npm run smoke:waitlist
 ```
 
-Set `WAITLIST_SMOKE_URL` to test a different URL, or `CHROME_PATH` if Chrome,
-Edge, or Chromium is not found automatically.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Set `WAITLIST_SMOKE_URL` to test a different address, or `CHROME_PATH` if Chrome, Edge or Chromium is not found automatically.
